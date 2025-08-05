@@ -25,6 +25,7 @@ Types:
 
 - <code><a href="./src/resources/individuals/documents.ts">DocumentResponse</a></code>
 - <code><a href="./src/resources/individuals/documents.ts">GenericDocument</a></code>
+- <code><a href="./src/resources/individuals/documents.ts">Kbis</a></code>
 
 Methods:
 
