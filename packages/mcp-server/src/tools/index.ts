@@ -5,19 +5,9 @@ import { Metadata, Endpoint, HandlerFunction } from './types';
 export { Metadata, Endpoint, HandlerFunction };
 
 import create_individuals from './individuals/create-individuals';
-import retrieve_individuals from './individuals/retrieve-individuals';
-import update_individuals from './individuals/update-individuals';
 import list_individuals from './individuals/list-individuals';
-import delete_individuals from './individuals/delete-individuals';
-import list_individuals_documents from './individuals/documents/list-individuals-documents';
-import upload_individuals_documents from './individuals/documents/upload-individuals-documents';
 import create_companies from './companies/create-companies';
-import retrieve_companies from './companies/retrieve-companies';
-import update_companies from './companies/update-companies';
 import list_companies from './companies/list-companies';
-import delete_companies from './companies/delete-companies';
-import list_companies_documents from './companies/documents/list-companies-documents';
-import upload_companies_documents from './companies/documents/upload-companies-documents';
 
 export const endpoints: Endpoint[] = [];
 
@@ -26,19 +16,9 @@ function addEndpoint(endpoint: Endpoint) {
 }
 
 addEndpoint(create_individuals);
-addEndpoint(retrieve_individuals);
-addEndpoint(update_individuals);
 addEndpoint(list_individuals);
-addEndpoint(delete_individuals);
-addEndpoint(list_individuals_documents);
-addEndpoint(upload_individuals_documents);
 addEndpoint(create_companies);
-addEndpoint(retrieve_companies);
-addEndpoint(update_companies);
 addEndpoint(list_companies);
-addEndpoint(delete_companies);
-addEndpoint(list_companies_documents);
-addEndpoint(upload_companies_documents);
 
 export type Filter = {
   type: 'resource' | 'operation' | 'tag' | 'tool';
