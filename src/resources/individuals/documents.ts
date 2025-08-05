@@ -2,8 +2,49 @@
 
 import { APIResource } from '../../core/resource';
 import * as Shared from '../shared';
+import { APIPromise } from '../../core/api-promise';
+import { type Uploadable } from '../../core/uploads';
+import { RequestOptions } from '../../internal/request-options';
+import { multipartFormRequestOptions } from '../../internal/uploads';
+import { path } from '../../internal/utils/path';
 
-export class Documents extends APIResource {}
+export class Documents extends APIResource {
+  /**
+   * Get documents to an individuals
+   *
+   * @example
+   * ```ts
+   * const documentResponse =
+   *   await client.individuals.documents.list('individual_id');
+   * ```
+   */
+  list(individualID: string, options?: RequestOptions): APIPromise<DocumentResponse> {
+    return this._client.get(path`/individuals/${individualID}/documents`, options);
+  }
+
+  /**
+   * Upload documents to an individual
+   *
+   * @example
+   * ```ts
+   * const genericDocument =
+   *   await client.individuals.documents.upload(
+   *     'individual_id',
+   *     { document_type: 'bank_statements' },
+   *   );
+   * ```
+   */
+  upload(
+    individualID: string,
+    body: DocumentUploadParams,
+    options?: RequestOptions,
+  ): APIPromise<GenericDocument> {
+    return this._client.post(
+      path`/individuals/${individualID}/documents`,
+      multipartFormRequestOptions({ body, ...options }, this._client),
+    );
+  }
+}
 
 export interface DocumentResponse {
   /**
@@ -147,6 +188,41 @@ export namespace GenericDocument {
   }
 }
 
+export interface DocumentUploadParams {
+  /**
+   * Filter by document type for upload (must be one of the allowed values)
+   */
+  document_type:
+    | 'bank_statements'
+    | 'liasse_fiscale'
+    | 'amortised_loan_schedule'
+    | 'accounting'
+    | 'invoice'
+    | 'receipt'
+    | 'company_statuts'
+    | 'rib'
+    | 'livret_famille'
+    | 'payslip'
+    | 'carte_grise'
+    | 'proof_address'
+    | 'identity_document'
+    | 'tax';
+
+  /**
+   * File to upload (required)
+   */
+  file?: Uploadable;
+
+  /**
+   * URL of the file to upload (either `file` or `url` is required)
+   */
+  url?: string;
+}
+
 export declare namespace Documents {
-  export { type DocumentResponse as DocumentResponse, type GenericDocument as GenericDocument };
+  export {
+    type DocumentResponse as DocumentResponse,
+    type GenericDocument as GenericDocument,
+    type DocumentUploadParams as DocumentUploadParams,
+  };
 }
