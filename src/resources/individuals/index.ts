@@ -4,6 +4,7 @@ export {
   Documents,
   type DocumentResponse,
   type GenericDocument,
+  type Kbis,
   type DocumentUploadParams,
 } from './documents';
 export {
