@@ -188,6 +188,203 @@ export namespace GenericDocument {
   }
 }
 
+/**
+ * A document representing official registration data from the KBIS (France).
+ */
+export interface Kbis {
+  /**
+   * Declared business activities.
+   */
+  activities?: string;
+
+  /**
+   * Official address of the company.
+   */
+  address?: string;
+
+  /**
+   * Registered social capital of the company.
+   */
+  capital_social?: string;
+
+  /**
+   * Date of closure, if applicable.
+   */
+  closure_date?: string;
+
+  /**
+   * Official name of the company.
+   */
+  company_name?: string;
+
+  /**
+   * Date when the document was issued.
+   */
+  document_date?: string;
+
+  /**
+   * Fixed identifier for the document type.
+   */
+  document_type?: string;
+
+  /**
+   * Date of the first fiscal closure.
+   */
+  first_closure_date?: string;
+
+  /**
+   * Registry office that issued the document.
+   */
+  from_greffe?: string;
+
+  /**
+   * Legal form of the company (e.g., SAS, SARL).
+   */
+  legal_form?: string;
+
+  /**
+   * List of people or entities associated with the company.
+   */
+  members?: Array<Kbis.Member>;
+
+  /**
+   * Business registry number or NGestion.
+   */
+  ngestion?: string;
+
+  /**
+   * RCS (Company Registration Number).
+   */
+  rcs_number?: string;
+
+  /**
+   * Date of registration with the registry.
+   */
+  registration_date?: string;
+
+  /**
+   * SIREN number of the company.
+   */
+  siren_info?: string;
+}
+
+export namespace Kbis {
+  /**
+   * A member (person or entity) associated with the company from a KBIS document.
+   */
+  export interface Member {
+    /**
+     * Unique identifier for the member.
+     */
+    id?: string;
+
+    /**
+     * Address of the member.
+     */
+    address?: string;
+
+    /**
+     * Birth date of the person (only if type = person).
+     */
+    birthday?: string;
+
+    /**
+     * Place of birth (only if type = person).
+     */
+    birthplace?: string;
+
+    /**
+     * Country of residence or registration.
+     */
+    country?: string;
+
+    /**
+     * Email address of the member.
+     */
+    email?: string;
+
+    /**
+     * First name of the person (only if type = person).
+     */
+    first_name?: string;
+
+    /**
+     * Indicates if this member is a beneficial owner.
+     */
+    is_beneficial_owner?: boolean;
+
+    /**
+     * Indicates if this member is a delegator.
+     */
+    is_delegator?: boolean;
+
+    /**
+     * Last name of the person (only if type = person).
+     */
+    last_name?: string;
+
+    /**
+     * Indicates if the member passed liveness verification.
+     */
+    liveness_verification?: boolean;
+
+    /**
+     * Name of the company (only if type = company).
+     */
+    name?: string;
+
+    /**
+     * Ownership percentage held by the member.
+     */
+    ownership_percentage?: number;
+
+    /**
+     * Phone number of the member.
+     */
+    phone_number?: string;
+
+    /**
+     * Postal code of the member's address.
+     */
+    postal_code?: string;
+
+    /**
+     * Company registration number (if type = company).
+     */
+    registration_id?: string;
+
+    /**
+     * Type of relation (e.g., shareholder, director).
+     */
+    relation?: string;
+
+    /**
+     * Roles held by the member (e.g., legal_representative or shareholder).
+     */
+    roles?: string;
+
+    /**
+     * Source of the data (e.g., gouv, user, company).
+     */
+    source?: string;
+
+    /**
+     * Current status of the member.
+     */
+    status?: string;
+
+    /**
+     * Type of entity (company or person).
+     */
+    type?: 'company' | 'person';
+
+    /**
+     * Workspace identifier for internal tracking.
+     */
+    workspace_id?: string;
+  }
+}
+
 export interface DocumentUploadParams {
   /**
    * Filter by document type for upload (must be one of the allowed values)
@@ -223,6 +420,7 @@ export declare namespace Documents {
   export {
     type DocumentResponse as DocumentResponse,
     type GenericDocument as GenericDocument,
+    type Kbis as Kbis,
     type DocumentUploadParams as DocumentUploadParams,
   };
 }

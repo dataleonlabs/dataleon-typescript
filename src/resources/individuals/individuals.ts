@@ -3,7 +3,7 @@
 import { APIResource } from '../../core/resource';
 import * as Shared from '../shared';
 import * as DocumentsAPI from './documents';
-import { DocumentResponse, DocumentUploadParams, Documents, GenericDocument } from './documents';
+import { DocumentResponse, DocumentUploadParams, Documents, GenericDocument, Kbis } from './documents';
 import { APIPromise } from '../../core/api-promise';
 import { buildHeaders } from '../../internal/headers';
 import { RequestOptions } from '../../internal/request-options';
@@ -827,6 +827,7 @@ export declare namespace Individuals {
     Documents as Documents,
     type DocumentResponse as DocumentResponse,
     type GenericDocument as GenericDocument,
+    type Kbis as Kbis,
     type DocumentUploadParams as DocumentUploadParams,
   };
 }
