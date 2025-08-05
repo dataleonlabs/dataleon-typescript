@@ -3,12 +3,10 @@
 import { APIResource } from '../../core/resource';
 import * as Shared from '../shared';
 import * as DocumentsAPI from './documents';
-import { DocumentUploadParams, Documents } from './documents';
+import { Documents } from './documents';
 import * as IndividualsDocumentsAPI from '../individuals/documents';
 import { APIPromise } from '../../core/api-promise';
-import { buildHeaders } from '../../internal/headers';
 import { RequestOptions } from '../../internal/request-options';
-import { path } from '../../internal/utils/path';
 
 export class Companies extends APIResource {
   documents: DocumentsAPI.Documents = new DocumentsAPI.Documents(this._client);
@@ -29,46 +27,6 @@ export class Companies extends APIResource {
   }
 
   /**
-   * Get a company by ID
-   *
-   * @example
-   * ```ts
-   * const companyRegistration = await client.companies.retrieve(
-   *   'company_id',
-   * );
-   * ```
-   */
-  retrieve(
-    companyID: string,
-    query: CompanyRetrieveParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<CompanyRegistration> {
-    return this._client.get(path`/companies/${companyID}`, { query, ...options });
-  }
-
-  /**
-   * Update a company by ID
-   *
-   * @example
-   * ```ts
-   * const companyRegistration = await client.companies.update(
-   *   'company_id',
-   *   {
-   *     company: { name: 'ACME Corp' },
-   *     workspace_id: 'wk_123',
-   *   },
-   * );
-   * ```
-   */
-  update(
-    companyID: string,
-    body: CompanyUpdateParams,
-    options?: RequestOptions,
-  ): APIPromise<CompanyRegistration> {
-    return this._client.put(path`/companies/${companyID}`, { body, ...options });
-  }
-
-  /**
    * Get all companies
    *
    * @example
@@ -81,21 +39,6 @@ export class Companies extends APIResource {
     options?: RequestOptions,
   ): APIPromise<CompanyListResponse> {
     return this._client.get('/companies', { query, ...options });
-  }
-
-  /**
-   * Delete a company by ID
-   *
-   * @example
-   * ```ts
-   * await client.companies.delete('company_id');
-   * ```
-   */
-  delete(companyID: string, options?: RequestOptions): APIPromise<void> {
-    return this._client.delete(path`/companies/${companyID}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-    });
   }
 }
 
@@ -255,11 +198,6 @@ export namespace CompanyRegistration {
     commercial_name?: string;
 
     /**
-     * Contact information for the company, including email, phone number, and address.
-     */
-    contact?: Company.Contact;
-
-    /**
      * Country code where the company is registered.
      */
     country?: string;
@@ -323,38 +261,6 @@ export namespace CompanyRegistration {
      * Official website URL of the company.
      */
     website_url?: string;
-  }
-
-  export namespace Company {
-    /**
-     * Contact information for the company, including email, phone number, and address.
-     */
-    export interface Contact {
-      /**
-       * Department of the contact person.
-       */
-      department?: string;
-
-      /**
-       * Email address of the contact person.
-       */
-      email?: string;
-
-      /**
-       * First name of the contact person.
-       */
-      first_name?: string;
-
-      /**
-       * Last name of the contact person.
-       */
-      last_name?: string;
-
-      /**
-       * Phone number of the contact person.
-       */
-      phone_number?: string;
-    }
   }
 
   /**
@@ -610,11 +516,6 @@ export namespace CompanyRegistration {
     qr_code?: string;
 
     /**
-     * Flag indicating whether to include raw data in the response.
-     */
-    raw_data?: boolean;
-
-    /**
      * Timestamp when the request or process was rejected; null if not rejected.
      */
     rejected_at?: string | null;
@@ -760,153 +661,6 @@ export namespace CompanyCreateParams {
      * Preferred language for responses or notifications (e.g., "eng", "fra").
      */
     language?: string;
-
-    /**
-     * Flag indicating whether to include raw data in the response.
-     */
-    raw_data?: boolean;
-  }
-}
-
-export interface CompanyRetrieveParams {
-  /**
-   * Include document signed url
-   */
-  document?: boolean;
-
-  /**
-   * Scope filter (id or scope)
-   */
-  scope?: string;
-}
-
-export interface CompanyUpdateParams {
-  /**
-   * Main information about the company being registered.
-   */
-  company: CompanyUpdateParams.Company;
-
-  /**
-   * Unique identifier of the workspace in which the company is being created.
-   */
-  workspace_id: string;
-
-  /**
-   * Optional identifier to track the origin of the request or integration from your
-   * system.
-   */
-  source_id?: string;
-
-  /**
-   * Technical metadata and callback configuration.
-   */
-  technical_data?: CompanyUpdateParams.TechnicalData;
-}
-
-export namespace CompanyUpdateParams {
-  /**
-   * Main information about the company being registered.
-   */
-  export interface Company {
-    /**
-     * Legal name of the company.
-     */
-    name: string;
-
-    /**
-     * Registered address of the company.
-     */
-    address?: string;
-
-    /**
-     * Commercial or trade name of the company, if different from the legal name.
-     */
-    commercial_name?: string;
-
-    /**
-     * ISO 3166-1 alpha-2 country code of company registration (e.g., "FR" for France).
-     */
-    country?: string;
-
-    /**
-     * Contact email address for the company.
-     */
-    email?: string;
-
-    /**
-     * Employer Identification Number (EIN) or equivalent.
-     */
-    employer_identification_number?: string;
-
-    /**
-     * Legal structure of the company (e.g., SARL, SAS).
-     */
-    legal_form?: string;
-
-    /**
-     * Contact phone number for the company.
-     */
-    phone_number?: string;
-
-    /**
-     * Date of official company registration in YYYY-MM-DD format.
-     */
-    registration_date?: string;
-
-    /**
-     * Official company registration identifier.
-     */
-    registration_id?: string;
-
-    /**
-     * Declared share capital of the company, usually in euros.
-     */
-    share_capital?: string;
-
-    /**
-     * Current status of the company (e.g., active, inactive).
-     */
-    status?: string;
-
-    /**
-     * National tax identifier (e.g., VAT or TIN).
-     */
-    tax_identification_number?: string;
-
-    /**
-     * Type of company, such as "main" or "affiliated".
-     */
-    type?: string;
-
-    /**
-     * Company’s official website URL.
-     */
-    website_url?: string;
-  }
-
-  /**
-   * Technical metadata and callback configuration.
-   */
-  export interface TechnicalData {
-    /**
-     * URL to receive a callback once the company is processed.
-     */
-    callback_url?: string;
-
-    /**
-     * URL to receive notifications about the processing state and status.
-     */
-    callback_url_notification?: string;
-
-    /**
-     * Preferred language for responses or notifications (e.g., "eng", "fra").
-     */
-    language?: string;
-
-    /**
-     * Flag indicating whether to include raw data in the response.
-     */
-    raw_data?: boolean;
   }
 }
 
@@ -968,10 +722,8 @@ export declare namespace Companies {
     type CompanyRegistration as CompanyRegistration,
     type CompanyListResponse as CompanyListResponse,
     type CompanyCreateParams as CompanyCreateParams,
-    type CompanyRetrieveParams as CompanyRetrieveParams,
-    type CompanyUpdateParams as CompanyUpdateParams,
     type CompanyListParams as CompanyListParams,
   };
 
-  export { Documents as Documents, type DocumentUploadParams as DocumentUploadParams };
+  export { Documents as Documents };
 }
