@@ -3,11 +3,9 @@
 import { APIResource } from '../../core/resource';
 import * as Shared from '../shared';
 import * as DocumentsAPI from './documents';
-import { DocumentResponse, DocumentUploadParams, Documents, GenericDocument } from './documents';
+import { DocumentResponse, Documents, GenericDocument } from './documents';
 import { APIPromise } from '../../core/api-promise';
-import { buildHeaders } from '../../internal/headers';
 import { RequestOptions } from '../../internal/request-options';
-import { path } from '../../internal/utils/path';
 
 export class Individuals extends APIResource {
   documents: DocumentsAPI.Documents = new DocumentsAPI.Documents(this._client);
@@ -27,43 +25,6 @@ export class Individuals extends APIResource {
   }
 
   /**
-   * Get an individual by ID
-   *
-   * @example
-   * ```ts
-   * const individual = await client.individuals.retrieve(
-   *   'individual_id',
-   * );
-   * ```
-   */
-  retrieve(
-    individualID: string,
-    query: IndividualRetrieveParams | null | undefined = {},
-    options?: RequestOptions,
-  ): APIPromise<Individual> {
-    return this._client.get(path`/individuals/${individualID}`, { query, ...options });
-  }
-
-  /**
-   * Update an individual by ID
-   *
-   * @example
-   * ```ts
-   * const individual = await client.individuals.update(
-   *   'individual_id',
-   *   { workspace_id: 'wk_123' },
-   * );
-   * ```
-   */
-  update(
-    individualID: string,
-    body: IndividualUpdateParams,
-    options?: RequestOptions,
-  ): APIPromise<Individual> {
-    return this._client.put(path`/individuals/${individualID}`, { body, ...options });
-  }
-
-  /**
    * Get all individuals
    *
    * @example
@@ -76,21 +37,6 @@ export class Individuals extends APIResource {
     options?: RequestOptions,
   ): APIPromise<IndividualListResponse> {
     return this._client.get('/individuals', { query, ...options });
-  }
-
-  /**
-   * Delete an individual by ID
-   *
-   * @example
-   * ```ts
-   * await client.individuals.delete('individual_id');
-   * ```
-   */
-  delete(individualID: string, options?: RequestOptions): APIPromise<void> {
-    return this._client.delete(path`/individuals/${individualID}`, {
-      ...options,
-      headers: buildHeaders([{ Accept: '*/*' }, options?.headers]),
-    });
   }
 }
 
@@ -540,11 +486,6 @@ export namespace Individual {
     qr_code?: string;
 
     /**
-     * Flag indicating whether to include raw data in the response.
-     */
-    raw_data?: boolean;
-
-    /**
      * Timestamp when the request or process was rejected; null if not rejected.
      */
     rejected_at?: string | null;
@@ -650,113 +591,6 @@ export namespace IndividualCreateParams {
      * Preferred language for communication (e.g., "eng", "fra").
      */
     language?: string;
-
-    /**
-     * Flag indicating whether to include raw data in the response.
-     */
-    raw_data?: boolean;
-  }
-}
-
-export interface IndividualRetrieveParams {
-  /**
-   * Include document information
-   */
-  document?: boolean;
-
-  /**
-   * Scope filter (id or scope)
-   */
-  scope?: string;
-}
-
-export interface IndividualUpdateParams {
-  /**
-   * Unique identifier of the workspace where the individual is being registered.
-   */
-  workspace_id: string;
-
-  /**
-   * Personal information about the individual.
-   */
-  person?: IndividualUpdateParams.Person;
-
-  /**
-   * Optional identifier for tracking the source system or integration from your
-   * system.
-   */
-  source_id?: string;
-
-  /**
-   * Technical metadata related to the request or processing.
-   */
-  technical_data?: IndividualUpdateParams.TechnicalData;
-}
-
-export namespace IndividualUpdateParams {
-  /**
-   * Personal information about the individual.
-   */
-  export interface Person {
-    /**
-     * Date of birth in DD/MM/YYYY format.
-     */
-    birthday?: string;
-
-    /**
-     * Email address of the individual.
-     */
-    email?: string;
-
-    /**
-     * First name of the individual.
-     */
-    first_name?: string;
-
-    /**
-     * Gender of the individual (M for male, F for female).
-     */
-    gender?: 'M' | 'F';
-
-    /**
-     * Last name (family name) of the individual.
-     */
-    last_name?: string;
-
-    /**
-     * Maiden name, if applicable.
-     */
-    maiden_name?: string;
-
-    /**
-     * Phone number of the individual.
-     */
-    phone_number?: string;
-  }
-
-  /**
-   * Technical metadata related to the request or processing.
-   */
-  export interface TechnicalData {
-    /**
-     * URL to call back upon completion of processing.
-     */
-    callback_url?: string;
-
-    /**
-     * URL for receive notifications about the processing state or status.
-     */
-    callback_url_notification?: string;
-
-    /**
-     * Preferred language for communication (e.g., "eng", "fra").
-     */
-    language?: string;
-
-    /**
-     * Flag indicating whether to include raw data in the response.
-     */
-    raw_data?: boolean;
   }
 }
 
@@ -818,8 +652,6 @@ export declare namespace Individuals {
     type Individual as Individual,
     type IndividualListResponse as IndividualListResponse,
     type IndividualCreateParams as IndividualCreateParams,
-    type IndividualRetrieveParams as IndividualRetrieveParams,
-    type IndividualUpdateParams as IndividualUpdateParams,
     type IndividualListParams as IndividualListParams,
   };
 
@@ -827,6 +659,5 @@ export declare namespace Individuals {
     Documents as Documents,
     type DocumentResponse as DocumentResponse,
     type GenericDocument as GenericDocument,
-    type DocumentUploadParams as DocumentUploadParams,
   };
 }
