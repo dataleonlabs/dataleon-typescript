@@ -79,10 +79,6 @@ export const tool: Tool = {
             type: 'string',
             description: 'Preferred language for communication (e.g., "eng", "fra").',
           },
-          raw_data: {
-            type: 'boolean',
-            description: 'Flag indicating whether to include raw data in the response.',
-          },
         },
       },
     },
