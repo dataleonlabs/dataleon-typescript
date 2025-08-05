@@ -9,17 +9,20 @@ export const metadata: Metadata = {
   resource: 'companies',
   operation: 'write',
   tags: [],
-  httpMethod: 'post',
-  httpPath: '/companies',
-  operationId: 'createCompany',
+  httpMethod: 'put',
+  httpPath: '/companies/{company_id}',
+  operationId: 'updateCompany',
 };
 
 export const tool: Tool = {
-  name: 'create_companies',
-  description: 'Create a new company',
+  name: 'update_companies',
+  description: 'Update a company by ID',
   inputSchema: {
     type: 'object',
     properties: {
+      company_id: {
+        type: 'string',
+      },
       company: {
         type: 'object',
         description: 'Main information about the company being registered.',
@@ -119,14 +122,16 @@ export const tool: Tool = {
         },
       },
     },
-    required: ['company', 'workspace_id'],
+    required: ['company_id', 'company', 'workspace_id'],
   },
-  annotations: {},
+  annotations: {
+    idempotentHint: true,
+  },
 };
 
 export const handler = async (client: Dataleon, args: Record<string, unknown> | undefined) => {
-  const body = args as any;
-  return asTextContentResult(await client.companies.create(body));
+  const { company_id, ...body } = args as any;
+  return asTextContentResult(await client.companies.update(company_id, body));
 };
 
 export default { metadata, tool, handler };

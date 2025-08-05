@@ -5,6 +5,8 @@ export {
   type CompanyRegistration,
   type CompanyListResponse,
   type CompanyCreateParams,
+  type CompanyRetrieveParams,
+  type CompanyUpdateParams,
   type CompanyListParams,
 } from './companies';
-export { Documents } from './documents';
+export { Documents, type DocumentUploadParams } from './documents';

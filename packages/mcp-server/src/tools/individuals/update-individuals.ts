@@ -9,17 +9,20 @@ export const metadata: Metadata = {
   resource: 'individuals',
   operation: 'write',
   tags: [],
-  httpMethod: 'post',
-  httpPath: '/individuals',
-  operationId: 'createIndividual',
+  httpMethod: 'put',
+  httpPath: '/individuals/{individual_id}',
+  operationId: 'updateIndividual',
 };
 
 export const tool: Tool = {
-  name: 'create_individuals',
-  description: 'Create a new individual',
+  name: 'update_individuals',
+  description: 'Update an individual by ID',
   inputSchema: {
     type: 'object',
     properties: {
+      individual_id: {
+        type: 'string',
+      },
       workspace_id: {
         type: 'string',
         description: 'Unique identifier of the workspace where the individual is being registered.',
@@ -86,14 +89,16 @@ export const tool: Tool = {
         },
       },
     },
-    required: ['workspace_id'],
+    required: ['individual_id', 'workspace_id'],
   },
-  annotations: {},
+  annotations: {
+    idempotentHint: true,
+  },
 };
 
 export const handler = async (client: Dataleon, args: Record<string, unknown> | undefined) => {
-  const body = args as any;
-  return asTextContentResult(await client.individuals.create(body));
+  const { individual_id, ...body } = args as any;
+  return asTextContentResult(await client.individuals.update(individual_id, body));
 };
 
 export default { metadata, tool, handler };
