@@ -6,6 +6,8 @@ export {
   type CompanyRegistration,
   type CompanyListResponse,
   type CompanyCreateParams,
+  type CompanyRetrieveParams,
+  type CompanyUpdateParams,
   type CompanyListParams,
 } from './companies/companies';
 export {
@@ -13,5 +15,7 @@ export {
   type Individual,
   type IndividualListResponse,
   type IndividualCreateParams,
+  type IndividualRetrieveParams,
+  type IndividualUpdateParams,
   type IndividualListParams,
 } from './individuals/individuals';

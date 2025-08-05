@@ -183,9 +183,25 @@ The following tools are available in this MCP server.
 ### Resource `individuals`:
 
 - `create_individuals` (`write`): Create a new individual
+- `retrieve_individuals` (`read`): Get an individual by ID
+- `update_individuals` (`write`): Update an individual by ID
 - `list_individuals` (`read`): Get all individuals
+- `delete_individuals` (`write`): Delete an individual by ID
+
+### Resource `individuals.documents`:
+
+- `list_individuals_documents` (`read`): Get documents to an individuals
+- `upload_individuals_documents` (`write`): Upload documents to an individual
 
 ### Resource `companies`:
 
 - `create_companies` (`write`): Create a new company
+- `retrieve_companies` (`read`): Get a company by ID
+- `update_companies` (`write`): Update a company by ID
 - `list_companies` (`read`): Get all companies
+- `delete_companies` (`write`): Delete a company by ID
+
+### Resource `companies.documents`:
+
+- `list_companies_documents` (`read`): Get documents to an company
+- `upload_companies_documents` (`write`): Upload documents to an company
