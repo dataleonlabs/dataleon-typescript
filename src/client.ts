@@ -22,12 +22,16 @@ import {
   CompanyListParams,
   CompanyListResponse,
   CompanyRegistration,
+  CompanyRetrieveParams,
+  CompanyUpdateParams,
 } from './resources/companies/companies';
 import {
   Individual,
   IndividualCreateParams,
   IndividualListParams,
   IndividualListResponse,
+  IndividualRetrieveParams,
+  IndividualUpdateParams,
   Individuals,
 } from './resources/individuals/individuals';
 import { type Fetch } from './internal/builtin-types';
@@ -741,6 +745,8 @@ export declare namespace Dataleon {
     type Individual as Individual,
     type IndividualListResponse as IndividualListResponse,
     type IndividualCreateParams as IndividualCreateParams,
+    type IndividualRetrieveParams as IndividualRetrieveParams,
+    type IndividualUpdateParams as IndividualUpdateParams,
     type IndividualListParams as IndividualListParams,
   };
 
@@ -749,6 +755,8 @@ export declare namespace Dataleon {
     type CompanyRegistration as CompanyRegistration,
     type CompanyListResponse as CompanyListResponse,
     type CompanyCreateParams as CompanyCreateParams,
+    type CompanyRetrieveParams as CompanyRetrieveParams,
+    type CompanyUpdateParams as CompanyUpdateParams,
     type CompanyListParams as CompanyListParams,
   };
 
