@@ -1,4 +1,4 @@
 configured_endpoints: 14
-openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/dataleon%2Fdataleon-9019d49ebabf9050026721937ac7066d94368c945f040764c79ce8f22db8523e.yml
-openapi_spec_hash: cc05d216747e92e1be80ba5c0d144720
-config_hash: 26d15cc53715429fdd014ffd053bd090
+openapi_spec_url: https://storage.googleapis.com/stainless-sdk-openapi-specs/dataleon%2Fdataleon-a5d5cbc62213a9a40211c72dcd8571c057242b28c39ca22398befb9430cde4e3.yml
+openapi_spec_hash: 402768abef5ae51648267ab0301ffd3a
+config_hash: ce73e9616e8c03c36e84159da8f84ec5
