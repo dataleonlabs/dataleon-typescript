@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.0.1-alpha.2 (2025-08-08)
+
+Full Changelog: [v0.0.1-alpha.1...v0.0.1-alpha.2](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.0.1-alpha.1...v0.0.1-alpha.2)
+
+### Features
+
+* **mcp:** add unix socket option for remote MCP ([14bae7c](https://github.com/dataleonlabs/dataleon-typescript/commit/14bae7c7ea0cd86d963cf86150c9764abfa02bf7))
+
+
+### Chores
+
+* **internal:** move publish config ([f8f11fc](https://github.com/dataleonlabs/dataleon-typescript/commit/f8f11fc813a5bcc2c5bf003c0f7756b57a80e255))
+* **mcp:** refactor streamable http transport ([4127bc0](https://github.com/dataleonlabs/dataleon-typescript/commit/4127bc0b6ab5589a79ade674abc1af2fff3435b8))
+
 ## 0.0.1-alpha.1 (2025-08-05)
 
 Full Changelog: [v0.0.1-alpha.0...v0.0.1-alpha.1](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.0.1-alpha.0...v0.0.1-alpha.1)
