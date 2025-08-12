@@ -8,7 +8,7 @@ const client = new Dataleon({
 });
 
 describe('resource documents', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.companies.documents.list('company_id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource documents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('upload: only required params', async () => {
     const responsePromise = client.companies.documents.upload('company_id', {
       document_type: 'bank_statements',
@@ -34,7 +34,7 @@ describe('resource documents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('upload: required and optional params', async () => {
     const response = await client.companies.documents.upload('company_id', {
       document_type: 'bank_statements',
