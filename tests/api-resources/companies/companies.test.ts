@@ -8,7 +8,7 @@ const client = new Dataleon({
 });
 
 describe('resource companies', () => {
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.companies.create({
       company: { name: 'ACME Corp' },
@@ -23,7 +23,7 @@ describe('resource companies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.companies.create({
       company: {
@@ -54,7 +54,7 @@ describe('resource companies', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.companies.retrieve('company_id');
     const rawResponse = await responsePromise.asResponse();
@@ -66,7 +66,7 @@ describe('resource companies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -78,7 +78,7 @@ describe('resource companies', () => {
     ).rejects.toThrow(Dataleon.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.companies.update('company_id', {
       company: { name: 'ACME Corp' },
@@ -93,7 +93,7 @@ describe('resource companies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.companies.update('company_id', {
       company: {
@@ -124,7 +124,7 @@ describe('resource companies', () => {
     });
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.companies.list();
     const rawResponse = await responsePromise.asResponse();
@@ -136,7 +136,7 @@ describe('resource companies', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -156,7 +156,7 @@ describe('resource companies', () => {
     ).rejects.toThrow(Dataleon.NotFoundError);
   });
 
-  // skipped: tests are disabled for the time being
+  // Prism tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.companies.delete('company_id');
     const rawResponse = await responsePromise.asResponse();
