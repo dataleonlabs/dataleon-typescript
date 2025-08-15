@@ -1,5 +1,29 @@
 # Changelog
 
+## 0.0.1-alpha.2 (2025-08-15)
+
+Full Changelog: [v0.0.1-alpha.1...v0.0.1-alpha.2](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.0.1-alpha.1...v0.0.1-alpha.2)
+
+### Features
+
+* **mcp:** add unix socket option for remote MCP ([14bae7c](https://github.com/dataleonlabs/dataleon-typescript/commit/14bae7c7ea0cd86d963cf86150c9764abfa02bf7))
+
+
+### Bug Fixes
+
+* **mcp:** generate additionalProperties=true for map schemas to avoid validation issues ([a2edec1](https://github.com/dataleonlabs/dataleon-typescript/commit/a2edec1817d78abfe81b77487a5d720a68398d57))
+
+
+### Chores
+
+* **internal:** codegen related update ([c476cb5](https://github.com/dataleonlabs/dataleon-typescript/commit/c476cb582d34759c286712fd4616f09a0336a952))
+* **internal:** move publish config ([f8f11fc](https://github.com/dataleonlabs/dataleon-typescript/commit/f8f11fc813a5bcc2c5bf003c0f7756b57a80e255))
+* **internal:** update comment in script ([077f80e](https://github.com/dataleonlabs/dataleon-typescript/commit/077f80e8829db1000ccb5626f88f73f021b0c2e7))
+* **mcp:** document remote server in README.md ([6b57959](https://github.com/dataleonlabs/dataleon-typescript/commit/6b57959b1897e989cc04e586ebccf6208654611e))
+* **mcp:** minor cleanup of types and package.json ([81f91c4](https://github.com/dataleonlabs/dataleon-typescript/commit/81f91c490baaf4cdb71e326f422876ba3fb0b8a1))
+* **mcp:** refactor streamable http transport ([4127bc0](https://github.com/dataleonlabs/dataleon-typescript/commit/4127bc0b6ab5589a79ade674abc1af2fff3435b8))
+* update @stainless-api/prism-cli to v5.15.0 ([85476d2](https://github.com/dataleonlabs/dataleon-typescript/commit/85476d2dadf3c959bbf42ecc5fc7859dd5b7fa0a))
+
 ## 0.0.1-alpha.1 (2025-08-05)
 
 Full Changelog: [v0.0.1-alpha.0...v0.0.1-alpha.1](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.0.1-alpha.0...v0.0.1-alpha.1)
