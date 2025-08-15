@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-08-15)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Features
+
+* **api:** api update ([dc4502f](https://github.com/dataleonlabs/dataleon-typescript/commit/dc4502f354e7e195256dc6d323921a6e1d08d9c1))
+
 ## 0.1.0-alpha.1 (2025-08-15)
 
 Full Changelog: [v0.0.1-alpha.2...v0.1.0-alpha.1](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.0.1-alpha.2...v0.1.0-alpha.1)
