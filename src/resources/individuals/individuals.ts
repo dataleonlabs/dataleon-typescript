@@ -550,6 +550,11 @@ export namespace Individual {
     rejected_at?: string | null;
 
     /**
+     * Duration of the user session in seconds.
+     */
+    session_duration?: number;
+
+    /**
      * Timestamp when the process started.
      */
     started_at?: string;
