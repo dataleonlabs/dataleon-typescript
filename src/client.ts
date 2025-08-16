@@ -735,8 +735,10 @@ export class Dataleon {
   individuals: API.Individuals = new API.Individuals(this);
   companies: API.Companies = new API.Companies(this);
 }
+
 Dataleon.Individuals = Individuals;
 Dataleon.Companies = Companies;
+
 export declare namespace Dataleon {
   export type RequestOptions = Opts.RequestOptions;
 
