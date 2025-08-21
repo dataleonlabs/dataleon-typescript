@@ -250,6 +250,11 @@ export namespace CompanyRegistration {
     address?: string;
 
     /**
+     * Closure date of the company, if applicable.
+     */
+    closure_date?: string;
+
+    /**
      * Trade or commercial name of the company.
      */
     commercial_name?: string;
@@ -270,9 +275,24 @@ export namespace CompanyRegistration {
     email?: string;
 
     /**
+     * Number of employees in the company.
+     */
+    employees?: number;
+
+    /**
      * Employer Identification Number (EIN) or equivalent.
      */
     employer_identification_number?: string;
+
+    /**
+     * Indicates whether an insolvency procedure exists for the company.
+     */
+    insolvency_exists?: boolean;
+
+    /**
+     * Indicates whether an insolvency procedure is ongoing for the company.
+     */
+    insolvency_ongoing?: boolean;
 
     /**
      * Legal form or structure of the company (e.g., LLC, SARL).
@@ -618,6 +638,11 @@ export namespace CompanyRegistration {
      * Timestamp when the request or process was rejected; null if not rejected.
      */
     rejected_at?: string | null;
+
+    /**
+     * Duration of the user session in seconds.
+     */
+    session_duration?: number;
 
     /**
      * Timestamp when the process started.
