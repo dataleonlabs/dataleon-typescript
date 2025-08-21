@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.3 (2025-08-21)
+
+Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
+
+### Features
+
+* **api:** api update ([773a264](https://github.com/dataleonlabs/dataleon-typescript/commit/773a2643ee69957bd229dcf2b4fa4ba093d823b1))
+* **mcp:** add code execution tool ([eaed228](https://github.com/dataleonlabs/dataleon-typescript/commit/eaed228bf1cdead464bc7a1fff6a087023802cbe))
+* **mcp:** add option to infer mcp client ([477d273](https://github.com/dataleonlabs/dataleon-typescript/commit/477d273096ace1da0b8b660d48dad794dc099d51))
+* **mcp:** parse query string as mcp client options in mcp server ([a65b203](https://github.com/dataleonlabs/dataleon-typescript/commit/a65b203e29940d9609db412e9a904a6dc605c051))
+
+
+### Chores
+
+* **deps:** update dependency @types/node to v20.17.58 ([4552911](https://github.com/dataleonlabs/dataleon-typescript/commit/455291102ec6ab617154ec51484b2ecd82b0ac03))
+* **internal:** formatting change ([b09472a](https://github.com/dataleonlabs/dataleon-typescript/commit/b09472a67f5c920796d36203554052249b5985b1))
+* **internal:** make mcp-server publishing public by defaut ([99a090d](https://github.com/dataleonlabs/dataleon-typescript/commit/99a090d4d36faebd813d823cc22e5f0efda8dd84))
+* **internal:** refactor array check ([9f04d7f](https://github.com/dataleonlabs/dataleon-typescript/commit/9f04d7ffa69d0d6df0457a96d274cc3de2904612))
+* **mcp:** add cors to oauth metadata route ([3c7afac](https://github.com/dataleonlabs/dataleon-typescript/commit/3c7afac98d8817da34c819341bdf38d170538a5f))
+* **mcp:** update README ([a653faf](https://github.com/dataleonlabs/dataleon-typescript/commit/a653faf76e81dad8bed1b4e7ee9364e88a47b51f))
+
 ## 0.1.0-alpha.2 (2025-08-15)
 
 Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
