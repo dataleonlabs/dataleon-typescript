@@ -100,6 +100,11 @@ export const tool: Tool = {
         type: 'object',
         description: 'Technical metadata and callback configuration.',
         properties: {
+          active_aml_suspicions: {
+            type: 'boolean',
+            description:
+              'Flag indicating whether there are active research AML (Anti-Money Laundering) suspicions for the company when you apply for a new entry or get an existing one.',
+          },
           callback_url: {
             type: 'string',
             description: 'URL to receive a callback once the company is processed.',
