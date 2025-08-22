@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.4 (2025-08-22)
+
+Full Changelog: [v0.1.0-alpha.3...v0.1.0-alpha.4](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.3...v0.1.0-alpha.4)
+
+### Features
+
+* **api:** api update ([9a662bb](https://github.com/dataleonlabs/dataleon-typescript/commit/9a662bb668b29b5064ebad2d5df8f958aa91804a))
+
+
+### Chores
+
+* add package to package.json ([5f56759](https://github.com/dataleonlabs/dataleon-typescript/commit/5f56759f0862d055ef02577b66e18479887e2241))
+* **client:** qualify global Blob ([e03f902](https://github.com/dataleonlabs/dataleon-typescript/commit/e03f90213eb58f573504ca76e4b2e8748616eabd))
+* **internal:** codegen related update ([b3d3382](https://github.com/dataleonlabs/dataleon-typescript/commit/b3d338282224ef2d59311f0fd51094d5e6386505))
+* **mcp:** update package.json ([fb873c8](https://github.com/dataleonlabs/dataleon-typescript/commit/fb873c8eb63c373d5b813247b524942c3c18227c))
+* **mcp:** update types ([ded4e37](https://github.com/dataleonlabs/dataleon-typescript/commit/ded4e377c3fa70bdc677fe5571bfd3cec424fdff))
+
 ## 0.1.0-alpha.3 (2025-08-21)
 
 Full Changelog: [v0.1.0-alpha.2...v0.1.0-alpha.3](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.2...v0.1.0-alpha.3)
