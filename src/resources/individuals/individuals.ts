@@ -216,9 +216,14 @@ export namespace Individual {
     caption?: string;
 
     /**
-     * Indicates whether this suspicion has been manually reviewed or confirmed.
+     * Country associated with the suspicion (ISO 3166-1 alpha-2 code).
      */
-    checked?: boolean;
+    country?: string;
+
+    /**
+     * Gender associated with the suspicion, if applicable.
+     */
+    gender?: string;
 
     /**
      * Nature of the relationship between the entity and the suspicious activity (e.g.,
@@ -232,20 +237,26 @@ export namespace Individual {
     schema?: string;
 
     /**
-     * Risk score between 0.0 and 1.0 indicating the severity of the suspicion.
+     * Risk score between 0.0 and 0.85 indicating the severity of the suspicion.
      */
     score?: number;
 
     /**
-     * URL identifying the source system or service providing this suspicion.
+     * Source system or service providing this suspicion.
      */
     source?: string;
 
     /**
-     * Watchlist category associated with the suspicion. Possible values include
-     * Watchlist types like "PEP", "Sanctions", "RiskyEntity", or "Crime".
+     * Status of the suspicion review process. Possible values: "true_positive",
+     * "false_positive", "pending".
      */
-    type?: 'Watchlist' | 'PEP' | 'Sanctions' | 'RiskyEntity' | 'Crime';
+    status?: 'true_positive' | 'false_positive' | 'pending';
+
+    /**
+     * Category of the suspicion. Possible values: "crime", "sanction", "pep",
+     * "adverse_news", "other".
+     */
+    type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other';
   }
 
   /**
