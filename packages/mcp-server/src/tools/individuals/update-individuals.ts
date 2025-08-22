@@ -70,6 +70,11 @@ export const tool: Tool = {
         type: 'object',
         description: 'Technical metadata related to the request or processing.',
         properties: {
+          active_aml_suspicions: {
+            type: 'boolean',
+            description:
+              'Flag indicating whether there are active research AML (Anti-Money Laundering) suspicions for the individual when you apply for a new entry or get an existing one.',
+          },
           callback_url: {
             type: 'string',
             description: 'URL to call back upon completion of processing.',

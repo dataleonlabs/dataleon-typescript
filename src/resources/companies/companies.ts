@@ -571,6 +571,12 @@ export namespace CompanyRegistration {
    */
   export interface TechnicalData {
     /**
+     * Flag indicating whether there are active research AML (Anti-Money Laundering)
+     * suspicions for the object when you apply for a new entry or get an existing one.
+     */
+    active_aml_suspicions?: boolean;
+
+    /**
      * Version number of the API used.
      */
     api_version?: number;
@@ -783,6 +789,13 @@ export namespace CompanyCreateParams {
    */
   export interface TechnicalData {
     /**
+     * Flag indicating whether there are active research AML (Anti-Money Laundering)
+     * suspicions for the company when you apply for a new entry or get an existing
+     * one.
+     */
+    active_aml_suspicions?: boolean;
+
+    /**
      * URL to receive a callback once the company is processed.
      */
     callback_url?: string;
@@ -924,6 +937,13 @@ export namespace CompanyUpdateParams {
    * Technical metadata and callback configuration.
    */
   export interface TechnicalData {
+    /**
+     * Flag indicating whether there are active research AML (Anti-Money Laundering)
+     * suspicions for the company when you apply for a new entry or get an existing
+     * one.
+     */
+    active_aml_suspicions?: boolean;
+
     /**
      * URL to receive a callback once the company is processed.
      */

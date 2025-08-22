@@ -481,6 +481,12 @@ export namespace Individual {
    */
   export interface TechnicalData {
     /**
+     * Flag indicating whether there are active research AML (Anti-Money Laundering)
+     * suspicions for the object when you apply for a new entry or get an existing one.
+     */
+    active_aml_suspicions?: boolean;
+
+    /**
      * Version number of the API used.
      */
     api_version?: number;
@@ -653,6 +659,13 @@ export namespace IndividualCreateParams {
    */
   export interface TechnicalData {
     /**
+     * Flag indicating whether there are active research AML (Anti-Money Laundering)
+     * suspicions for the individual when you apply for a new entry or get an existing
+     * one.
+     */
+    active_aml_suspicions?: boolean;
+
+    /**
      * URL to call back upon completion of processing.
      */
     callback_url?: string;
@@ -754,6 +767,13 @@ export namespace IndividualUpdateParams {
    * Technical metadata related to the request or processing.
    */
   export interface TechnicalData {
+    /**
+     * Flag indicating whether there are active research AML (Anti-Money Laundering)
+     * suspicions for the individual when you apply for a new entry or get an existing
+     * one.
+     */
+    active_aml_suspicions?: boolean;
+
     /**
      * URL to call back upon completion of processing.
      */
