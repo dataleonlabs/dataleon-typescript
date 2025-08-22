@@ -207,7 +207,7 @@ export namespace CompanyRegistration {
     schema?: string;
 
     /**
-     * Risk score between 0.0 and 0.85 indicating the severity of the suspicion.
+     * Risk score between 0.0 and 1 indicating the severity of the suspicion.
      */
     score?: number;
 
