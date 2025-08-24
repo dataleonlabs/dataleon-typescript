@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.0-alpha.7 (2025-08-24)
+
+Full Changelog: [v0.1.0-alpha.6...v0.1.0-alpha.7](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.6...v0.1.0-alpha.7)
+
+### Chores
+
+* **internal:** codegen related update ([265553f](https://github.com/dataleonlabs/dataleon-typescript/commit/265553f88910e8c069f4b2259574298689a27d0a))
+* update CI script ([802be2e](https://github.com/dataleonlabs/dataleon-typescript/commit/802be2ef2519976e1fc08f9f0065d7f41a51cd08))
+
 ## 0.1.0-alpha.6 (2025-08-22)
 
 Full Changelog: [v0.1.0-alpha.5...v0.1.0-alpha.6](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.5...v0.1.0-alpha.6)
