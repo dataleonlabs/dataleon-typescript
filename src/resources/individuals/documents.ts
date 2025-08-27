@@ -30,7 +30,7 @@ export class Documents extends APIResource {
    * const genericDocument =
    *   await client.individuals.documents.upload(
    *     'individual_id',
-   *     { document_type: 'bank_statements' },
+   *     { document_type: 'liasse_fiscale' },
    *   );
    * ```
    */
@@ -390,20 +390,39 @@ export interface DocumentUploadParams {
    * Filter by document type for upload (must be one of the allowed values)
    */
   document_type:
-    | 'bank_statements'
     | 'liasse_fiscale'
     | 'amortised_loan_schedule'
-    | 'accounting'
     | 'invoice'
     | 'receipt'
     | 'company_statuts'
+    | 'registration_company_certificate'
+    | 'kbis'
     | 'rib'
     | 'livret_famille'
+    | 'birth_certificate'
     | 'payslip'
+    | 'social_security_card'
+    | 'vehicle_registration_certificate'
     | 'carte_grise'
-    | 'proof_address'
+    | 'criminal_record_extract'
+    | 'proof_of_address'
+    | 'identity_card_front'
+    | 'identity_card_back'
+    | 'driver_license_front'
+    | 'driver_license_back'
     | 'identity_document'
-    | 'tax';
+    | 'driver_license'
+    | 'passport'
+    | 'tax'
+    | 'certificate_of_incorporation'
+    | 'certificate_of_good_standing'
+    | 'lcb_ft_lab_aml_policies'
+    | 'niu_entreprise'
+    | 'financial_statements'
+    | 'rccm'
+    | 'proof_of_source_funds'
+    | 'organizational_chart'
+    | 'risk_policies';
 
   /**
    * File to upload (required)

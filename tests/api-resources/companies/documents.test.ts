@@ -23,7 +23,7 @@ describe('resource documents', () => {
   // Prism tests are disabled
   test.skip('upload: only required params', async () => {
     const responsePromise = client.companies.documents.upload('company_id', {
-      document_type: 'bank_statements',
+      document_type: 'liasse_fiscale',
     });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
@@ -37,7 +37,7 @@ describe('resource documents', () => {
   // Prism tests are disabled
   test.skip('upload: required and optional params', async () => {
     const response = await client.companies.documents.upload('company_id', {
-      document_type: 'bank_statements',
+      document_type: 'liasse_fiscale',
       file: await toFile(Buffer.from('# my file contents'), 'README.md'),
       url: 'https://example.com/sample.pdf',
     });
