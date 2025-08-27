@@ -1,6 +1,6 @@
 {
   "name": "dataleon",
-  "version": "0.1.0-alpha.8",
+  "version": "0.1.0-alpha.9",
   "description": "The official TypeScript library for the Dataleon API",
   "author": "Dataleon <support@dataleon.ai>",
   "types": "dist/index.d.ts",
