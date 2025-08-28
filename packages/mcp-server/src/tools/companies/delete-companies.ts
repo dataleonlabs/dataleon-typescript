@@ -1,9 +1,9 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Metadata, asTextContentResult } from 'dataleon-mcp/tools/types';
+import { Metadata, asTextContentResult } from '@dataleon/dataleon-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import Dataleon from 'dataleon';
+import Dataleon from '@dataleon/dataleon';
 
 export const metadata: Metadata = {
   resource: 'companies',

@@ -2,7 +2,7 @@
 
 import { dirname } from 'node:path';
 import { pathToFileURL } from 'node:url';
-import Dataleon, { ClientOptions } from 'dataleon';
+import Dataleon, { ClientOptions } from '@dataleon/dataleon';
 import { Endpoint, ContentBlock, Metadata } from './tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
