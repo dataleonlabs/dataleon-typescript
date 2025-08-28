@@ -1,4 +1,4 @@
-import { createPathTagFunction, encodeURIPath } from 'dataleon/internal/utils/path';
+import { createPathTagFunction, encodeURIPath } from '@dataleon/dataleon/internal/utils/path';
 import { inspect } from 'node:util';
 import { runInNewContext } from 'node:vm';
 

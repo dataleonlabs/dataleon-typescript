@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^dataleon-mcp$': '<rootDir>/src/index.ts',
-    '^dataleon-mcp/(.*)$': '<rootDir>/src/$1',
+    '^@dataleon/dataleon-mcp$': '<rootDir>/src/index.ts',
+    '^@dataleon/dataleon-mcp/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: ['<rootDir>/dist/'],
   testPathIgnorePatterns: ['scripts'],

@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import Dataleon, { toFile } from 'dataleon';
+import Dataleon, { toFile } from '@dataleon/dataleon';
 
 const client = new Dataleon({
   apiKey: 'My API Key',

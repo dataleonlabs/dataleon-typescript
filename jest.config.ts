@@ -7,8 +7,8 @@ const config: JestConfigWithTsJest = {
     '^.+\\.(t|j)sx?$': ['@swc/jest', { sourceMaps: 'inline' }],
   },
   moduleNameMapper: {
-    '^dataleon$': '<rootDir>/src/index.ts',
-    '^dataleon/(.*)$': '<rootDir>/src/$1',
+    '^@dataleon/dataleon$': '<rootDir>/src/index.ts',
+    '^@dataleon/dataleon/(.*)$': '<rootDir>/src/$1',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/ecosystem-tests/',

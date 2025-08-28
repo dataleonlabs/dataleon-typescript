@@ -9,8 +9,8 @@ import {
   ListToolsRequestSchema,
   Tool,
 } from '@modelcontextprotocol/sdk/types.js';
-import { ClientOptions } from 'dataleon';
-import Dataleon from 'dataleon';
+import { ClientOptions } from '@dataleon/dataleon';
+import Dataleon from '@dataleon/dataleon';
 import {
   applyCompatibilityTransformations,
   ClientCapabilities,
@@ -25,13 +25,13 @@ import { McpOptions } from './options';
 export { McpOptions } from './options';
 export { ClientType } from './compat';
 export { Filter } from './tools';
-export { ClientOptions } from 'dataleon';
+export { ClientOptions } from '@dataleon/dataleon';
 export { endpoints } from './tools';
 
 export const newMcpServer = () =>
   new McpServer(
     {
-      name: 'dataleon_api',
+      name: 'dataleon_dataleon_api',
       version: '0.1.0-alpha.9',
     },
     { capabilities: { tools: {}, logging: {} } },

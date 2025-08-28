@@ -1,5 +1,5 @@
-import { multipartFormRequestOptions, createForm } from 'dataleon/internal/uploads';
-import { toFile } from 'dataleon/core/uploads';
+import { multipartFormRequestOptions, createForm } from '@dataleon/dataleon/internal/uploads';
+import { toFile } from '@dataleon/dataleon/core/uploads';
 
 describe('form data validation', () => {
   test('valid values do not error', async () => {

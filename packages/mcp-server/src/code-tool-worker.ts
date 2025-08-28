@@ -2,7 +2,7 @@
 
 import util from 'node:util';
 import { WorkerInput, WorkerSuccess, WorkerError } from './code-tool-types';
-import { Dataleon } from 'dataleon';
+import { Dataleon } from '@dataleon/dataleon';
 
 const fetch = async (req: Request): Promise<Response> => {
   const { opts, code } = (await req.json()) as WorkerInput;

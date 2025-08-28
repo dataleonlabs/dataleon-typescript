@@ -1,10 +1,10 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { APIPromise } from 'dataleon/core/api-promise';
+import { APIPromise } from '@dataleon/dataleon/core/api-promise';
 
 import util from 'node:util';
-import Dataleon from 'dataleon';
-import { APIUserAbortError } from 'dataleon';
+import Dataleon from '@dataleon/dataleon';
+import { APIUserAbortError } from '@dataleon/dataleon';
 const defaultFetch = fetch;
 
 describe('instantiate client', () => {
