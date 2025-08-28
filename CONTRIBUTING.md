@@ -55,12 +55,12 @@ $ cd dataleon-typescript
 # With yarn
 $ yarn link
 $ cd ../my-package
-$ yarn link dataleon
+$ yarn link @dataleon/dataleon
 
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global dataleon
+$ pnpm link -—global @dataleon/dataleon
 ```
 
 ## Running tests

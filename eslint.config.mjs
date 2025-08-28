@@ -25,7 +25,7 @@ export default tseslint.config(
         {
           patterns: [
             {
-              regex: '^dataleon(/.*)?',
+              regex: '^@dataleon/dataleon(/.*)?',
               message: 'Use a relative import, not a package import.',
             },
           ],

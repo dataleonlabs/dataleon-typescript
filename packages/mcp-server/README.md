@@ -10,7 +10,7 @@ You can run the MCP Server directly via `npx`:
 
 ```sh
 export DATALEON_API_KEY="My API Key"
-npx -y dataleon-mcp@latest
+npx -y @dataleon/dataleon-mcp@latest
 ```
 
 ### Via MCP Client
@@ -23,9 +23,9 @@ For clients with a configuration JSON, it might look something like this:
 ```json
 {
   "mcpServers": {
-    "dataleon_api": {
+    "dataleon_dataleon_api": {
       "command": "npx",
-      "args": ["-y", "dataleon-mcp", "--client=claude", "--tools=all"],
+      "args": ["-y", "@dataleon/dataleon-mcp", "--client=claude", "--tools=all"],
       "env": {
         "DATALEON_API_KEY": "My API Key"
       }
@@ -140,7 +140,7 @@ A configuration JSON for this server might look like this, assuming the server i
 ```json
 {
   "mcpServers": {
-    "dataleon_api": {
+    "dataleon_dataleon_api": {
       "url": "http://localhost:3000",
       "headers": {
         "Api-Key": "My API Key"
@@ -167,10 +167,10 @@ http://localhost:3000?client=cursor&capability=tool-name-length%3D40
 
 ```js
 // Import the server, generated endpoints, or the init function
-import { server, endpoints, init } from "dataleon-mcp/server";
+import { server, endpoints, init } from "@dataleon/dataleon-mcp/server";
 
 // import a specific tool
-import createIndividuals from "dataleon-mcp/tools/individuals/create-individuals";
+import createIndividuals from "@dataleon/dataleon-mcp/tools/individuals/create-individuals";
 
 // initialize the server and all endpoints
 init({ server, endpoints });
