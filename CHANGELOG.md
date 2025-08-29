@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.11 (2025-08-29)
+
+Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
+
+### Chores
+
+* **internal:** update global Error reference ([080b814](https://github.com/dataleonlabs/dataleon-typescript/commit/080b8149e1a1b6e5defa3965a908c515725b5049))
+
 ## 0.1.0-alpha.10 (2025-08-28)
 
 Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
