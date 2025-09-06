@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.1.0-alpha.11 (2025-09-06)
+
+Full Changelog: [v0.1.0-alpha.10...v0.1.0-alpha.11](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.10...v0.1.0-alpha.11)
+
+### Features
+
+* **mcp:** allow setting logging level ([8040b9e](https://github.com/dataleonlabs/dataleon-typescript/commit/8040b9e6a4663d1cdbb0ca1323c98244ab8b8f95))
+* **mcp:** expose client options in `streamableHTTPApp` ([44b70e5](https://github.com/dataleonlabs/dataleon-typescript/commit/44b70e5f1e1d7eb03c9376299fca59211a47783c))
+
+
+### Bug Fixes
+
+* **mcp:** fix query options parsing ([8db3753](https://github.com/dataleonlabs/dataleon-typescript/commit/8db375365cf36f1bd809138a5000d69e4c624c64))
+
+
+### Chores
+
+* ci build action ([a36f68f](https://github.com/dataleonlabs/dataleon-typescript/commit/a36f68fbb6a3484b318c7d698f04108f01ad83de))
+* **internal:** codegen related update ([60bfefb](https://github.com/dataleonlabs/dataleon-typescript/commit/60bfefb86e2d5b293a061bd6d672fe20aae5e5bb))
+* **internal:** codegen related update ([7a6584c](https://github.com/dataleonlabs/dataleon-typescript/commit/7a6584cd8d0232c62a9b612e82a7d9d0add73fc3))
+* **internal:** update global Error reference ([080b814](https://github.com/dataleonlabs/dataleon-typescript/commit/080b8149e1a1b6e5defa3965a908c515725b5049))
+
 ## 0.1.0-alpha.10 (2025-08-28)
 
 Full Changelog: [v0.1.0-alpha.9...v0.1.0-alpha.10](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.9...v0.1.0-alpha.10)
