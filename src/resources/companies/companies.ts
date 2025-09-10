@@ -612,6 +612,11 @@ export namespace CompanyRegistration {
     export_type?: string;
 
     /**
+     * Minimum filtering score (between 0 and 1) for AML suspicions to be considered.
+     */
+    filtering_score_aml_suspicions?: number;
+
+    /**
      * Timestamp when the process finished.
      */
     finished_at?: string;
@@ -806,6 +811,11 @@ export namespace CompanyCreateParams {
     callback_url_notification?: string;
 
     /**
+     * Minimum filtering score (between 0 and 1) for AML suspicions to be considered.
+     */
+    filtering_score_aml_suspicions?: number;
+
+    /**
      * Preferred language for responses or notifications (e.g., "eng", "fra").
      */
     language?: string;
@@ -953,6 +963,11 @@ export namespace CompanyUpdateParams {
      * URL to receive notifications about the processing state and status.
      */
     callback_url_notification?: string;
+
+    /**
+     * Minimum filtering score (between 0 and 1) for AML suspicions to be considered.
+     */
+    filtering_score_aml_suspicions?: number;
 
     /**
      * Preferred language for responses or notifications (e.g., "eng", "fra").

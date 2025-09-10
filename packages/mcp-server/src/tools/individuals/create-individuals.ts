@@ -53,6 +53,10 @@ export const tool: Tool = {
             type: 'string',
             description: 'Maiden name, if applicable.',
           },
+          nationality: {
+            type: 'string',
+            description: 'Nationality of the individual (ISO 3166-1 alpha-3 country code).',
+          },
           phone_number: {
             type: 'string',
             description: 'Phone number of the individual.',
@@ -79,6 +83,10 @@ export const tool: Tool = {
           callback_url_notification: {
             type: 'string',
             description: 'URL for receive notifications about the processing state or status.',
+          },
+          filtering_score_aml_suspicions: {
+            type: 'number',
+            description: 'Minimum filtering score (between 0 and 1) for AML suspicions to be considered.',
           },
           language: {
             type: 'string',
