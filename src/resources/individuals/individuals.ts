@@ -405,6 +405,11 @@ export namespace Individual {
     maiden_name?: string;
 
     /**
+     * Nationality of the individual (ISO 3166-1 alpha-3 country code).
+     */
+    nationality?: string;
+
+    /**
      * Contact phone number including country code.
      */
     phone_number?: string;
@@ -520,6 +525,11 @@ export namespace Individual {
      * Export format defined by the API (e.g., "json", "xml").
      */
     export_type?: string;
+
+    /**
+     * Minimum filtering score (between 0 and 1) for AML suspicions to be considered.
+     */
+    filtering_score_aml_suspicions?: number;
 
     /**
      * Timestamp when the process finished.
@@ -649,6 +659,11 @@ export namespace IndividualCreateParams {
     maiden_name?: string;
 
     /**
+     * Nationality of the individual (ISO 3166-1 alpha-3 country code).
+     */
+    nationality?: string;
+
+    /**
      * Phone number of the individual.
      */
     phone_number?: string;
@@ -674,6 +689,11 @@ export namespace IndividualCreateParams {
      * URL for receive notifications about the processing state or status.
      */
     callback_url_notification?: string;
+
+    /**
+     * Minimum filtering score (between 0 and 1) for AML suspicions to be considered.
+     */
+    filtering_score_aml_suspicions?: number;
 
     /**
      * Preferred language for communication (e.g., "eng", "fra").
@@ -758,6 +778,11 @@ export namespace IndividualUpdateParams {
     maiden_name?: string;
 
     /**
+     * Nationality of the individual (ISO 3166-1 alpha-3 country code).
+     */
+    nationality?: string;
+
+    /**
      * Phone number of the individual.
      */
     phone_number?: string;
@@ -783,6 +808,11 @@ export namespace IndividualUpdateParams {
      * URL for receive notifications about the processing state or status.
      */
     callback_url_notification?: string;
+
+    /**
+     * Minimum filtering score (between 0 and 1) for AML suspicions to be considered.
+     */
+    filtering_score_aml_suspicions?: number;
 
     /**
      * Preferred language for communication (e.g., "eng", "fra").

@@ -113,6 +113,10 @@ export const tool: Tool = {
             type: 'string',
             description: 'URL to receive notifications about the processing state and status.',
           },
+          filtering_score_aml_suspicions: {
+            type: 'number',
+            description: 'Minimum filtering score (between 0 and 1) for AML suspicions to be considered.',
+          },
           language: {
             type: 'string',
             description: 'Preferred language for responses or notifications (e.g., "eng", "fra").',
