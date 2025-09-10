@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.13 (2025-09-10)
+
+Full Changelog: [v0.1.0-alpha.12...v0.1.0-alpha.13](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.12...v0.1.0-alpha.13)
+
+### Features
+
+* **api:** api update ([2d0c5ff](https://github.com/dataleonlabs/dataleon-typescript/commit/2d0c5ff8027470274ceeec6d9c52fe59acae6f4e))
+
+
+### Chores
+
+* **mcp:** upload dxt as release asset ([932c565](https://github.com/dataleonlabs/dataleon-typescript/commit/932c5657b111e53aa9a90f7be88b6f6198c3faac))
+
 ## 0.1.0-alpha.12 (2025-09-09)
 
 Full Changelog: [v0.1.0-alpha.11...v0.1.0-alpha.12](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.11...v0.1.0-alpha.12)
