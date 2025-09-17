@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.15 (2025-09-17)
+
+Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
+
+### Bug Fixes
+
+* **ci:** set permissions for DXT publish action ([be17efa](https://github.com/dataleonlabs/dataleon-typescript/commit/be17efa0ab0d4354ce1ffead759340c780e331f7))
+
 ## 0.1.0-alpha.14 (2025-09-12)
 
 Full Changelog: [v0.1.0-alpha.13...v0.1.0-alpha.14](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.13...v0.1.0-alpha.14)
