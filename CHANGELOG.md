@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.16 (2025-09-20)
+
+Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
+
+### Features
+
+* **mcp:** add docs search tool ([52f2522](https://github.com/dataleonlabs/dataleon-typescript/commit/52f2522ca9c1745dcbcc8da391fa5fcd44c7d34b))
+
+
+### Chores
+
+* **codegen:** internal codegen update ([51dd2f3](https://github.com/dataleonlabs/dataleon-typescript/commit/51dd2f3dc2b3f16978c96b3e759b53eadb57617c))
+* do not install brew dependencies in ./scripts/bootstrap by default ([20b24cd](https://github.com/dataleonlabs/dataleon-typescript/commit/20b24cd053b2c7e077b75a247317f31e0a0f3991))
+* **internal:** gitignore .mcpb files ([d66f64f](https://github.com/dataleonlabs/dataleon-typescript/commit/d66f64f004e6cd5d48ba8f04854c52b7dd6d39d6))
+* **mcp:** rename dxt to mcpb ([5d0bd60](https://github.com/dataleonlabs/dataleon-typescript/commit/5d0bd60dbb77fd5c28119338cedb17e3082fd4ef))
+
 ## 0.1.0-alpha.15 (2025-09-17)
 
 Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
