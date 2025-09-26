@@ -7,10 +7,9 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "baseUrl": "./",
     "paths": {
-      "@dataleon/dataleon-mcp/*": ["src/*"],
-      "@dataleon/dataleon-mcp": ["src/index.ts"]
+      "@dataleon/dataleon-mcp/*": ["./src/*"],
+      "@dataleon/dataleon-mcp": ["./src/index.ts"]
     },
     "noEmit": true,
 
