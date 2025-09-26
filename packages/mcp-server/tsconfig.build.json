@@ -5,8 +5,8 @@
   "compilerOptions": {
     "rootDir": "./dist/src",
     "paths": {
-      "@dataleon/dataleon-mcp/*": ["dist/src/*"],
-      "@dataleon/dataleon-mcp": ["dist/src/index.ts"]
+      "@dataleon/dataleon-mcp/*": ["./dist/src/*"],
+      "@dataleon/dataleon-mcp": ["./dist/src/index.ts"]
     },
     "noEmit": false,
     "declaration": true,
