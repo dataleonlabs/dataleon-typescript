@@ -34,7 +34,7 @@ export const newMcpServer = () =>
   new McpServer(
     {
       name: 'dataleon_dataleon_api',
-      version: '0.1.0-alpha.15',
+      version: '0.1.0-alpha.16',
     },
     { capabilities: { tools: {}, logging: {} } },
   );
