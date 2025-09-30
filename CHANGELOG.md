@@ -1,5 +1,40 @@
 # Changelog
 
+## 0.1.0-alpha.16 (2025-09-30)
+
+Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
+
+### Features
+
+* **mcp:** add docs search tool ([52f2522](https://github.com/dataleonlabs/dataleon-typescript/commit/52f2522ca9c1745dcbcc8da391fa5fcd44c7d34b))
+* **mcp:** add option for including docs tools ([43652ad](https://github.com/dataleonlabs/dataleon-typescript/commit/43652ad4b393793d15dfb7a24b14033ad5e8944a))
+* **mcp:** enable experimental docs search tool ([f200a65](https://github.com/dataleonlabs/dataleon-typescript/commit/f200a65fd358b3e4f50d4668d1925d2a54c80c46))
+
+
+### Bug Fixes
+
+* **mcp:** fix cli argument parsing logic ([141c336](https://github.com/dataleonlabs/dataleon-typescript/commit/141c3364742063acb46d1a7a4e7ab9a0c74d6839))
+* **mcp:** resolve a linting issue in server code ([6d2118d](https://github.com/dataleonlabs/dataleon-typescript/commit/6d2118d0665eb328b301ff1b5facb521304da24f))
+
+
+### Performance Improvements
+
+* faster formatting ([6f96e5c](https://github.com/dataleonlabs/dataleon-typescript/commit/6f96e5c221417452badf26c0607f4ba5ba689c5e))
+
+
+### Chores
+
+* **codegen:** internal codegen update ([51dd2f3](https://github.com/dataleonlabs/dataleon-typescript/commit/51dd2f3dc2b3f16978c96b3e759b53eadb57617c))
+* do not install brew dependencies in ./scripts/bootstrap by default ([20b24cd](https://github.com/dataleonlabs/dataleon-typescript/commit/20b24cd053b2c7e077b75a247317f31e0a0f3991))
+* **internal:** codegen related update ([be04c6e](https://github.com/dataleonlabs/dataleon-typescript/commit/be04c6e756fb2ce96cfb0274e4cd2e8acd502e5a))
+* **internal:** fix incremental formatting in some cases ([7403199](https://github.com/dataleonlabs/dataleon-typescript/commit/7403199048ee5135da2e47bf3b72e6ffd91bb358))
+* **internal:** gitignore .mcpb files ([d66f64f](https://github.com/dataleonlabs/dataleon-typescript/commit/d66f64f004e6cd5d48ba8f04854c52b7dd6d39d6))
+* **internal:** ignore .eslintcache ([ff5ba41](https://github.com/dataleonlabs/dataleon-typescript/commit/ff5ba417a4314ac895a966cb888f6009840297be))
+* **internal:** remove deprecated `compilerOptions.baseUrl` from tsconfig.json ([f411963](https://github.com/dataleonlabs/dataleon-typescript/commit/f4119634fb9fcf2ed477419bb9b8c85fb7c1556d))
+* **mcp:** allow pointing `docs_search` tool at other URLs ([167d7ce](https://github.com/dataleonlabs/dataleon-typescript/commit/167d7cedd7e35c7e2cbe4504409e620f5d8233ef))
+* **mcp:** rename dxt to mcpb ([5d0bd60](https://github.com/dataleonlabs/dataleon-typescript/commit/5d0bd60dbb77fd5c28119338cedb17e3082fd4ef))
+* update lockfile ([0a62d2a](https://github.com/dataleonlabs/dataleon-typescript/commit/0a62d2a2fe915ce7ad68146a61139319444e7b0d))
+
 ## 0.1.0-alpha.15 (2025-09-17)
 
 Full Changelog: [v0.1.0-alpha.14...v0.1.0-alpha.15](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.14...v0.1.0-alpha.15)
