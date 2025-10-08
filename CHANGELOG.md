@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.0-alpha.17 (2025-10-07)
+
+Full Changelog: [v0.1.0-alpha.16...v0.1.0-alpha.17](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.16...v0.1.0-alpha.17)
+
+### Chores
+
+* **internal:** remove .eslintcache ([fa5ee83](https://github.com/dataleonlabs/dataleon-typescript/commit/fa5ee835e254f980e395ed0312ea0bd49e7feabe))
+* **internal:** use npm pack for build uploads ([bae0f5a](https://github.com/dataleonlabs/dataleon-typescript/commit/bae0f5a2a479dd210dd904358fe96c17cc898d84))
+* **jsdoc:** fix [@link](https://github.com/link) annotations to refer only to parts of the package‘s public interface ([fb1438b](https://github.com/dataleonlabs/dataleon-typescript/commit/fb1438b41102c1a1aa1298d0503afd5af2682519))
+
 ## 0.1.0-alpha.16 (2025-09-30)
 
 Full Changelog: [v0.1.0-alpha.15...v0.1.0-alpha.16](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.15...v0.1.0-alpha.16)
