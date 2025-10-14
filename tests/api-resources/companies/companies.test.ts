@@ -51,6 +51,7 @@ describe('resource companies', () => {
         callback_url_notification: 'https://example.com/notify',
         filtering_score_aml_suspicions: 0.75,
         language: 'fra',
+        portal_steps: ['identity_verification', 'document_signing'],
         raw_data: true,
       },
     });
@@ -123,6 +124,7 @@ describe('resource companies', () => {
         callback_url_notification: 'https://example.com/notify',
         filtering_score_aml_suspicions: 0.75,
         language: 'fra',
+        portal_steps: ['identity_verification', 'document_signing'],
         raw_data: true,
       },
     });
