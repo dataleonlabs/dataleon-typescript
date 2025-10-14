@@ -562,6 +562,13 @@ export namespace Individual {
     notification_confirmation?: boolean;
 
     /**
+     * List of steps to include in the portal workflow.
+     */
+    portal_steps?: Array<
+      'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'
+    >;
+
+    /**
      * Indicates whether QR code is enabled ("true" or "false").
      */
     qr_code?: string;
@@ -701,6 +708,13 @@ export namespace IndividualCreateParams {
     language?: string;
 
     /**
+     * List of steps to include in the portal workflow.
+     */
+    portal_steps?: Array<
+      'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'
+    >;
+
+    /**
      * Flag indicating whether to include raw data in the response.
      */
     raw_data?: boolean;
@@ -818,6 +832,13 @@ export namespace IndividualUpdateParams {
      * Preferred language for communication (e.g., "eng", "fra").
      */
     language?: string;
+
+    /**
+     * List of steps to include in the portal workflow.
+     */
+    portal_steps?: Array<
+      'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'
+    >;
 
     /**
      * Flag indicating whether to include raw data in the response.

@@ -121,6 +121,14 @@ export const tool: Tool = {
             type: 'string',
             description: 'Preferred language for responses or notifications (e.g., "eng", "fra").',
           },
+          portal_steps: {
+            type: 'array',
+            description: 'List of steps to include in the portal workflow.',
+            items: {
+              type: 'string',
+              enum: ['identity_verification', 'document_signing', 'proof_of_address', 'selfie', 'face_match'],
+            },
+          },
           raw_data: {
             type: 'boolean',
             description: 'Flag indicating whether to include raw data in the response.',
