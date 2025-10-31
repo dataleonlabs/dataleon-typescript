@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.19 (2025-10-31)
+
+Full Changelog: [v0.1.0-alpha.18...v0.1.0-alpha.19](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.18...v0.1.0-alpha.19)
+
+### Bug Fixes
+
+* **mcpb:** pin @anthropic-ai/mcpb version ([d82b5e3](https://github.com/dataleonlabs/dataleon-typescript/commit/d82b5e343ebb87ed7e41505623484ea56b2de3eb))
+
 ## 0.1.0-alpha.18 (2025-10-14)
 
 Full Changelog: [v0.1.0-alpha.17...v0.1.0-alpha.18](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.17...v0.1.0-alpha.18)
