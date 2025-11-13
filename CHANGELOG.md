@@ -1,5 +1,36 @@
 # Changelog
 
+## 0.1.0-alpha.20 (2025-11-13)
+
+Full Changelog: [v0.1.0-alpha.19...v0.1.0-alpha.20](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.19...v0.1.0-alpha.20)
+
+### Features
+
+* **mcp:** enable optional code execution tool on http mcp servers ([fa75032](https://github.com/dataleonlabs/dataleon-typescript/commit/fa750322099f7efcaf0be638a36689b6d526aefc))
+
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on jq failure ([ab2f8c2](https://github.com/dataleonlabs/dataleon-typescript/commit/ab2f8c2be091879db87f13f8da9e2d179fd42280))
+
+
+### Chores
+
+* **internal:** codegen related update ([e07f249](https://github.com/dataleonlabs/dataleon-typescript/commit/e07f249f145c435c16ad0893b87763b69c71e4b5))
+* **internal:** codegen related update ([34757aa](https://github.com/dataleonlabs/dataleon-typescript/commit/34757aabc593ed5314e83a34dc00654079086ddf))
+* **internal:** grammar fix (it's -&gt; its) ([4db5df4](https://github.com/dataleonlabs/dataleon-typescript/commit/4db5df4f13ca4a8be3871cfe5ef98c365ba1db00))
+* mcp code tool explicit error message when missing a run function ([798d349](https://github.com/dataleonlabs/dataleon-typescript/commit/798d34981d5c9fd63ca037d6a3be4a8a3fa43f29))
+* **mcp:** add friendlier MCP code tool errors on incorrect method invocations ([9befbe4](https://github.com/dataleonlabs/dataleon-typescript/commit/9befbe45d3a000f36124c43deb1bc33e09c53a2d))
+* **mcp:** add line numbers to code tool errors ([6951608](https://github.com/dataleonlabs/dataleon-typescript/commit/695160841599a678c9a83e5e5884c94ff9d3f468))
+* **mcp:** clarify http auth error ([801f7b9](https://github.com/dataleonlabs/dataleon-typescript/commit/801f7b9f7dee272b348b33c7f545fca27b91a5bf))
+* use structured error when code execution tool errors ([62d6ed5](https://github.com/dataleonlabs/dataleon-typescript/commit/62d6ed5d02017813590b2359caf6fd1e18fefe41))
+
+
+### Documentation
+
+* **mcp:** add a README button for one-click add to Cursor ([e756344](https://github.com/dataleonlabs/dataleon-typescript/commit/e7563444e38dfcd5e02643414f0a2a8d47b46185))
+* **mcp:** add a README link to add server to VS Code or Claude Code ([3ac6f3c](https://github.com/dataleonlabs/dataleon-typescript/commit/3ac6f3c3d575ad1ad2b3868bbf800e39bc7f8194))
+
 ## 0.1.0-alpha.19 (2025-10-31)
 
 Full Changelog: [v0.1.0-alpha.18...v0.1.0-alpha.19](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.18...v0.1.0-alpha.19)
