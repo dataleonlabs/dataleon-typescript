@@ -1,6 +1,6 @@
 // File generated from our OpenAPI spec by Stainless. See CONTRIBUTING.md for details.
 
-import { Metadata, asTextContentResult } from '@dataleon/dataleon-mcp/tools/types';
+import { Metadata, asErrorResult, asTextContentResult } from '@dataleon/dataleon-mcp/tools/types';
 
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
 import Dataleon from '@dataleon/dataleon';
@@ -119,7 +119,14 @@ export const tool: Tool = {
 
 export const handler = async (client: Dataleon, args: Record<string, unknown> | undefined) => {
   const { individual_id, ...body } = args as any;
-  return asTextContentResult(await client.individuals.update(individual_id, body));
+  try {
+    return asTextContentResult(await client.individuals.update(individual_id, body));
+  } catch (error) {
+    if (error instanceof Dataleon.APIError) {
+      return asErrorResult(error.message);
+    }
+    throw error;
+  }
 };
 
 export default { metadata, tool, handler };
