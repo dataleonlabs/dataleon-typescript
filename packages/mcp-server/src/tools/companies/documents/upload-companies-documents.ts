@@ -91,7 +91,7 @@ export const handler = async (client: Dataleon, args: Record<string, unknown> | 
       await maybeFilter(jq_filter, await client.companies.documents.upload(company_id, body)),
     );
   } catch (error) {
-    if (isJqError(error)) {
+    if (error instanceof Dataleon.APIError || isJqError(error)) {
       return asErrorResult(error.message);
     }
     throw error;
