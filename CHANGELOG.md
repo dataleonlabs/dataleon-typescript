@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.1.0-alpha.21 (2025-12-02)
+
+Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
+
+### Features
+
+* **mcp:** add detail field to docs search tool ([a411b0d](https://github.com/dataleonlabs/dataleon-typescript/commit/a411b0d5e55d0da17ecc52507f65701ae219bd04))
+
+
+### Bug Fixes
+
+* **mcp:** return tool execution error on api error ([10b2ee1](https://github.com/dataleonlabs/dataleon-typescript/commit/10b2ee177c3af56ed4eb27f09ff6cfb41f0183de))
+
+
+### Chores
+
+* **client:** fix logger property type ([c2fa535](https://github.com/dataleonlabs/dataleon-typescript/commit/c2fa5356e37041d3b8ed87e02546762c5c355ae7))
+* **mcp:** upgrade jq-web ([23609f4](https://github.com/dataleonlabs/dataleon-typescript/commit/23609f45a0b53ef55ab339b5c22de9a8861389dd))
+
 ## 0.1.0-alpha.20 (2025-11-13)
 
 Full Changelog: [v0.1.0-alpha.19...v0.1.0-alpha.20](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.19...v0.1.0-alpha.20)
