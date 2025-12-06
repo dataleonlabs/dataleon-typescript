@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.23 (2025-12-06)
+
+Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
+
+### Bug Fixes
+
+* **mcp:** correct code tool API endpoint ([b1ad49d](https://github.com/dataleonlabs/dataleon-typescript/commit/b1ad49d029f603bbfcc487b5ea9cf86a6fc8d128))
+
 ## 0.1.0-alpha.22 (2025-12-06)
 
 Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
