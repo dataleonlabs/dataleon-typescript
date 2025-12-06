@@ -1,5 +1,27 @@
 # Changelog
 
+## 0.1.0-alpha.22 (2025-12-06)
+
+Full Changelog: [v0.1.0-alpha.21...v0.1.0-alpha.22](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.21...v0.1.0-alpha.22)
+
+### Features
+
+* **mcp:** add typescript check to code execution tool ([4451273](https://github.com/dataleonlabs/dataleon-typescript/commit/445127331fb7b9fe1b82c397af31286f32bf2c3d))
+* **mcp:** handle code mode calls in the Stainless API ([025d957](https://github.com/dataleonlabs/dataleon-typescript/commit/025d957e5abf1efab714dff848190b030483de4b))
+* **mcp:** return logs on code tool errors ([bddb959](https://github.com/dataleonlabs/dataleon-typescript/commit/bddb959ee74ca5481dd00656d31553f3d9856e61))
+
+
+### Bug Fixes
+
+* **mcp:** return correct lines on typescript errors ([4432741](https://github.com/dataleonlabs/dataleon-typescript/commit/4432741220de9d43f44f1df0e70dc67588027cc5))
+
+
+### Chores
+
+* **internal:** codegen related update ([ccef8c3](https://github.com/dataleonlabs/dataleon-typescript/commit/ccef8c3270abe274e72a4700f84fb45433b69597))
+* **internal:** upgrade eslint ([91b0afe](https://github.com/dataleonlabs/dataleon-typescript/commit/91b0afed3d9fb2f69f0f2b741040049b365fd763))
+* use latest @modelcontextprotocol/sdk ([f4e1fff](https://github.com/dataleonlabs/dataleon-typescript/commit/f4e1fffd6f613c98c051c1afd95781b294a43bec))
+
 ## 0.1.0-alpha.21 (2025-12-02)
 
 Full Changelog: [v0.1.0-alpha.20...v0.1.0-alpha.21](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.20...v0.1.0-alpha.21)
