@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.1.0-alpha.24 (2025-12-11)
+
+Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
+
+### Bug Fixes
+
+* **mcp:** add client instantiation options to code tool ([981a138](https://github.com/dataleonlabs/dataleon-typescript/commit/981a1387bc1404e66ce089e6850786d450218c6a))
+
+
+### Chores
+
+* **internal:** codegen related update ([23b3141](https://github.com/dataleonlabs/dataleon-typescript/commit/23b3141365d3d0c25f42fe117f443561c8acefc0))
+* **mcp:** update lockfile ([98e9977](https://github.com/dataleonlabs/dataleon-typescript/commit/98e99775c129eebe97b6ae6e4c8ce62991f2b67c))
+
 ## 0.1.0-alpha.23 (2025-12-06)
 
 Full Changelog: [v0.1.0-alpha.22...v0.1.0-alpha.23](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.22...v0.1.0-alpha.23)
