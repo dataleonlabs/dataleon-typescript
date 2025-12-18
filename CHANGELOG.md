@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.25 (2025-12-18)
+
+Full Changelog: [v0.1.0-alpha.24...v0.1.0-alpha.25](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.24...v0.1.0-alpha.25)
+
+### Bug Fixes
+
+* **mcp:** pass base url to code tool ([f94b0ea](https://github.com/dataleonlabs/dataleon-typescript/commit/f94b0ea0e41c01fc4114d5225360f5d4d3dbb34b))
+
 ## 0.1.0-alpha.24 (2025-12-11)
 
 Full Changelog: [v0.1.0-alpha.23...v0.1.0-alpha.24](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.23...v0.1.0-alpha.24)
