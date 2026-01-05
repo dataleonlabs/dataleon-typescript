@@ -309,6 +309,11 @@ export namespace Individual {
     country?: string;
 
     /**
+     * Date of entitlement or validity start date, in YYYY-MM-DD format.
+     */
+    entitlement_date?: string;
+
+    /**
      * Expiration date of the document, in YYYY-MM-DD format.
      */
     expiration_date?: string;
