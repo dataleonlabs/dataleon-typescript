@@ -39,7 +39,7 @@ For clients with a configuration JSON, it might look something like this:
 If you use Cursor, you can install the MCP server by using the button below. You will need to set your environment variables
 in Cursor's `mcp.json`, which can be found in Cursor Settings > Tools & MCP > New MCP Server.
 
-[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=@dataleon/dataleon-mcp&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBkYXRhbGVvbi9kYXRhbGVvbi1tY3AiXSwiZW52Ijp7IkRBVEFMRU9OX0FQSV9LRVkiOiJTZXQgeW91ciBEQVRBTEVPTl9BUElfS0VZIGhlcmUuIn19)
+[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=%40dataleon%2Fdataleon-mcp&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsIkBkYXRhbGVvbi9kYXRhbGVvbi1tY3AiXSwiZW52Ijp7IkRBVEFMRU9OX0FQSV9LRVkiOiJTZXQgeW91ciBEQVRBTEVPTl9BUElfS0VZIGhlcmUuIn19)
 
 ### VS Code
 
@@ -54,7 +54,7 @@ If you use Claude Code, you can install the MCP server by running the command be
 environment variables in Claude Code's `.claude.json`, which can be found in your home directory.
 
 ```
-claude mcp add --transport stdio dataleon_dataleon_api --env DATALEON_API_KEY="Your DATALEON_API_KEY here." -- npx -y @dataleon/dataleon-mcp
+claude mcp add dataleon_dataleon_mcp_api --env DATALEON_API_KEY="Your DATALEON_API_KEY here." -- npx -y @dataleon/dataleon-mcp
 ```
 
 ## Code Mode
