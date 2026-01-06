@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.1.0-alpha.26 (2026-01-06)
+
+Full Changelog: [v0.1.0-alpha.25...v0.1.0-alpha.26](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.25...v0.1.0-alpha.26)
+
+### ⚠ BREAKING CHANGES
+
+* **mcp:** remove deprecated tool schemes
+* **mcp:** **Migration:** To migrate, simply modify the command used to invoke the MCP server. Currently, the only supported tool scheme is code mode. Now, starting the server with just `node /path/to/mcp/server` or `npx package-name` will invoke code tools: changing your command to one of these is likely all you will need to do.
+
+### Features
+
+* **api:** api update ([6a872a5](https://github.com/dataleonlabs/dataleon-typescript/commit/6a872a520278e1c319870a706ad49e5c55df56f8))
+
+
+### Chores
+
+* **mcp:** remove deprecated tool schemes ([038bedb](https://github.com/dataleonlabs/dataleon-typescript/commit/038bedb87f8d4cfdd8755f834b1cce8d5fe4092a))
+
+
+### Documentation
+
+* prominently feature MCP server setup in root SDK readmes ([d82f2d0](https://github.com/dataleonlabs/dataleon-typescript/commit/d82f2d00af5cdba06152a68b2b5e0cee784d64f9))
+
 ## 0.1.0-alpha.25 (2025-12-18)
 
 Full Changelog: [v0.1.0-alpha.24...v0.1.0-alpha.25](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.24...v0.1.0-alpha.25)
