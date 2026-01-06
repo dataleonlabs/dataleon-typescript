@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.27 (2026-01-06)
+
+Full Changelog: [v0.1.0-alpha.26...v0.1.0-alpha.27](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.26...v0.1.0-alpha.27)
+
+### Bug Fixes
+
+* **mcp:** correct code tool api output types ([40ddf46](https://github.com/dataleonlabs/dataleon-typescript/commit/40ddf46ce42d227cd32c143c61377e95631d8e5d))
+
 ## 0.1.0-alpha.26 (2026-01-06)
 
 Full Changelog: [v0.1.0-alpha.25...v0.1.0-alpha.26](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.25...v0.1.0-alpha.26)
