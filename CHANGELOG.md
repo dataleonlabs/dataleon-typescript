@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.28 (2026-01-07)
+
+Full Changelog: [v0.1.0-alpha.27...v0.1.0-alpha.28](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.27...v0.1.0-alpha.28)
+
+### Bug Fixes
+
+* **mcp:** fix options parsing ([01300e0](https://github.com/dataleonlabs/dataleon-typescript/commit/01300e03c68723fb04b3fde8da47b8231f833b00))
+
+
+### Chores
+
+* break long lines in snippets into multiline ([29bf236](https://github.com/dataleonlabs/dataleon-typescript/commit/29bf2368f8f84cbcd099544ec8260b54a6fbcd47))
+
 ## 0.1.0-alpha.27 (2026-01-06)
 
 Full Changelog: [v0.1.0-alpha.26...v0.1.0-alpha.27](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.26...v0.1.0-alpha.27)
