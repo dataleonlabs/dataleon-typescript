@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.29 (2026-01-08)
+
+Full Changelog: [v0.1.0-alpha.28...v0.1.0-alpha.29](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.28...v0.1.0-alpha.29)
+
+### Bug Fixes
+
+* **mcp:** fix env parsing ([f785d7d](https://github.com/dataleonlabs/dataleon-typescript/commit/f785d7d3634e3bc87536e0f91fb7888cce756e59))
+
 ## 0.1.0-alpha.28 (2026-01-07)
 
 Full Changelog: [v0.1.0-alpha.27...v0.1.0-alpha.28](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.27...v0.1.0-alpha.28)
