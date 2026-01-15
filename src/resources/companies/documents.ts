@@ -58,6 +58,7 @@ export interface DocumentUploadParams {
     | 'registration_company_certificate'
     | 'kbis'
     | 'rib'
+    | 'check'
     | 'livret_famille'
     | 'birth_certificate'
     | 'payslip'
