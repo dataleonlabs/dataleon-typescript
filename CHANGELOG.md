@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.1.0-alpha.31 (2026-01-15)
+
+Full Changelog: [v0.1.0-alpha.30...v0.1.0-alpha.31](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.30...v0.1.0-alpha.31)
+
+### Features
+
+* **api:** api update ([26b52cb](https://github.com/dataleonlabs/dataleon-typescript/commit/26b52cbc497aea595bd334d3ac9b8c39162b6e57))
+
+
+### Chores
+
+* **internal:** codegen related update ([c8834a3](https://github.com/dataleonlabs/dataleon-typescript/commit/c8834a316ff7e1d9006bee669f9f725852fc89de))
+* **internal:** codegen related update ([0664d50](https://github.com/dataleonlabs/dataleon-typescript/commit/0664d50ad9993c574482c726db067c4ccc7281a6))
+* **internal:** codegen related update ([c03d63a](https://github.com/dataleonlabs/dataleon-typescript/commit/c03d63aeed3a243161748120e05b140c736cf0f8))
+* **internal:** codegen related update ([2152ed7](https://github.com/dataleonlabs/dataleon-typescript/commit/2152ed7fe41cb70b6567eb0559230f77f1e7c1b3))
+* **internal:** upgrade babel, qs, js-yaml ([bf76cd8](https://github.com/dataleonlabs/dataleon-typescript/commit/bf76cd8a59a8d817c4ba97eb599e8c3cd0794eff))
+* **mcp:** add intent param to execute tool ([88dd86b](https://github.com/dataleonlabs/dataleon-typescript/commit/88dd86b4f167cb80e76246c391e8099e7a482a32))
+* **mcp:** pass intent param to execute handler ([b59cf32](https://github.com/dataleonlabs/dataleon-typescript/commit/b59cf32f5ab850955e9f8e978bd92237d22d7dc3))
+* **mcp:** upgrade dependencies ([501998b](https://github.com/dataleonlabs/dataleon-typescript/commit/501998b6eb33fda46b64929d26026e81ba2b08e5))
+
 ## 0.1.0-alpha.30 (2026-01-09)
 
 Full Changelog: [v0.1.0-alpha.29...v0.1.0-alpha.30](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.29...v0.1.0-alpha.30)
