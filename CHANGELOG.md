@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.32 (2026-01-20)
+
+Full Changelog: [v0.1.0-alpha.31...v0.1.0-alpha.32](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.31...v0.1.0-alpha.32)
+
+### Features
+
+* **api:** api update ([0278b70](https://github.com/dataleonlabs/dataleon-typescript/commit/0278b703d7bdf9cad3dac32461ea51d7da2b5459))
+
+
+### Chores
+
+* **internal:** update `actions/checkout` version ([5c093ee](https://github.com/dataleonlabs/dataleon-typescript/commit/5c093eef76bb79bf2126531c20091ec5b05cf243))
+
 ## 0.1.0-alpha.31 (2026-01-15)
 
 Full Changelog: [v0.1.0-alpha.30...v0.1.0-alpha.31](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.30...v0.1.0-alpha.31)
