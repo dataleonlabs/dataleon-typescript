@@ -587,6 +587,11 @@ export namespace CompanyRegistration {
     approved_at?: string;
 
     /**
+     * Identifier of the actor who approved (e.g., user id or username).
+     */
+    approved_by?: string | null;
+
+    /**
      * URL to receive callback data from the AML system.
      */
     callback_url?: string;
@@ -642,6 +647,11 @@ export namespace CompanyRegistration {
     need_review_at?: string | null;
 
     /**
+     * Identifier of the actor who requested review (e.g., user id or username).
+     */
+    need_review_by?: string | null;
+
+    /**
      * Flag indicating if notification confirmation is required or received.
      */
     notification_confirmation?: boolean;
@@ -667,6 +677,11 @@ export namespace CompanyRegistration {
      * Timestamp when the request or process was rejected; null if not rejected.
      */
     rejected_at?: string | null;
+
+    /**
+     * Identifier of the actor who rejected (e.g., user id or username).
+     */
+    rejected_by?: string | null;
 
     /**
      * Duration of the user session in seconds.
