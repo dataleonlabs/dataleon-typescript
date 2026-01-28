@@ -2,7 +2,7 @@
 
 import { McpTool, Metadata, ToolCallResult, asErrorResult, asTextContentResult } from './types';
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import { readEnv, readEnvOrError } from './server';
+import { readEnv, requireValue } from './server';
 import { WorkerInput, WorkerOutput } from './code-tool-types';
 import { Dataleon } from '@dataleon/dataleon';
 
@@ -71,7 +71,10 @@ export function codeTool(): McpTool {
         ...(stainlessAPIKey && { Authorization: stainlessAPIKey }),
         'Content-Type': 'application/json',
         client_envs: JSON.stringify({
-          DATALEON_API_KEY: readEnvOrError('DATALEON_API_KEY') ?? client.apiKey ?? undefined,
+          DATALEON_API_KEY: requireValue(
+            readEnv('DATALEON_API_KEY') ?? client.apiKey,
+            'set DATALEON_API_KEY environment variable or provide apiKey client option',
+          ),
           DATALEON_BASE_URL: readEnv('DATALEON_BASE_URL') ?? client.baseURL ?? undefined,
         }),
       },
