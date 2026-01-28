@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.33 (2026-01-28)
+
+Full Changelog: [v0.1.0-alpha.32...v0.1.0-alpha.33](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.32...v0.1.0-alpha.33)
+
+### Bug Fixes
+
+* **mcp:** allow falling back for required env variables ([3cd7a42](https://github.com/dataleonlabs/dataleon-typescript/commit/3cd7a4279424a5ccb4e89cf9731a955be54db0e5))
+
+
+### Chores
+
+* **ci:** upgrade `actions/github-script` ([3827946](https://github.com/dataleonlabs/dataleon-typescript/commit/3827946e61d311b3b6665b5243d3e2ce4e89e1a2))
+* **internal:** codegen related update ([24bf4e1](https://github.com/dataleonlabs/dataleon-typescript/commit/24bf4e1e39bbe3f04684cf8d842f7ec0a7fc78cf))
+* **internal:** update lock file ([39bf379](https://github.com/dataleonlabs/dataleon-typescript/commit/39bf379219f1690e990e9eb3ce8ca0c7e47d9071))
+
 ## 0.1.0-alpha.32 (2026-01-20)
 
 Full Changelog: [v0.1.0-alpha.31...v0.1.0-alpha.32](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.31...v0.1.0-alpha.32)
