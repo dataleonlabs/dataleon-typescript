@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.34 (2026-01-29)
+
+Full Changelog: [v0.1.0-alpha.33...v0.1.0-alpha.34](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.33...v0.1.0-alpha.34)
+
+### Bug Fixes
+
+* **docs:** fix mcp installation instructions for remote servers ([88bc2ff](https://github.com/dataleonlabs/dataleon-typescript/commit/88bc2ff859f127b6876fbaaa97aed2a717a69243))
+
 ## 0.1.0-alpha.33 (2026-01-28)
 
 Full Changelog: [v0.1.0-alpha.32...v0.1.0-alpha.33](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.32...v0.1.0-alpha.33)
