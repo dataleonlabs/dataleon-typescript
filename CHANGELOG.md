@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.35 (2026-02-03)
+
+Full Changelog: [v0.1.0-alpha.34...v0.1.0-alpha.35](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.34...v0.1.0-alpha.35)
+
+### Bug Fixes
+
+* **client:** avoid memory leak with abort signals ([4fc8688](https://github.com/dataleonlabs/dataleon-typescript/commit/4fc8688a6c82d1886c11b693f6f1b9068f39aff4))
+
+
+### Chores
+
+* **mcp:** up tsconfig lib version to es2022 ([2bb7009](https://github.com/dataleonlabs/dataleon-typescript/commit/2bb70095c2a14f7fa01aa69572c164b7e6fc1736))
+
 ## 0.1.0-alpha.34 (2026-01-29)
 
 Full Changelog: [v0.1.0-alpha.33...v0.1.0-alpha.34](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.33...v0.1.0-alpha.34)
