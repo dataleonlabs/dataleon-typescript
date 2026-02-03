@@ -3,7 +3,7 @@
 import { IncomingMessage } from 'node:http';
 import { ClientOptions } from '@dataleon/dataleon';
 
-export const parseAuthHeaders = (req: IncomingMessage): Partial<ClientOptions> => {
+export const parseAuthHeaders = (req: IncomingMessage, required?: boolean): Partial<ClientOptions> => {
   const apiKey = Array.isArray(req.headers['api-key']) ? req.headers['api-key'][0] : req.headers['api-key'];
   return { apiKey };
 };
