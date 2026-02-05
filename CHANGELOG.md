@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.1.0-alpha.36 (2026-02-05)
+
+Full Changelog: [v0.1.0-alpha.35...v0.1.0-alpha.36](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.35...v0.1.0-alpha.36)
+
+### Features
+
+* **mcp:** add initial server instructions ([056f944](https://github.com/dataleonlabs/dataleon-typescript/commit/056f944295fcc4c83883c943a83fef830fe51577))
+
+
+### Chores
+
+* **client:** do not parse responses with empty content-length ([ef15c79](https://github.com/dataleonlabs/dataleon-typescript/commit/ef15c79e4ab297013622c44820ec98ab3d7464a2))
+* **client:** restructure abort controller binding ([5be2e08](https://github.com/dataleonlabs/dataleon-typescript/commit/5be2e08ea50903775c4a245e389e83857264cf18))
+* **internal:** refactor flag parsing for MCP servers and add debug flag ([3577953](https://github.com/dataleonlabs/dataleon-typescript/commit/35779537a4c8bd7df9600e9eb4fef7e968fd2846))
+* **internal:** support oauth authorization code flow for MCP servers ([5a3e897](https://github.com/dataleonlabs/dataleon-typescript/commit/5a3e897ff2e0922b642b700ec841d1352de07648))
+
 ## 0.1.0-alpha.35 (2026-02-03)
 
 Full Changelog: [v0.1.0-alpha.34...v0.1.0-alpha.35](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.34...v0.1.0-alpha.35)
