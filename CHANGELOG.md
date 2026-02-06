@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.37 (2026-02-06)
+
+Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
+
+### Bug Fixes
+
+* **client:** avoid removing abort listener too early ([e15a5d8](https://github.com/dataleonlabs/dataleon-typescript/commit/e15a5d8eeb154346ff130aa3a3b74ddc816bc688))
+
 ## 0.1.0-alpha.36 (2026-02-05)
 
 Full Changelog: [v0.1.0-alpha.35...v0.1.0-alpha.36](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.35...v0.1.0-alpha.36)
