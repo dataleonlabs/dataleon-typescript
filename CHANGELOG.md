@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.38 (2026-02-20)
+
+Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
+
+### Bug Fixes
+
+* **mcp:** initialize SDK lazily to avoid failing the connection on init errors ([5874887](https://github.com/dataleonlabs/dataleon-typescript/commit/587488739d447c1502de73e733d050a370e1fab9))
+
+
+### Chores
+
+* **internal/client:** fix form-urlencoded requests ([775ee48](https://github.com/dataleonlabs/dataleon-typescript/commit/775ee482321186ad22adcc3339f4e63ed3c32e5a))
+* **internal:** add health check to MCP server when running in HTTP mode ([3033a1d](https://github.com/dataleonlabs/dataleon-typescript/commit/3033a1d9015318f24299676c4fe6dca282dfa666))
+* **internal:** allow basic filtering of methods allowed for MCP code mode ([eebb050](https://github.com/dataleonlabs/dataleon-typescript/commit/eebb050cf70d39297c8db410fecd4a9ea7cdd01b))
+* **internal:** allow setting x-stainless-api-key header on mcp server requests ([9c92fd6](https://github.com/dataleonlabs/dataleon-typescript/commit/9c92fd66f5b907c3ff9b159f397e518f5efce649))
+* **internal:** always generate MCP server dockerfiles and upgrade associated dependencies ([624b024](https://github.com/dataleonlabs/dataleon-typescript/commit/624b024e593f99521334545c26f2328c49d52cbb))
+* **internal:** avoid type checking errors with ts-reset ([97657df](https://github.com/dataleonlabs/dataleon-typescript/commit/97657dfb8eadc107f087d68436a718847b32fa26))
+* **internal:** cache fetch instruction calls in MCP server ([8177df5](https://github.com/dataleonlabs/dataleon-typescript/commit/8177df52ddb071c0b3a5369acdd58fcbd86a6a6c))
+* **internal:** improve layout of generated MCP server files ([5735b35](https://github.com/dataleonlabs/dataleon-typescript/commit/5735b3594327f993241144b364a7cb9506d037fd))
+* **mcp:** forward STAINLESS_API_KEY to docs search endpoint ([18dc941](https://github.com/dataleonlabs/dataleon-typescript/commit/18dc9419f21ed90da0fc3da4210b0f2993d15405))
+
 ## 0.1.0-alpha.37 (2026-02-06)
 
 Full Changelog: [v0.1.0-alpha.36...v0.1.0-alpha.37](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.36...v0.1.0-alpha.37)
