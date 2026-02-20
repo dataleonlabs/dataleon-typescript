@@ -8,7 +8,7 @@ const client = new Dataleon({
 });
 
 describe('resource individuals', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: only required params', async () => {
     const responsePromise = client.individuals.create({ workspace_id: 'wk_123' });
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource individuals', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: required and optional params', async () => {
     const response = await client.individuals.create({
       workspace_id: 'wk_123',
@@ -47,7 +47,7 @@ describe('resource individuals', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.individuals.retrieve('individual_id');
     const rawResponse = await responsePromise.asResponse();
@@ -59,7 +59,7 @@ describe('resource individuals', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -71,7 +71,7 @@ describe('resource individuals', () => {
     ).rejects.toThrow(Dataleon.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: only required params', async () => {
     const responsePromise = client.individuals.update('individual_id', { workspace_id: 'wk_123' });
     const rawResponse = await responsePromise.asResponse();
@@ -83,7 +83,7 @@ describe('resource individuals', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: required and optional params', async () => {
     const response = await client.individuals.update('individual_id', {
       workspace_id: 'wk_123',
@@ -110,7 +110,7 @@ describe('resource individuals', () => {
     });
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.individuals.list();
     const rawResponse = await responsePromise.asResponse();
@@ -122,7 +122,7 @@ describe('resource individuals', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -142,7 +142,7 @@ describe('resource individuals', () => {
     ).rejects.toThrow(Dataleon.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.individuals.delete('individual_id');
     const rawResponse = await responsePromise.asResponse();
