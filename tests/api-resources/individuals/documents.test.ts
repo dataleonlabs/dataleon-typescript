@@ -8,7 +8,7 @@ const client = new Dataleon({
 });
 
 describe('resource documents', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.individuals.documents.list('individual_id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource documents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('upload: only required params', async () => {
     const responsePromise = client.individuals.documents.upload('individual_id', {
       document_type: 'liasse_fiscale',
@@ -34,7 +34,7 @@ describe('resource documents', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('upload: required and optional params', async () => {
     const response = await client.individuals.documents.upload('individual_id', {
       document_type: 'liasse_fiscale',
