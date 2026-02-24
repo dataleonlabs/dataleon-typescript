@@ -60,7 +60,7 @@ $ yarn link @dataleon/dataleon
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global @dataleon/dataleon
+$ pnpm link --global @dataleon/dataleon
 ```
 
 ## Running tests
