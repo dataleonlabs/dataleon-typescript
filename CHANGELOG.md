@@ -1,5 +1,20 @@
 # Changelog
 
+## 0.1.0-alpha.39 (2026-02-24)
+
+Full Changelog: [v0.1.0-alpha.38...v0.1.0-alpha.39](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.38...v0.1.0-alpha.39)
+
+### Bug Fixes
+
+* **docs/contributing:** correct pnpm link command ([aaf964e](https://github.com/dataleonlabs/dataleon-typescript/commit/aaf964ecfa4c45609b72b2e5bd91c1170db6a367))
+
+
+### Chores
+
+* **internal:** remove mock server code ([731182d](https://github.com/dataleonlabs/dataleon-typescript/commit/731182d586103bbdb29d61dc629f51ceba67888b))
+* **mcp:** correctly update version in sync with sdk ([3606790](https://github.com/dataleonlabs/dataleon-typescript/commit/3606790f3186076b90e62ac9b50a715fd18df32a))
+* update mock server docs ([23f05f0](https://github.com/dataleonlabs/dataleon-typescript/commit/23f05f0f0f48429988b9a5e9603995e930df1bb0))
+
 ## 0.1.0-alpha.38 (2026-02-20)
 
 Full Changelog: [v0.1.0-alpha.37...v0.1.0-alpha.38](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.37...v0.1.0-alpha.38)
