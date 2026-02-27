@@ -1,5 +1,22 @@
 # Changelog
 
+## 0.1.0-alpha.40 (2026-02-27)
+
+Full Changelog: [v0.1.0-alpha.39...v0.1.0-alpha.40](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.39...v0.1.0-alpha.40)
+
+### Features
+
+* **mcp:** add an option to disable code tool ([57aab03](https://github.com/dataleonlabs/dataleon-typescript/commit/57aab03805eb1900f7d63e6dcc78e61e5ac3823f))
+
+
+### Chores
+
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([c7838c9](https://github.com/dataleonlabs/dataleon-typescript/commit/c7838c9af65cab1782fc44aafb30f4ba150e9de9))
+* **internal:** fix MCP Dockerfiles so they can be built without buildkit ([0e02ad7](https://github.com/dataleonlabs/dataleon-typescript/commit/0e02ad776bcc5bd520fb7ba26ccc72a2504a5c53))
+* **internal:** make MCP code execution location configurable via a flag ([5295be8](https://github.com/dataleonlabs/dataleon-typescript/commit/5295be8045f471730477c7e0bcf75843fe33c28f))
+* **internal:** move stringifyQuery implementation to internal function ([d295fe0](https://github.com/dataleonlabs/dataleon-typescript/commit/d295fe0f5ba152d94887093b28f479fd0a07d0dc))
+* **internal:** upgrade @modelcontextprotocol/sdk and hono ([89392cd](https://github.com/dataleonlabs/dataleon-typescript/commit/89392cdc5b721517939686033759f4ac1495d36b))
+
 ## 0.1.0-alpha.39 (2026-02-24)
 
 Full Changelog: [v0.1.0-alpha.38...v0.1.0-alpha.39](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.38...v0.1.0-alpha.39)
