@@ -38,7 +38,7 @@ describe('resource documents', () => {
   test.skip('upload: required and optional params', async () => {
     const response = await client.companies.documents.upload('company_id', {
       document_type: 'liasse_fiscale',
-      file: await toFile(Buffer.from('# my file contents'), 'README.md'),
+      file: await toFile(Buffer.from('Example data'), 'README.md'),
       url: 'https://example.com/sample.pdf',
     });
   });
