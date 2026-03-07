@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.1.0-alpha.42 (2026-03-07)
+
+Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
+
+### Bug Fixes
+
+* **client:** preserve URL params already embedded in path ([e6c9ccf](https://github.com/dataleonlabs/dataleon-typescript/commit/e6c9ccf9ace44b4bd2ae2cacb38aa1254ae0e2e2))
+
+
+### Chores
+
+* **ci:** skip uploading artifacts on stainless-internal branches ([ceb060e](https://github.com/dataleonlabs/dataleon-typescript/commit/ceb060efbcdb7f2f5f2609bedab3c0650965af97))
+* **internal:** codegen related update ([116a5a0](https://github.com/dataleonlabs/dataleon-typescript/commit/116a5a06cce08e5614082515d019b38df62d712e))
+* **internal:** codegen related update ([25a7286](https://github.com/dataleonlabs/dataleon-typescript/commit/25a728628eb09f64fc7a7027e96d081e433b5667))
+* **internal:** use x-stainless-mcp-client-envs header for MCP remote code tool calls ([6a59d39](https://github.com/dataleonlabs/dataleon-typescript/commit/6a59d39cb54a99b8a3ad6a613f55cabf4bbb2291))
+* **mcp-server:** return access instructions for 404 without API key ([d7189de](https://github.com/dataleonlabs/dataleon-typescript/commit/d7189de7b92d80b971189a38e0039d5fe89bbb87))
+* update placeholder string ([9c4917e](https://github.com/dataleonlabs/dataleon-typescript/commit/9c4917e648634b3b47a476d91e4ee97cd1d0e0f3))
+
 ## 0.1.0-alpha.41 (2026-02-27)
 
 Full Changelog: [v0.1.0-alpha.40...v0.1.0-alpha.41](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.40...v0.1.0-alpha.41)
