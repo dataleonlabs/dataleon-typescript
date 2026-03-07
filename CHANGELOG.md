@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.43 (2026-03-07)
+
+Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
+
+### Chores
+
+* **mcp-server:** improve instructions ([3d5ebda](https://github.com/dataleonlabs/dataleon-typescript/commit/3d5ebda54975f4208adaa2309e97ca066dac39f7))
+
 ## 0.1.0-alpha.42 (2026-03-07)
 
 Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
