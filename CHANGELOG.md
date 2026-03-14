@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.1.0-alpha.43 (2026-03-14)
+
+Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
+
+### Chores
+
+* **internal:** bump @modelcontextprotocol/sdk, @hono/node-server, and minimatch ([dfe3ecd](https://github.com/dataleonlabs/dataleon-typescript/commit/dfe3ecd4160b300aaef8443011691a35254ebd9c))
+* **internal:** make generated MCP servers compatible with Cloudflare worker environments ([628fd55](https://github.com/dataleonlabs/dataleon-typescript/commit/628fd55e4a65f7a2b32b97ecea6bfac6520a8469))
+* **internal:** support x-stainless-mcp-client-envs header in MCP servers ([0de4d66](https://github.com/dataleonlabs/dataleon-typescript/commit/0de4d66edfb1ffe6f719863c8e3e9c510f10e154))
+* **internal:** update dependencies to address dependabot vulnerabilities ([e7848fa](https://github.com/dataleonlabs/dataleon-typescript/commit/e7848faa3579c8c176a870a52836c7df2cdc1b64))
+* **mcp-server:** improve instructions ([3d5ebda](https://github.com/dataleonlabs/dataleon-typescript/commit/3d5ebda54975f4208adaa2309e97ca066dac39f7))
+
 ## 0.1.0-alpha.42 (2026-03-07)
 
 Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
