@@ -434,7 +434,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       php: {
         method: 'individuals->documents->upload',
         example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->individuals->documents->upload(\n  'individual_id',\n  documentType: 'liasse_fiscale',\n  file: 'file',\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->individuals->documents->upload(\n  'individual_id',\n  documentType: 'liasse_fiscale',\n  file: FileParam::fromString('Example data', filename: uniqid('file-upload-', true)),\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
       },
       python: {
         method: 'individuals.documents.upload',
@@ -837,7 +837,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       php: {
         method: 'companies->documents->upload',
         example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->companies->documents->upload(\n  'company_id',\n  documentType: 'liasse_fiscale',\n  file: 'file',\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->companies->documents->upload(\n  'company_id',\n  documentType: 'liasse_fiscale',\n  file: FileParam::fromString('Example data', filename: uniqid('file-upload-', true)),\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
       },
       python: {
         method: 'companies.documents.upload',
