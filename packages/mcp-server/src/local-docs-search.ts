@@ -449,7 +449,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       typescript: {
         method: 'client.individuals.documents.upload',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.individuals.documents.upload('individual_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
+          "import fs from 'fs';\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.individuals.documents.upload('individual_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
       },
     },
   },
@@ -852,7 +852,7 @@ const EMBEDDED_METHODS: MethodEntry[] = [
       typescript: {
         method: 'client.companies.documents.upload',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.companies.documents.upload('company_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
+          "import fs from 'fs';\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.companies.documents.upload('company_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
       },
     },
   },
