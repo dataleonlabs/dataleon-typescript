@@ -1,5 +1,50 @@
 # Changelog
 
+## 0.1.0-alpha.43 (2026-04-28)
+
+Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
+
+### Features
+
+* support setting headers via env ([0cd0e47](https://github.com/dataleonlabs/dataleon-typescript/commit/0cd0e47df14829885beb53175ba504ea6a9bdac4))
+
+
+### Chores
+
+* **ci:** escape input path in publish-npm workflow ([807f799](https://github.com/dataleonlabs/dataleon-typescript/commit/807f7994275d302b23d4b2f0bbba64e8f55e29c1))
+* **ci:** skip lint on metadata-only changes ([61f29b7](https://github.com/dataleonlabs/dataleon-typescript/commit/61f29b7a7e7a2e975c37e63473921d397ffce547))
+* fix example snippet imports ([f9a9dad](https://github.com/dataleonlabs/dataleon-typescript/commit/f9a9dadd7da70e79f496aeb46cb5719e49fa2f82))
+* **internal:** bump @modelcontextprotocol/sdk, @hono/node-server, and minimatch ([dfe3ecd](https://github.com/dataleonlabs/dataleon-typescript/commit/dfe3ecd4160b300aaef8443011691a35254ebd9c))
+* **internal:** codegen related update ([33e495d](https://github.com/dataleonlabs/dataleon-typescript/commit/33e495dfc7fc6e7dba7ad8732a883f4ae6f49edf))
+* **internal:** codegen related update ([333e7ef](https://github.com/dataleonlabs/dataleon-typescript/commit/333e7eff930ea388d940b6ca3cd8034e94147209))
+* **internal:** codegen related update ([296e3fc](https://github.com/dataleonlabs/dataleon-typescript/commit/296e3fcf047a45a6175049099b43e93ad559c9a8))
+* **internal:** codegen related update ([a424832](https://github.com/dataleonlabs/dataleon-typescript/commit/a42483274e31b35ab0dc906a5c511b9eaa4267f3))
+* **internal:** codegen related update ([1d5bdf6](https://github.com/dataleonlabs/dataleon-typescript/commit/1d5bdf6e632a72b1a8ba292aff17375d58af218e))
+* **internal:** codegen related update ([dd99857](https://github.com/dataleonlabs/dataleon-typescript/commit/dd998578c5ea32ca6080e15eee9a1d5646763100))
+* **internal:** fix MCP docker image builds in yarn projects ([f22f162](https://github.com/dataleonlabs/dataleon-typescript/commit/f22f162f57cbed78fa11da989b2eef5a2dc7532d))
+* **internal:** fix MCP server import ordering ([a17c26c](https://github.com/dataleonlabs/dataleon-typescript/commit/a17c26cdebfd8c43572599e0347cdcedfa0100cb))
+* **internal:** fix MCP server TS errors that occur with required client options ([1e5caa6](https://github.com/dataleonlabs/dataleon-typescript/commit/1e5caa69125df1e6c5ed7f2a58e81d4bc5e9cb87))
+* **internal:** improve local docs search for MCP servers ([6041fe2](https://github.com/dataleonlabs/dataleon-typescript/commit/6041fe27ed032d735792c00928566ef4883d9725))
+* **internal:** improve local docs search for MCP servers ([46fb39d](https://github.com/dataleonlabs/dataleon-typescript/commit/46fb39dc7751acf529b7218177118a9d3d160a9b))
+* **internal:** make generated MCP servers compatible with Cloudflare worker environments ([628fd55](https://github.com/dataleonlabs/dataleon-typescript/commit/628fd55e4a65f7a2b32b97ecea6bfac6520a8469))
+* **internal:** more robust bootstrap script ([21ebd6b](https://github.com/dataleonlabs/dataleon-typescript/commit/21ebd6b147cb9390011c097785c2f3cac0c00f3e))
+* **internal:** show error causes in MCP servers when running in local mode ([dc0bf8f](https://github.com/dataleonlabs/dataleon-typescript/commit/dc0bf8fb54259f77d8dac8a3646b5b1c51b56d1b))
+* **internal:** support custom-instructions-path flag in MCP servers ([720b916](https://github.com/dataleonlabs/dataleon-typescript/commit/720b91603978e020d37d7b7884780def54177bc9))
+* **internal:** support local docs search in MCP servers ([2407eaa](https://github.com/dataleonlabs/dataleon-typescript/commit/2407eaa2be74efdd3321299d0399661cb969692e))
+* **internal:** support type annotations when running MCP in local execution mode ([ab1706d](https://github.com/dataleonlabs/dataleon-typescript/commit/ab1706da75bd4c406d7adcdb5f07b66e1fbb3349))
+* **internal:** support x-stainless-mcp-client-envs header in MCP servers ([0de4d66](https://github.com/dataleonlabs/dataleon-typescript/commit/0de4d66edfb1ffe6f719863c8e3e9c510f10e154))
+* **internal:** support x-stainless-mcp-client-permissions headers in MCP servers ([4efc39f](https://github.com/dataleonlabs/dataleon-typescript/commit/4efc39f1da91133dcfd6d362edd87b3c0b80c037))
+* **internal:** tweak CI branches ([dda6ba5](https://github.com/dataleonlabs/dataleon-typescript/commit/dda6ba5e9d89f37bc2af71467ae04a2450696d91))
+* **internal:** update dependencies to address dependabot vulnerabilities ([e7848fa](https://github.com/dataleonlabs/dataleon-typescript/commit/e7848faa3579c8c176a870a52836c7df2cdc1b64))
+* **internal:** update docs ordering ([9fd88ee](https://github.com/dataleonlabs/dataleon-typescript/commit/9fd88eea75bead4b96cabd877d309c3239bd810e))
+* **internal:** update gitignore ([57968d6](https://github.com/dataleonlabs/dataleon-typescript/commit/57968d681b127ec118d7956a418377a37684719c))
+* **internal:** use link instead of file in MCP server package.json files ([54434be](https://github.com/dataleonlabs/dataleon-typescript/commit/54434be3b51a3ff65c42e0a933752d1a2316bc9c))
+* **mcp-server:** add support for session id, forward client info ([43f7e10](https://github.com/dataleonlabs/dataleon-typescript/commit/43f7e10c5e05efd809252580064b20b6252d73a8))
+* **mcp-server:** improve instructions ([3d5ebda](https://github.com/dataleonlabs/dataleon-typescript/commit/3d5ebda54975f4208adaa2309e97ca066dac39f7))
+* **mcp-server:** increase local docs search result count from 5 to 10 ([5a03ca5](https://github.com/dataleonlabs/dataleon-typescript/commit/5a03ca5df90dedae4090f1a9a7bd70ec1bd37111))
+* **mcp-server:** log client info ([fafd70d](https://github.com/dataleonlabs/dataleon-typescript/commit/fafd70da47cea02b0e9b91dd9f0f0f1a8e32c2b2))
+* restructure docs search code ([7a4c302](https://github.com/dataleonlabs/dataleon-typescript/commit/7a4c3028a553df4d95f503bbfd0c2103d8c0c375))
+
 ## 0.1.0-alpha.42 (2026-03-07)
 
 Full Changelog: [v0.1.0-alpha.41...v0.1.0-alpha.42](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.41...v0.1.0-alpha.42)
