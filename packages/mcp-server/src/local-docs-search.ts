@@ -69,44 +69,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## create\n\n`client.individuals.create(workspace_id: string, person?: { birthday?: string; email?: string; first_name?: string; gender?: 'M' | 'F'; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }, source_id?: string, technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }): { id?: string; aml_suspicions?: object[]; auth_url?: string; certificat?: object; checks?: check[]; created_at?: string; documents?: generic_document[]; identity_card?: object; number?: number; person?: object; portal_url?: string; properties?: object[]; risk?: object; source_id?: string; state?: string; status?: string; tags?: object[]; technical_data?: object; webview_url?: string; workspace_id?: string; }`\n\n**post** `/individuals`\n\nCreate a new individual\n\n### Parameters\n\n- `workspace_id: string`\n  Unique identifier of the workspace where the individual is being registered.\n\n- `person?: { birthday?: string; email?: string; first_name?: string; gender?: 'M' | 'F'; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }`\n  Personal information about the individual.\n  - `birthday?: string`\n    Date of birth in DD/MM/YYYY format.\n  - `email?: string`\n    Email address of the individual.\n  - `first_name?: string`\n    First name of the individual.\n  - `gender?: 'M' | 'F'`\n    Gender of the individual (M for male, F for female).\n  - `last_name?: string`\n    Last name (family name) of the individual.\n  - `maiden_name?: string`\n    Maiden name, if applicable.\n  - `nationality?: string`\n    Nationality of the individual (ISO 3166-1 alpha-3 country code).\n  - `phone_number?: string`\n    Phone number of the individual.\n\n- `source_id?: string`\n  Optional identifier for tracking the source system or integration from your system.\n\n- `technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }`\n  Technical metadata related to the request or processing.\n  - `active_aml_suspicions?: boolean`\n    Flag indicating whether there are active research AML (Anti-Money Laundering) suspicions for the individual when you apply for a new entry or get an existing one.\n  - `callback_url?: string`\n    URL to call back upon completion of processing.\n  - `callback_url_notification?: string`\n    URL for receive notifications about the processing state or status.\n  - `filtering_score_aml_suspicions?: number`\n    Minimum filtering score (between 0 and 1) for AML suspicions to be considered.\n  - `language?: string`\n    Preferred language for communication (e.g., \"eng\", \"fra\").\n  - `portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]`\n    List of steps to include in the portal workflow.\n  - `raw_data?: boolean`\n    Flag indicating whether to include raw data in the response.\n\n### Returns\n\n- `{ id?: string; aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; auth_url?: string; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; documents?: { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }[]; identity_card?: { id?: string; back_document_signed_url?: string; birth_place?: string; birthday?: string; country?: string; entitlement_date?: string; expiration_date?: string; first_name?: string; front_document_signed_url?: string; gender?: string; issue_date?: string; last_name?: string; mrz_line_1?: string; mrz_line_2?: string; mrz_line_3?: string; type?: string; }; number?: number; person?: { birthday?: string; email?: string; face_image_signed_url?: string; first_name?: string; full_name?: string; gender?: string; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; state?: string; status?: string; tags?: { key?: string; private?: boolean; type?: string; value?: string; }[]; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; workspace_id?: string; }`\n  Represents a single individual record, including identification, status, and associated metadata.\n\n  - `id?: string`\n  - `aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]`\n  - `auth_url?: string`\n  - `certificat?: { id?: string; created_at?: string; filename?: string; }`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `created_at?: string`\n  - `documents?: { id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]`\n  - `identity_card?: { id?: string; back_document_signed_url?: string; birth_place?: string; birthday?: string; country?: string; entitlement_date?: string; expiration_date?: string; first_name?: string; front_document_signed_url?: string; gender?: string; issue_date?: string; last_name?: string; mrz_line_1?: string; mrz_line_2?: string; mrz_line_3?: string; type?: string; }`\n  - `number?: number`\n  - `person?: { birthday?: string; email?: string; face_image_signed_url?: string; first_name?: string; full_name?: string; gender?: string; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }`\n  - `portal_url?: string`\n  - `properties?: { name?: string; type?: string; value?: string; }[]`\n  - `risk?: { code?: string; reason?: string; score?: number; }`\n  - `source_id?: string`\n  - `state?: string`\n  - `status?: string`\n  - `tags?: { key?: string; private?: boolean; type?: string; value?: string; }[]`\n  - `technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }`\n  - `webview_url?: string`\n  - `workspace_id?: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst individual = await client.individuals.create({ workspace_id: 'wk_123' });\n\nconsole.log(individual);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Individuals.Create',
+      typescript: {
+        method: 'client.individuals.create',
         example:
-          'IndividualCreateParams parameters = new() { WorkspaceID = "wk_123" };\n\nvar individual = await client.Individuals.Create(parameters);\n\nConsole.WriteLine(individual);',
-      },
-      go: {
-        method: 'client.Individuals.New',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividual, err := client.Individuals.New(context.TODO(), dataleon.IndividualNewParams{\n\t\tWorkspaceID: "wk_123",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individual.ID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/individuals \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
-      },
-      java: {
-        method: 'individuals().create',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualCreateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        IndividualCreateParams params = IndividualCreateParams.builder()\n            .workspaceId("wk_123")\n            .build();\n        Individual individual = client.individuals().create(params);\n    }\n}',
-      },
-      php: {
-        method: 'individuals->create',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individual = $client->individuals->create(\n  workspaceID: 'wk_123',\n  person: [\n    'birthday' => '15/05/1985',\n    'email' => 'john.doe@example.com',\n    'firstName' => 'John',\n    'gender' => 'M',\n    'lastName' => 'Doe',\n    'maidenName' => 'John Doe',\n    'nationality' => 'FRA',\n    'phoneNumber' => '+33 1 23 45 67 89',\n  ],\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'selfie', 'face_match'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($individual);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individual = await client.individuals.create({ workspace_id: 'wk_123' });\n\nconsole.log(individual.id);",
       },
       python: {
         method: 'individuals.create',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\nindividual = client.individuals.create(\n    workspace_id="wk_123",\n)\nprint(individual.id)',
       },
+      java: {
+        method: 'individuals().create',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualCreateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        IndividualCreateParams params = IndividualCreateParams.builder()\n            .workspaceId("wk_123")\n            .build();\n        Individual individual = client.individuals().create(params);\n    }\n}',
+      },
+      go: {
+        method: 'client.Individuals.New',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividual, err := client.Individuals.New(context.TODO(), dataleon.IndividualNewParams{\n\t\tWorkspaceID: "wk_123",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individual.ID)\n}\n',
+      },
       ruby: {
         method: 'individuals.create',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\nindividual = dataleon.individuals.create(workspace_id: "wk_123")\n\nputs(individual)',
       },
-      typescript: {
-        method: 'client.individuals.create',
+      php: {
+        method: 'individuals->create',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individual = await client.individuals.create({ workspace_id: 'wk_123' });\n\nconsole.log(individual.id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individual = $client->individuals->create(\n  workspaceID: 'wk_123',\n  person: [\n    'birthday' => '15/05/1985',\n    'email' => 'john.doe@example.com',\n    'firstName' => 'John',\n    'gender' => 'M',\n    'lastName' => 'Doe',\n    'maidenName' => 'John Doe',\n    'nationality' => 'FRA',\n    'phoneNumber' => '+33 1 23 45 67 89',\n  ],\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'selfie', 'face_match'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($individual);",
+      },
+      csharp: {
+        method: 'Individuals.Create',
+        example:
+          'IndividualCreateParams parameters = new() { WorkspaceID = "wk_123" };\n\nvar individual = await client.Individuals.Create(parameters);\n\nConsole.WriteLine(individual);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/individuals \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
       },
     },
   },
@@ -133,44 +133,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.individuals.list(end_date?: string, limit?: number, offset?: number, source_id?: string, start_date?: string, state?: string, status?: 'rejected' | 'need_review' | 'approved', workspace_id?: string): object[]`\n\n**get** `/individuals`\n\nGet all individuals\n\n### Parameters\n\n- `end_date?: string`\n  Filter individuals created before this date (format YYYY-MM-DD)\n\n- `limit?: number`\n  Number of results to return (between 1 and 100)\n\n- `offset?: number`\n  Number of results to offset (must be ≥ 0)\n\n- `source_id?: string`\n  Filter by source ID\n\n- `start_date?: string`\n  Filter individuals created after this date (format YYYY-MM-DD)\n\n- `state?: string`\n  Filter by individual status (must be one of the allowed values)\n\n- `status?: 'rejected' | 'need_review' | 'approved'`\n  Filter by individual status (must be one of the allowed values)\n\n- `workspace_id?: string`\n  Filter by workspace ID\n\n### Returns\n\n- `{ id?: string; aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; auth_url?: string; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: object[]; created_at?: string; documents?: object[]; identity_card?: { id?: string; back_document_signed_url?: string; birth_place?: string; birthday?: string; country?: string; entitlement_date?: string; expiration_date?: string; first_name?: string; front_document_signed_url?: string; gender?: string; issue_date?: string; last_name?: string; mrz_line_1?: string; mrz_line_2?: string; mrz_line_3?: string; type?: string; }; number?: number; person?: { birthday?: string; email?: string; face_image_signed_url?: string; first_name?: string; full_name?: string; gender?: string; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; state?: string; status?: string; tags?: { key?: string; private?: boolean; type?: string; value?: string; }[]; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; workspace_id?: string; }[]`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst individuals = await client.individuals.list();\n\nconsole.log(individuals);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Individuals.List',
+      typescript: {
+        method: 'client.individuals.list',
         example:
-          'IndividualListParams parameters = new();\n\nvar individuals = await client.Individuals.List(parameters);\n\nConsole.WriteLine(individuals);',
-      },
-      go: {
-        method: 'client.Individuals.List',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividuals, err := client.Individuals.List(context.TODO(), dataleon.IndividualListParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individuals)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/individuals \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'individuals().list',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualListParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        List<Individual> individuals = client.individuals().list();\n    }\n}',
-      },
-      php: {
-        method: 'individuals->list',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individuals = $client->individuals->list(\n  endDate: '2019-12-27',\n  limit: 1,\n  offset: 0,\n  sourceID: 'source_id',\n  startDate: '2019-12-27',\n  state: 'VOID',\n  status: 'rejected',\n  workspaceID: 'workspace_id',\n);\n\nvar_dump($individuals);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individuals = await client.individuals.list();\n\nconsole.log(individuals);",
       },
       python: {
         method: 'individuals.list',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\nindividuals = client.individuals.list()\nprint(individuals)',
       },
+      java: {
+        method: 'individuals().list',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualListParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        List<Individual> individuals = client.individuals().list();\n    }\n}',
+      },
+      go: {
+        method: 'client.Individuals.List',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividuals, err := client.Individuals.List(context.TODO(), dataleon.IndividualListParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individuals)\n}\n',
+      },
       ruby: {
         method: 'individuals.list',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\nindividuals = dataleon.individuals.list\n\nputs(individuals)',
       },
-      typescript: {
-        method: 'client.individuals.list',
+      php: {
+        method: 'individuals->list',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individuals = await client.individuals.list();\n\nconsole.log(individuals);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individuals = $client->individuals->list(\n  endDate: '2019-12-27',\n  limit: 1,\n  offset: 0,\n  sourceID: 'source_id',\n  startDate: '2019-12-27',\n  state: 'VOID',\n  status: 'rejected',\n  workspaceID: 'workspace_id',\n);\n\nvar_dump($individuals);",
+      },
+      csharp: {
+        method: 'Individuals.List',
+        example:
+          'IndividualListParams parameters = new();\n\nvar individuals = await client.Individuals.List(parameters);\n\nConsole.WriteLine(individuals);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/individuals \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -188,44 +188,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.individuals.retrieve(individual_id: string, document?: boolean, scope?: string): { id?: string; aml_suspicions?: object[]; auth_url?: string; certificat?: object; checks?: check[]; created_at?: string; documents?: generic_document[]; identity_card?: object; number?: number; person?: object; portal_url?: string; properties?: object[]; risk?: object; source_id?: string; state?: string; status?: string; tags?: object[]; technical_data?: object; webview_url?: string; workspace_id?: string; }`\n\n**get** `/individuals/{individual_id}`\n\nGet an individual by ID\n\n### Parameters\n\n- `individual_id: string`\n\n- `document?: boolean`\n  Include document information\n\n- `scope?: string`\n  Scope filter (id or scope)\n\n### Returns\n\n- `{ id?: string; aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; auth_url?: string; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; documents?: { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }[]; identity_card?: { id?: string; back_document_signed_url?: string; birth_place?: string; birthday?: string; country?: string; entitlement_date?: string; expiration_date?: string; first_name?: string; front_document_signed_url?: string; gender?: string; issue_date?: string; last_name?: string; mrz_line_1?: string; mrz_line_2?: string; mrz_line_3?: string; type?: string; }; number?: number; person?: { birthday?: string; email?: string; face_image_signed_url?: string; first_name?: string; full_name?: string; gender?: string; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; state?: string; status?: string; tags?: { key?: string; private?: boolean; type?: string; value?: string; }[]; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; workspace_id?: string; }`\n  Represents a single individual record, including identification, status, and associated metadata.\n\n  - `id?: string`\n  - `aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]`\n  - `auth_url?: string`\n  - `certificat?: { id?: string; created_at?: string; filename?: string; }`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `created_at?: string`\n  - `documents?: { id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]`\n  - `identity_card?: { id?: string; back_document_signed_url?: string; birth_place?: string; birthday?: string; country?: string; entitlement_date?: string; expiration_date?: string; first_name?: string; front_document_signed_url?: string; gender?: string; issue_date?: string; last_name?: string; mrz_line_1?: string; mrz_line_2?: string; mrz_line_3?: string; type?: string; }`\n  - `number?: number`\n  - `person?: { birthday?: string; email?: string; face_image_signed_url?: string; first_name?: string; full_name?: string; gender?: string; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }`\n  - `portal_url?: string`\n  - `properties?: { name?: string; type?: string; value?: string; }[]`\n  - `risk?: { code?: string; reason?: string; score?: number; }`\n  - `source_id?: string`\n  - `state?: string`\n  - `status?: string`\n  - `tags?: { key?: string; private?: boolean; type?: string; value?: string; }[]`\n  - `technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }`\n  - `webview_url?: string`\n  - `workspace_id?: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst individual = await client.individuals.retrieve('individual_id');\n\nconsole.log(individual);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Individuals.Retrieve',
+      typescript: {
+        method: 'client.individuals.retrieve',
         example:
-          'IndividualRetrieveParams parameters = new() { IndividualID = "individual_id" };\n\nvar individual = await client.Individuals.Retrieve(parameters);\n\nConsole.WriteLine(individual);',
-      },
-      go: {
-        method: 'client.Individuals.Get',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividual, err := client.Individuals.Get(\n\t\tcontext.TODO(),\n\t\t"individual_id",\n\t\tdataleon.IndividualGetParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individual.ID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'individuals().retrieve',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualRetrieveParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        Individual individual = client.individuals().retrieve("individual_id");\n    }\n}',
-      },
-      php: {
-        method: 'individuals->retrieve',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individual = $client->individuals->retrieve(\n  'individual_id', document: true, scope: 'scope'\n);\n\nvar_dump($individual);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individual = await client.individuals.retrieve('individual_id');\n\nconsole.log(individual.id);",
       },
       python: {
         method: 'individuals.retrieve',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\nindividual = client.individuals.retrieve(\n    individual_id="individual_id",\n)\nprint(individual.id)',
       },
+      java: {
+        method: 'individuals().retrieve',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualRetrieveParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        Individual individual = client.individuals().retrieve("individual_id");\n    }\n}',
+      },
+      go: {
+        method: 'client.Individuals.Get',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividual, err := client.Individuals.Get(\n\t\tcontext.TODO(),\n\t\t"individual_id",\n\t\tdataleon.IndividualGetParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individual.ID)\n}\n',
+      },
       ruby: {
         method: 'individuals.retrieve',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\nindividual = dataleon.individuals.retrieve("individual_id")\n\nputs(individual)',
       },
-      typescript: {
-        method: 'client.individuals.retrieve',
+      php: {
+        method: 'individuals->retrieve',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individual = await client.individuals.retrieve('individual_id');\n\nconsole.log(individual.id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individual = $client->individuals->retrieve(\n  'individual_id', document: true, scope: 'scope'\n);\n\nvar_dump($individual);",
+      },
+      csharp: {
+        method: 'Individuals.Retrieve',
+        example:
+          'IndividualRetrieveParams parameters = new() { IndividualID = "individual_id" };\n\nvar individual = await client.Individuals.Retrieve(parameters);\n\nConsole.WriteLine(individual);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -249,44 +249,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## update\n\n`client.individuals.update(individual_id: string, workspace_id: string, person?: { birthday?: string; email?: string; first_name?: string; gender?: 'M' | 'F'; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }, source_id?: string, technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }): { id?: string; aml_suspicions?: object[]; auth_url?: string; certificat?: object; checks?: check[]; created_at?: string; documents?: generic_document[]; identity_card?: object; number?: number; person?: object; portal_url?: string; properties?: object[]; risk?: object; source_id?: string; state?: string; status?: string; tags?: object[]; technical_data?: object; webview_url?: string; workspace_id?: string; }`\n\n**put** `/individuals/{individual_id}`\n\nUpdate an individual by ID\n\n### Parameters\n\n- `individual_id: string`\n\n- `workspace_id: string`\n  Unique identifier of the workspace where the individual is being registered.\n\n- `person?: { birthday?: string; email?: string; first_name?: string; gender?: 'M' | 'F'; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }`\n  Personal information about the individual.\n  - `birthday?: string`\n    Date of birth in DD/MM/YYYY format.\n  - `email?: string`\n    Email address of the individual.\n  - `first_name?: string`\n    First name of the individual.\n  - `gender?: 'M' | 'F'`\n    Gender of the individual (M for male, F for female).\n  - `last_name?: string`\n    Last name (family name) of the individual.\n  - `maiden_name?: string`\n    Maiden name, if applicable.\n  - `nationality?: string`\n    Nationality of the individual (ISO 3166-1 alpha-3 country code).\n  - `phone_number?: string`\n    Phone number of the individual.\n\n- `source_id?: string`\n  Optional identifier for tracking the source system or integration from your system.\n\n- `technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }`\n  Technical metadata related to the request or processing.\n  - `active_aml_suspicions?: boolean`\n    Flag indicating whether there are active research AML (Anti-Money Laundering) suspicions for the individual when you apply for a new entry or get an existing one.\n  - `callback_url?: string`\n    URL to call back upon completion of processing.\n  - `callback_url_notification?: string`\n    URL for receive notifications about the processing state or status.\n  - `filtering_score_aml_suspicions?: number`\n    Minimum filtering score (between 0 and 1) for AML suspicions to be considered.\n  - `language?: string`\n    Preferred language for communication (e.g., \"eng\", \"fra\").\n  - `portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]`\n    List of steps to include in the portal workflow.\n  - `raw_data?: boolean`\n    Flag indicating whether to include raw data in the response.\n\n### Returns\n\n- `{ id?: string; aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; auth_url?: string; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; documents?: { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }[]; identity_card?: { id?: string; back_document_signed_url?: string; birth_place?: string; birthday?: string; country?: string; entitlement_date?: string; expiration_date?: string; first_name?: string; front_document_signed_url?: string; gender?: string; issue_date?: string; last_name?: string; mrz_line_1?: string; mrz_line_2?: string; mrz_line_3?: string; type?: string; }; number?: number; person?: { birthday?: string; email?: string; face_image_signed_url?: string; first_name?: string; full_name?: string; gender?: string; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; state?: string; status?: string; tags?: { key?: string; private?: boolean; type?: string; value?: string; }[]; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; workspace_id?: string; }`\n  Represents a single individual record, including identification, status, and associated metadata.\n\n  - `id?: string`\n  - `aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]`\n  - `auth_url?: string`\n  - `certificat?: { id?: string; created_at?: string; filename?: string; }`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `created_at?: string`\n  - `documents?: { id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]`\n  - `identity_card?: { id?: string; back_document_signed_url?: string; birth_place?: string; birthday?: string; country?: string; entitlement_date?: string; expiration_date?: string; first_name?: string; front_document_signed_url?: string; gender?: string; issue_date?: string; last_name?: string; mrz_line_1?: string; mrz_line_2?: string; mrz_line_3?: string; type?: string; }`\n  - `number?: number`\n  - `person?: { birthday?: string; email?: string; face_image_signed_url?: string; first_name?: string; full_name?: string; gender?: string; last_name?: string; maiden_name?: string; nationality?: string; phone_number?: string; }`\n  - `portal_url?: string`\n  - `properties?: { name?: string; type?: string; value?: string; }[]`\n  - `risk?: { code?: string; reason?: string; score?: number; }`\n  - `source_id?: string`\n  - `state?: string`\n  - `status?: string`\n  - `tags?: { key?: string; private?: boolean; type?: string; value?: string; }[]`\n  - `technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }`\n  - `webview_url?: string`\n  - `workspace_id?: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst individual = await client.individuals.update('individual_id', { workspace_id: 'wk_123' });\n\nconsole.log(individual);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Individuals.Update',
+      typescript: {
+        method: 'client.individuals.update',
         example:
-          'IndividualUpdateParams parameters = new()\n{\n    IndividualID = "individual_id",\n    WorkspaceID = "wk_123",\n};\n\nvar individual = await client.Individuals.Update(parameters);\n\nConsole.WriteLine(individual);',
-      },
-      go: {
-        method: 'client.Individuals.Update',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividual, err := client.Individuals.Update(\n\t\tcontext.TODO(),\n\t\t"individual_id",\n\t\tdataleon.IndividualUpdateParams{\n\t\t\tWorkspaceID: "wk_123",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individual.ID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
-      },
-      java: {
-        method: 'individuals().update',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualUpdateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        IndividualUpdateParams params = IndividualUpdateParams.builder()\n            .individualId("individual_id")\n            .workspaceId("wk_123")\n            .build();\n        Individual individual = client.individuals().update(params);\n    }\n}',
-      },
-      php: {
-        method: 'individuals->update',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individual = $client->individuals->update(\n  'individual_id',\n  workspaceID: 'wk_123',\n  person: [\n    'birthday' => '15/05/1985',\n    'email' => 'john.doe@example.com',\n    'firstName' => 'John',\n    'gender' => 'M',\n    'lastName' => 'Doe',\n    'maidenName' => 'John Doe',\n    'nationality' => 'FRA',\n    'phoneNumber' => '+33 1 23 45 67 89',\n  ],\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'selfie', 'face_match'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($individual);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individual = await client.individuals.update('individual_id', { workspace_id: 'wk_123' });\n\nconsole.log(individual.id);",
       },
       python: {
         method: 'individuals.update',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\nindividual = client.individuals.update(\n    individual_id="individual_id",\n    workspace_id="wk_123",\n)\nprint(individual.id)',
       },
+      java: {
+        method: 'individuals().update',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.Individual;\nimport com.dataleon.api.models.individuals.IndividualUpdateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        IndividualUpdateParams params = IndividualUpdateParams.builder()\n            .individualId("individual_id")\n            .workspaceId("wk_123")\n            .build();\n        Individual individual = client.individuals().update(params);\n    }\n}',
+      },
+      go: {
+        method: 'client.Individuals.Update',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tindividual, err := client.Individuals.Update(\n\t\tcontext.TODO(),\n\t\t"individual_id",\n\t\tdataleon.IndividualUpdateParams{\n\t\t\tWorkspaceID: "wk_123",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", individual.ID)\n}\n',
+      },
       ruby: {
         method: 'individuals.update',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\nindividual = dataleon.individuals.update("individual_id", workspace_id: "wk_123")\n\nputs(individual)',
       },
-      typescript: {
-        method: 'client.individuals.update',
+      php: {
+        method: 'individuals->update',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst individual = await client.individuals.update('individual_id', { workspace_id: 'wk_123' });\n\nconsole.log(individual.id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$individual = $client->individuals->update(\n  'individual_id',\n  workspaceID: 'wk_123',\n  person: [\n    'birthday' => '15/05/1985',\n    'email' => 'john.doe@example.com',\n    'firstName' => 'John',\n    'gender' => 'M',\n    'lastName' => 'Doe',\n    'maidenName' => 'John Doe',\n    'nationality' => 'FRA',\n    'phoneNumber' => '+33 1 23 45 67 89',\n  ],\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'selfie', 'face_match'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($individual);",
+      },
+      csharp: {
+        method: 'Individuals.Update',
+        example:
+          'IndividualUpdateParams parameters = new()\n{\n    IndividualID = "individual_id",\n    WorkspaceID = "wk_123",\n};\n\nvar individual = await client.Individuals.Update(parameters);\n\nConsole.WriteLine(individual);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
       },
     },
   },
@@ -302,44 +302,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## delete\n\n`client.individuals.delete(individual_id: string): void`\n\n**delete** `/individuals/{individual_id}`\n\nDelete an individual by ID\n\n### Parameters\n\n- `individual_id: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nawait client.individuals.delete('individual_id')\n```",
     perLanguage: {
-      csharp: {
-        method: 'Individuals.Delete',
+      typescript: {
+        method: 'client.individuals.delete',
         example:
-          'IndividualDeleteParams parameters = new() { IndividualID = "individual_id" };\n\nawait client.Individuals.Delete(parameters);',
-      },
-      go: {
-        method: 'client.Individuals.Delete',
-        example:
-          'package main\n\nimport (\n\t"context"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Individuals.Delete(context.TODO(), "individual_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID \\\n    -X DELETE \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'individuals().delete',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.IndividualDeleteParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        client.individuals().delete("individual_id");\n    }\n}',
-      },
-      php: {
-        method: 'individuals->delete',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$result = $client->individuals->delete('individual_id');\n\nvar_dump($result);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.individuals.delete('individual_id');",
       },
       python: {
         method: 'individuals.delete',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\nclient.individuals.delete(\n    "individual_id",\n)',
       },
+      java: {
+        method: 'individuals().delete',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.IndividualDeleteParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        client.individuals().delete("individual_id");\n    }\n}',
+      },
+      go: {
+        method: 'client.Individuals.Delete',
+        example:
+          'package main\n\nimport (\n\t"context"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Individuals.Delete(context.TODO(), "individual_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
+      },
       ruby: {
         method: 'individuals.delete',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\nresult = dataleon.individuals.delete("individual_id")\n\nputs(result)',
       },
-      typescript: {
-        method: 'client.individuals.delete',
+      php: {
+        method: 'individuals->delete',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.individuals.delete('individual_id');",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$result = $client->individuals->delete('individual_id');\n\nvar_dump($result);",
+      },
+      csharp: {
+        method: 'Individuals.Delete',
+        example:
+          'IndividualDeleteParams parameters = new() { IndividualID = "individual_id" };\n\nawait client.Individuals.Delete(parameters);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID \\\n    -X DELETE \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -357,44 +357,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.individuals.documents.list(individual_id: string): { documents?: object[]; total_document?: number; }`\n\n**get** `/individuals/{individual_id}/documents`\n\nGet documents to an individuals\n\n### Parameters\n\n- `individual_id: string`\n\n### Returns\n\n- `{ documents?: { id?: string; document_type?: string; filename?: string; name?: string; signed_url?: string; state?: string; status?: string; workspace_id?: string; }[]; total_document?: number; }`\n\n  - `documents?: { id?: string; document_type?: string; filename?: string; name?: string; signed_url?: string; state?: string; status?: string; workspace_id?: string; }[]`\n  - `total_document?: number`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst documentResponse = await client.individuals.documents.list('individual_id');\n\nconsole.log(documentResponse);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Individuals.Documents.List',
+      typescript: {
+        method: 'client.individuals.documents.list',
         example:
-          'DocumentListParams parameters = new() { IndividualID = "individual_id" };\n\nvar documentResponse = await client.Individuals.Documents.List(parameters);\n\nConsole.WriteLine(documentResponse);',
-      },
-      go: {
-        method: 'client.Individuals.Documents.List',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tdocumentResponse, err := client.Individuals.Documents.List(context.TODO(), "individual_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", documentResponse.Documents)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID/documents \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'individuals().documents().list',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.documents.DocumentListParams;\nimport com.dataleon.api.models.individuals.documents.DocumentResponse;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentResponse documentResponse = client.individuals().documents().list("individual_id");\n    }\n}',
-      },
-      php: {
-        method: 'individuals->documents->list',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$documentResponse = $client->individuals->documents->list('individual_id');\n\nvar_dump($documentResponse);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst documentResponse = await client.individuals.documents.list('individual_id');\n\nconsole.log(documentResponse.documents);",
       },
       python: {
         method: 'individuals.documents.list',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ndocument_response = client.individuals.documents.list(\n    "individual_id",\n)\nprint(document_response.documents)',
       },
+      java: {
+        method: 'individuals().documents().list',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.documents.DocumentListParams;\nimport com.dataleon.api.models.individuals.documents.DocumentResponse;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentResponse documentResponse = client.individuals().documents().list("individual_id");\n    }\n}',
+      },
+      go: {
+        method: 'client.Individuals.Documents.List',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tdocumentResponse, err := client.Individuals.Documents.List(context.TODO(), "individual_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", documentResponse.Documents)\n}\n',
+      },
       ruby: {
         method: 'individuals.documents.list',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ndocument_response = dataleon.individuals.documents.list("individual_id")\n\nputs(document_response)',
       },
-      typescript: {
-        method: 'client.individuals.documents.list',
+      php: {
+        method: 'individuals->documents->list',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst documentResponse = await client.individuals.documents.list('individual_id');\n\nconsole.log(documentResponse.documents);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$documentResponse = $client->individuals->documents->list('individual_id');\n\nvar_dump($documentResponse);",
+      },
+      csharp: {
+        method: 'Individuals.Documents.List',
+        example:
+          'DocumentListParams parameters = new() { IndividualID = "individual_id" };\n\nvar documentResponse = await client.Individuals.Documents.List(parameters);\n\nConsole.WriteLine(documentResponse);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID/documents \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -412,44 +412,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## upload\n\n`client.individuals.documents.upload(individual_id: string, document_type: string, file?: string, url?: string): { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }`\n\n**post** `/individuals/{individual_id}/documents`\n\nUpload documents to an individual\n\n### Parameters\n\n- `individual_id: string`\n\n- `document_type: string`\n  Filter by document type for upload (must be one of the allowed values)\n\n- `file?: string`\n  File to upload (required)\n\n- `url?: string`\n  URL of the file to upload (either `file` or `url` is required)\n\n### Returns\n\n- `{ id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }`\n  Represents a general document with metadata, verification checks, and extracted data.\n\n  - `id?: string`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `created_at?: string`\n  - `document_type?: string`\n  - `name?: string`\n  - `signed_url?: string`\n  - `state?: string`\n  - `status?: string`\n  - `tables?: { operation?: object[]; }[]`\n  - `values?: { confidence?: number; name?: string; value?: number[]; }[]`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst genericDocument = await client.individuals.documents.upload('individual_id', { document_type: 'liasse_fiscale' });\n\nconsole.log(genericDocument);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Individuals.Documents.Upload',
+      typescript: {
+        method: 'client.individuals.documents.upload',
         example:
-          'DocumentUploadParams parameters = new()\n{\n    IndividualID = "individual_id",\n    DocumentType = DocumentType.LiasseFiscale,\n};\n\nvar genericDocument = await client.Individuals.Documents.Upload(parameters);\n\nConsole.WriteLine(genericDocument);',
-      },
-      go: {
-        method: 'client.Individuals.Documents.Upload',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tgenericDocument, err := client.Individuals.Documents.Upload(\n\t\tcontext.TODO(),\n\t\t"individual_id",\n\t\tdataleon.IndividualDocumentUploadParams{\n\t\t\tDocumentType: dataleon.IndividualDocumentUploadParamsDocumentTypeLiasseFiscale,\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", genericDocument.ID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID/documents \\\n    -H \'Content-Type: multipart/form-data\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -F document_type=liasse_fiscale \\\n    -F url=https://example.com/sample.pdf',
-      },
-      java: {
-        method: 'individuals().documents().upload',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.documents.DocumentUploadParams;\nimport com.dataleon.api.models.individuals.documents.GenericDocument;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentUploadParams params = DocumentUploadParams.builder()\n            .individualId("individual_id")\n            .documentType(DocumentUploadParams.DocumentType.LIASSE_FISCALE)\n            .build();\n        GenericDocument genericDocument = client.individuals().documents().upload(params);\n    }\n}',
-      },
-      php: {
-        method: 'individuals->documents->upload',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->individuals->documents->upload(\n  'individual_id',\n  documentType: 'liasse_fiscale',\n  file: FileParam::fromString('Example data', filename: uniqid('file-upload-', true)),\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
+          "import fs from 'fs';\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.individuals.documents.upload('individual_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
       },
       python: {
         method: 'individuals.documents.upload',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ngeneric_document = client.individuals.documents.upload(\n    individual_id="individual_id",\n    document_type="liasse_fiscale",\n)\nprint(generic_document.id)',
       },
+      java: {
+        method: 'individuals().documents().upload',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.individuals.documents.DocumentUploadParams;\nimport com.dataleon.api.models.individuals.documents.GenericDocument;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentUploadParams params = DocumentUploadParams.builder()\n            .individualId("individual_id")\n            .documentType(DocumentUploadParams.DocumentType.LIASSE_FISCALE)\n            .build();\n        GenericDocument genericDocument = client.individuals().documents().upload(params);\n    }\n}',
+      },
+      go: {
+        method: 'client.Individuals.Documents.Upload',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tgenericDocument, err := client.Individuals.Documents.Upload(\n\t\tcontext.TODO(),\n\t\t"individual_id",\n\t\tdataleon.IndividualDocumentUploadParams{\n\t\t\tDocumentType: dataleon.IndividualDocumentUploadParamsDocumentTypeLiasseFiscale,\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", genericDocument.ID)\n}\n',
+      },
       ruby: {
         method: 'individuals.documents.upload',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ngeneric_document = dataleon.individuals.documents.upload("individual_id", document_type: :liasse_fiscale)\n\nputs(generic_document)',
       },
-      typescript: {
-        method: 'client.individuals.documents.upload',
+      php: {
+        method: 'individuals->documents->upload',
         example:
-          "import fs from 'fs';\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.individuals.documents.upload('individual_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->individuals->documents->upload(\n  'individual_id',\n  documentType: 'liasse_fiscale',\n  file: FileParam::fromString('Example data', filename: uniqid('file-upload-', true)),\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
+      },
+      csharp: {
+        method: 'Individuals.Documents.Upload',
+        example:
+          'DocumentUploadParams parameters = new()\n{\n    IndividualID = "individual_id",\n    DocumentType = DocumentType.LiasseFiscale,\n};\n\nvar genericDocument = await client.Individuals.Documents.Upload(parameters);\n\nConsole.WriteLine(genericDocument);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/individuals/$INDIVIDUAL_ID/documents \\\n    -H \'Content-Type: multipart/form-data\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -F document_type=liasse_fiscale \\\n    -F url=https://example.com/sample.pdf',
       },
     },
   },
@@ -472,44 +472,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## create\n\n`client.companies.create(company: { name: string; address?: string; commercial_name?: string; country?: string; email?: string; employer_identification_number?: string; legal_form?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }, workspace_id: string, source_id?: string, technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }): { aml_suspicions?: object[]; certificat?: object; checks?: check[]; company?: object; documents?: generic_document[]; members?: object[]; portal_url?: string; properties?: object[]; risk?: object; source_id?: string; technical_data?: object; webview_url?: string; }`\n\n**post** `/companies`\n\nCreate a new company\n\n### Parameters\n\n- `company: { name: string; address?: string; commercial_name?: string; country?: string; email?: string; employer_identification_number?: string; legal_form?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }`\n  Main information about the company being registered.\n  - `name: string`\n    Legal name of the company.\n  - `address?: string`\n    Registered address of the company.\n  - `commercial_name?: string`\n    Commercial or trade name of the company, if different from the legal name.\n  - `country?: string`\n    ISO 3166-1 alpha-2 country code of company registration (e.g., \"FR\" for France).\n  - `email?: string`\n    Contact email address for the company.\n  - `employer_identification_number?: string`\n    Employer Identification Number (EIN) or equivalent.\n  - `legal_form?: string`\n    Legal structure of the company (e.g., SARL, SAS).\n  - `phone_number?: string`\n    Contact phone number for the company.\n  - `registration_date?: string`\n    Date of official company registration in YYYY-MM-DD format.\n  - `registration_id?: string`\n    Official company registration identifier.\n  - `share_capital?: string`\n    Declared share capital of the company, usually in euros.\n  - `status?: string`\n    Current status of the company (e.g., active, inactive).\n  - `tax_identification_number?: string`\n    National tax identifier (e.g., VAT or TIN).\n  - `type?: string`\n    Type of company, such as \"main\" or \"affiliated\".\n  - `website_url?: string`\n    Company’s official website URL.\n\n- `workspace_id: string`\n  Unique identifier of the workspace in which the company is being created.\n\n- `source_id?: string`\n  Optional identifier to track the origin of the request or integration from your system.\n\n- `technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }`\n  Technical metadata and callback configuration.\n  - `active_aml_suspicions?: boolean`\n    Flag indicating whether there are active research AML (Anti-Money Laundering) suspicions for the company when you apply for a new entry or get an existing one.\n  - `callback_url?: string`\n    URL to receive a callback once the company is processed.\n  - `callback_url_notification?: string`\n    URL to receive notifications about the processing state and status.\n  - `filtering_score_aml_suspicions?: number`\n    Minimum filtering score (between 0 and 1) for AML suspicions to be considered.\n  - `language?: string`\n    Preferred language for responses or notifications (e.g., \"eng\", \"fra\").\n  - `portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]`\n    List of steps to include in the portal workflow.\n  - `raw_data?: boolean`\n    Flag indicating whether to include raw data in the response.\n\n### Returns\n\n- `{ aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; company?: { address?: string; closure_date?: string; commercial_name?: string; contact?: { department?: string; email?: string; first_name?: string; last_name?: string; phone_number?: string; }; country?: string; email?: string; employees?: number; employer_identification_number?: string; insolvency_exists?: boolean; insolvency_ongoing?: boolean; legal_form?: string; name?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }; documents?: { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }[]; members?: { id?: string; address?: string; birthday?: string; birthplace?: string; country?: string; documents?: object[]; email?: string; first_name?: string; is_beneficial_owner?: boolean; is_delegator?: boolean; last_name?: string; liveness_verification?: boolean; name?: string; ownership_percentage?: number; phone_number?: string; postal_code?: string; registration_id?: string; relation?: string; roles?: string; source?: 'gouve' | 'user' | 'company'; state?: string; status?: string; type?: 'person' | 'company'; workspace_id?: string; }[]; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; }`\n\n  - `aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]`\n  - `certificat?: { id?: string; created_at?: string; filename?: string; }`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `company?: { address?: string; closure_date?: string; commercial_name?: string; contact?: { department?: string; email?: string; first_name?: string; last_name?: string; phone_number?: string; }; country?: string; email?: string; employees?: number; employer_identification_number?: string; insolvency_exists?: boolean; insolvency_ongoing?: boolean; legal_form?: string; name?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }`\n  - `documents?: { id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]`\n  - `members?: { id?: string; address?: string; birthday?: string; birthplace?: string; country?: string; documents?: { id?: string; checks?: object[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]; email?: string; first_name?: string; is_beneficial_owner?: boolean; is_delegator?: boolean; last_name?: string; liveness_verification?: boolean; name?: string; ownership_percentage?: number; phone_number?: string; postal_code?: string; registration_id?: string; relation?: string; roles?: string; source?: 'gouve' | 'user' | 'company'; state?: string; status?: string; type?: 'person' | 'company'; workspace_id?: string; }[]`\n  - `portal_url?: string`\n  - `properties?: { name?: string; type?: string; value?: string; }[]`\n  - `risk?: { code?: string; reason?: string; score?: number; }`\n  - `source_id?: string`\n  - `technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }`\n  - `webview_url?: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst companyRegistration = await client.companies.create({\n  company: { name: 'ACME Corp' },\n  workspace_id: 'wk_123',\n});\n\nconsole.log(companyRegistration);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Companies.Create',
+      typescript: {
+        method: 'client.companies.create',
         example:
-          'CompanyCreateParams parameters = new()\n{\n    Company = new()\n    {\n        Name = "ACME Corp",\n        Address = "123 rue Exemple, Paris",\n        CommercialName = "ACME",\n        Country = "FR",\n        Email = "info@acme.fr",\n        EmployerIdentificationNumber = "EIN123456",\n        LegalForm = "SARL",\n        PhoneNumber = "+33 1 23 45 67 89",\n        RegistrationDate = "2010-05-15",\n        RegistrationID = "RCS123456",\n        ShareCapital = "100000",\n        Status = "active",\n        TaxIdentificationNumber = "FR123456789",\n        Type = "main",\n        WebsiteUrl = "https://acme.fr",\n    },\n    WorkspaceID = "wk_123",\n};\n\nvar companyRegistration = await client.Companies.Create(parameters);\n\nConsole.WriteLine(companyRegistration);',
-      },
-      go: {
-        method: 'client.Companies.New',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistration, err := client.Companies.New(context.TODO(), dataleon.CompanyNewParams{\n\t\tCompany: dataleon.CompanyNewParamsCompany{\n\t\t\tName: "ACME Corp",\n\t\t},\n\t\tWorkspaceID: "wk_123",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistration.SourceID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/companies \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "company": {\n            "name": "ACME Corp"\n          },\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
-      },
-      java: {
-        method: 'companies().create',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyCreateParams;\nimport com.dataleon.api.models.companies.CompanyRegistration;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        CompanyCreateParams params = CompanyCreateParams.builder()\n            .company(CompanyCreateParams.Company.builder()\n                .name("ACME Corp")\n                .build())\n            .workspaceId("wk_123")\n            .build();\n        CompanyRegistration companyRegistration = client.companies().create(params);\n    }\n}',
-      },
-      php: {
-        method: 'companies->create',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistration = $client->companies->create(\n  company: [\n    'name' => 'ACME Corp',\n    'address' => '123 rue Exemple, Paris',\n    'commercialName' => 'ACME',\n    'country' => 'FR',\n    'email' => 'info@acme.fr',\n    'employerIdentificationNumber' => 'EIN123456',\n    'legalForm' => 'SARL',\n    'phoneNumber' => '+33 1 23 45 67 89',\n    'registrationDate' => '2010-05-15',\n    'registrationID' => 'RCS123456',\n    'shareCapital' => '100000',\n    'status' => 'active',\n    'taxIdentificationNumber' => 'FR123456789',\n    'type' => 'main',\n    'websiteURL' => 'https://acme.fr',\n  ],\n  workspaceID: 'wk_123',\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'document_signing'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($companyRegistration);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistration = await client.companies.create({\n  company: { name: 'ACME Corp' },\n  workspace_id: 'wk_123',\n});\n\nconsole.log(companyRegistration.source_id);",
       },
       python: {
         method: 'companies.create',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ncompany_registration = client.companies.create(\n    company={\n        "name": "ACME Corp"\n    },\n    workspace_id="wk_123",\n)\nprint(company_registration.source_id)',
       },
+      java: {
+        method: 'companies().create',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyCreateParams;\nimport com.dataleon.api.models.companies.CompanyRegistration;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        CompanyCreateParams params = CompanyCreateParams.builder()\n            .company(CompanyCreateParams.Company.builder()\n                .name("ACME Corp")\n                .build())\n            .workspaceId("wk_123")\n            .build();\n        CompanyRegistration companyRegistration = client.companies().create(params);\n    }\n}',
+      },
+      go: {
+        method: 'client.Companies.New',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistration, err := client.Companies.New(context.TODO(), dataleon.CompanyNewParams{\n\t\tCompany: dataleon.CompanyNewParamsCompany{\n\t\t\tName: "ACME Corp",\n\t\t},\n\t\tWorkspaceID: "wk_123",\n\t})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistration.SourceID)\n}\n',
+      },
       ruby: {
         method: 'companies.create',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ncompany_registration = dataleon.companies.create(company: {name: "ACME Corp"}, workspace_id: "wk_123")\n\nputs(company_registration)',
       },
-      typescript: {
-        method: 'client.companies.create',
+      php: {
+        method: 'companies->create',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistration = await client.companies.create({\n  company: { name: 'ACME Corp' },\n  workspace_id: 'wk_123',\n});\n\nconsole.log(companyRegistration.source_id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistration = $client->companies->create(\n  company: [\n    'name' => 'ACME Corp',\n    'address' => '123 rue Exemple, Paris',\n    'commercialName' => 'ACME',\n    'country' => 'FR',\n    'email' => 'info@acme.fr',\n    'employerIdentificationNumber' => 'EIN123456',\n    'legalForm' => 'SARL',\n    'phoneNumber' => '+33 1 23 45 67 89',\n    'registrationDate' => '2010-05-15',\n    'registrationID' => 'RCS123456',\n    'shareCapital' => '100000',\n    'status' => 'active',\n    'taxIdentificationNumber' => 'FR123456789',\n    'type' => 'main',\n    'websiteURL' => 'https://acme.fr',\n  ],\n  workspaceID: 'wk_123',\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'document_signing'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($companyRegistration);",
+      },
+      csharp: {
+        method: 'Companies.Create',
+        example:
+          'CompanyCreateParams parameters = new()\n{\n    Company = new()\n    {\n        Name = "ACME Corp",\n        Address = "123 rue Exemple, Paris",\n        CommercialName = "ACME",\n        Country = "FR",\n        Email = "info@acme.fr",\n        EmployerIdentificationNumber = "EIN123456",\n        LegalForm = "SARL",\n        PhoneNumber = "+33 1 23 45 67 89",\n        RegistrationDate = "2010-05-15",\n        RegistrationID = "RCS123456",\n        ShareCapital = "100000",\n        Status = "active",\n        TaxIdentificationNumber = "FR123456789",\n        Type = "main",\n        WebsiteUrl = "https://acme.fr",\n    },\n    WorkspaceID = "wk_123",\n};\n\nvar companyRegistration = await client.Companies.Create(parameters);\n\nConsole.WriteLine(companyRegistration);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/companies \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "company": {\n            "name": "ACME Corp"\n          },\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
       },
     },
   },
@@ -536,44 +536,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.companies.list(end_date?: string, limit?: number, offset?: number, source_id?: string, start_date?: string, state?: string, status?: 'rejected' | 'need_review' | 'approved', workspace_id?: string): object[]`\n\n**get** `/companies`\n\nGet all companies\n\n### Parameters\n\n- `end_date?: string`\n  Filter companies created before this date (format YYYY-MM-DD)\n\n- `limit?: number`\n  Number of results to return (between 1 and 100)\n\n- `offset?: number`\n  Number of results to skip (must be ≥ 0)\n\n- `source_id?: string`\n  Filter by source ID\n\n- `start_date?: string`\n  Filter companies created after this date (format YYYY-MM-DD)\n\n- `state?: string`\n  Filter by company state (must be one of the allowed values)\n\n- `status?: 'rejected' | 'need_review' | 'approved'`\n  Filter by individual status (must be one of the allowed values)\n\n- `workspace_id?: string`\n  Filter by workspace ID\n\n### Returns\n\n- `{ aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: object[]; company?: { address?: string; closure_date?: string; commercial_name?: string; contact?: object; country?: string; email?: string; employees?: number; employer_identification_number?: string; insolvency_exists?: boolean; insolvency_ongoing?: boolean; legal_form?: string; name?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }; documents?: object[]; members?: { id?: string; address?: string; birthday?: string; birthplace?: string; country?: string; documents?: generic_document[]; email?: string; first_name?: string; is_beneficial_owner?: boolean; is_delegator?: boolean; last_name?: string; liveness_verification?: boolean; name?: string; ownership_percentage?: number; phone_number?: string; postal_code?: string; registration_id?: string; relation?: string; roles?: string; source?: 'gouve' | 'user' | 'company'; state?: string; status?: string; type?: 'person' | 'company'; workspace_id?: string; }[]; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; }[]`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst companyRegistrations = await client.companies.list();\n\nconsole.log(companyRegistrations);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Companies.List',
+      typescript: {
+        method: 'client.companies.list',
         example:
-          'CompanyListParams parameters = new();\n\nvar companyRegistrations = await client.Companies.List(parameters);\n\nConsole.WriteLine(companyRegistrations);',
-      },
-      go: {
-        method: 'client.Companies.List',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistrations, err := client.Companies.List(context.TODO(), dataleon.CompanyListParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistrations)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/companies \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'companies().list',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyListParams;\nimport com.dataleon.api.models.companies.CompanyRegistration;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        List<CompanyRegistration> companyRegistrations = client.companies().list();\n    }\n}',
-      },
-      php: {
-        method: 'companies->list',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistrations = $client->companies->list(\n  endDate: '2019-12-27',\n  limit: 1,\n  offset: 0,\n  sourceID: 'source_id',\n  startDate: '2019-12-27',\n  state: 'VOID',\n  status: 'rejected',\n  workspaceID: 'workspace_id',\n);\n\nvar_dump($companyRegistrations);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistrations = await client.companies.list();\n\nconsole.log(companyRegistrations);",
       },
       python: {
         method: 'companies.list',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ncompany_registrations = client.companies.list()\nprint(company_registrations)',
       },
+      java: {
+        method: 'companies().list',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyListParams;\nimport com.dataleon.api.models.companies.CompanyRegistration;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        List<CompanyRegistration> companyRegistrations = client.companies().list();\n    }\n}',
+      },
+      go: {
+        method: 'client.Companies.List',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistrations, err := client.Companies.List(context.TODO(), dataleon.CompanyListParams{})\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistrations)\n}\n',
+      },
       ruby: {
         method: 'companies.list',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ncompany_registrations = dataleon.companies.list\n\nputs(company_registrations)',
       },
-      typescript: {
-        method: 'client.companies.list',
+      php: {
+        method: 'companies->list',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistrations = await client.companies.list();\n\nconsole.log(companyRegistrations);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistrations = $client->companies->list(\n  endDate: '2019-12-27',\n  limit: 1,\n  offset: 0,\n  sourceID: 'source_id',\n  startDate: '2019-12-27',\n  state: 'VOID',\n  status: 'rejected',\n  workspaceID: 'workspace_id',\n);\n\nvar_dump($companyRegistrations);",
+      },
+      csharp: {
+        method: 'Companies.List',
+        example:
+          'CompanyListParams parameters = new();\n\nvar companyRegistrations = await client.Companies.List(parameters);\n\nConsole.WriteLine(companyRegistrations);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/companies \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -591,44 +591,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## retrieve\n\n`client.companies.retrieve(company_id: string, document?: boolean, scope?: string): { aml_suspicions?: object[]; certificat?: object; checks?: check[]; company?: object; documents?: generic_document[]; members?: object[]; portal_url?: string; properties?: object[]; risk?: object; source_id?: string; technical_data?: object; webview_url?: string; }`\n\n**get** `/companies/{company_id}`\n\nGet a company by ID\n\n### Parameters\n\n- `company_id: string`\n\n- `document?: boolean`\n  Include document signed url\n\n- `scope?: string`\n  Scope filter (id or scope)\n\n### Returns\n\n- `{ aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; company?: { address?: string; closure_date?: string; commercial_name?: string; contact?: { department?: string; email?: string; first_name?: string; last_name?: string; phone_number?: string; }; country?: string; email?: string; employees?: number; employer_identification_number?: string; insolvency_exists?: boolean; insolvency_ongoing?: boolean; legal_form?: string; name?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }; documents?: { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }[]; members?: { id?: string; address?: string; birthday?: string; birthplace?: string; country?: string; documents?: object[]; email?: string; first_name?: string; is_beneficial_owner?: boolean; is_delegator?: boolean; last_name?: string; liveness_verification?: boolean; name?: string; ownership_percentage?: number; phone_number?: string; postal_code?: string; registration_id?: string; relation?: string; roles?: string; source?: 'gouve' | 'user' | 'company'; state?: string; status?: string; type?: 'person' | 'company'; workspace_id?: string; }[]; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; }`\n\n  - `aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]`\n  - `certificat?: { id?: string; created_at?: string; filename?: string; }`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `company?: { address?: string; closure_date?: string; commercial_name?: string; contact?: { department?: string; email?: string; first_name?: string; last_name?: string; phone_number?: string; }; country?: string; email?: string; employees?: number; employer_identification_number?: string; insolvency_exists?: boolean; insolvency_ongoing?: boolean; legal_form?: string; name?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }`\n  - `documents?: { id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]`\n  - `members?: { id?: string; address?: string; birthday?: string; birthplace?: string; country?: string; documents?: { id?: string; checks?: object[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]; email?: string; first_name?: string; is_beneficial_owner?: boolean; is_delegator?: boolean; last_name?: string; liveness_verification?: boolean; name?: string; ownership_percentage?: number; phone_number?: string; postal_code?: string; registration_id?: string; relation?: string; roles?: string; source?: 'gouve' | 'user' | 'company'; state?: string; status?: string; type?: 'person' | 'company'; workspace_id?: string; }[]`\n  - `portal_url?: string`\n  - `properties?: { name?: string; type?: string; value?: string; }[]`\n  - `risk?: { code?: string; reason?: string; score?: number; }`\n  - `source_id?: string`\n  - `technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }`\n  - `webview_url?: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst companyRegistration = await client.companies.retrieve('company_id');\n\nconsole.log(companyRegistration);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Companies.Retrieve',
+      typescript: {
+        method: 'client.companies.retrieve',
         example:
-          'CompanyRetrieveParams parameters = new() { CompanyID = "company_id" };\n\nvar companyRegistration = await client.Companies.Retrieve(parameters);\n\nConsole.WriteLine(companyRegistration);',
-      },
-      go: {
-        method: 'client.Companies.Get',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistration, err := client.Companies.Get(\n\t\tcontext.TODO(),\n\t\t"company_id",\n\t\tdataleon.CompanyGetParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistration.SourceID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'companies().retrieve',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyRegistration;\nimport com.dataleon.api.models.companies.CompanyRetrieveParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        CompanyRegistration companyRegistration = client.companies().retrieve("company_id");\n    }\n}',
-      },
-      php: {
-        method: 'companies->retrieve',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistration = $client->companies->retrieve(\n  'company_id', document: true, scope: 'scope'\n);\n\nvar_dump($companyRegistration);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistration = await client.companies.retrieve('company_id');\n\nconsole.log(companyRegistration.source_id);",
       },
       python: {
         method: 'companies.retrieve',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ncompany_registration = client.companies.retrieve(\n    company_id="company_id",\n)\nprint(company_registration.source_id)',
       },
+      java: {
+        method: 'companies().retrieve',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyRegistration;\nimport com.dataleon.api.models.companies.CompanyRetrieveParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        CompanyRegistration companyRegistration = client.companies().retrieve("company_id");\n    }\n}',
+      },
+      go: {
+        method: 'client.Companies.Get',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistration, err := client.Companies.Get(\n\t\tcontext.TODO(),\n\t\t"company_id",\n\t\tdataleon.CompanyGetParams{},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistration.SourceID)\n}\n',
+      },
       ruby: {
         method: 'companies.retrieve',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ncompany_registration = dataleon.companies.retrieve("company_id")\n\nputs(company_registration)',
       },
-      typescript: {
-        method: 'client.companies.retrieve',
+      php: {
+        method: 'companies->retrieve',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistration = await client.companies.retrieve('company_id');\n\nconsole.log(companyRegistration.source_id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistration = $client->companies->retrieve(\n  'company_id', document: true, scope: 'scope'\n);\n\nvar_dump($companyRegistration);",
+      },
+      csharp: {
+        method: 'Companies.Retrieve',
+        example:
+          'CompanyRetrieveParams parameters = new() { CompanyID = "company_id" };\n\nvar companyRegistration = await client.Companies.Retrieve(parameters);\n\nConsole.WriteLine(companyRegistration);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -652,44 +652,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## update\n\n`client.companies.update(company_id: string, company: { name: string; address?: string; commercial_name?: string; country?: string; email?: string; employer_identification_number?: string; legal_form?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }, workspace_id: string, source_id?: string, technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }): { aml_suspicions?: object[]; certificat?: object; checks?: check[]; company?: object; documents?: generic_document[]; members?: object[]; portal_url?: string; properties?: object[]; risk?: object; source_id?: string; technical_data?: object; webview_url?: string; }`\n\n**put** `/companies/{company_id}`\n\nUpdate a company by ID\n\n### Parameters\n\n- `company_id: string`\n\n- `company: { name: string; address?: string; commercial_name?: string; country?: string; email?: string; employer_identification_number?: string; legal_form?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }`\n  Main information about the company being registered.\n  - `name: string`\n    Legal name of the company.\n  - `address?: string`\n    Registered address of the company.\n  - `commercial_name?: string`\n    Commercial or trade name of the company, if different from the legal name.\n  - `country?: string`\n    ISO 3166-1 alpha-2 country code of company registration (e.g., \"FR\" for France).\n  - `email?: string`\n    Contact email address for the company.\n  - `employer_identification_number?: string`\n    Employer Identification Number (EIN) or equivalent.\n  - `legal_form?: string`\n    Legal structure of the company (e.g., SARL, SAS).\n  - `phone_number?: string`\n    Contact phone number for the company.\n  - `registration_date?: string`\n    Date of official company registration in YYYY-MM-DD format.\n  - `registration_id?: string`\n    Official company registration identifier.\n  - `share_capital?: string`\n    Declared share capital of the company, usually in euros.\n  - `status?: string`\n    Current status of the company (e.g., active, inactive).\n  - `tax_identification_number?: string`\n    National tax identifier (e.g., VAT or TIN).\n  - `type?: string`\n    Type of company, such as \"main\" or \"affiliated\".\n  - `website_url?: string`\n    Company’s official website URL.\n\n- `workspace_id: string`\n  Unique identifier of the workspace in which the company is being created.\n\n- `source_id?: string`\n  Optional identifier to track the origin of the request or integration from your system.\n\n- `technical_data?: { active_aml_suspicions?: boolean; callback_url?: string; callback_url_notification?: string; filtering_score_aml_suspicions?: number; language?: string; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; raw_data?: boolean; }`\n  Technical metadata and callback configuration.\n  - `active_aml_suspicions?: boolean`\n    Flag indicating whether there are active research AML (Anti-Money Laundering) suspicions for the company when you apply for a new entry or get an existing one.\n  - `callback_url?: string`\n    URL to receive a callback once the company is processed.\n  - `callback_url_notification?: string`\n    URL to receive notifications about the processing state and status.\n  - `filtering_score_aml_suspicions?: number`\n    Minimum filtering score (between 0 and 1) for AML suspicions to be considered.\n  - `language?: string`\n    Preferred language for responses or notifications (e.g., \"eng\", \"fra\").\n  - `portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]`\n    List of steps to include in the portal workflow.\n  - `raw_data?: boolean`\n    Flag indicating whether to include raw data in the response.\n\n### Returns\n\n- `{ aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]; certificat?: { id?: string; created_at?: string; filename?: string; }; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; company?: { address?: string; closure_date?: string; commercial_name?: string; contact?: { department?: string; email?: string; first_name?: string; last_name?: string; phone_number?: string; }; country?: string; email?: string; employees?: number; employer_identification_number?: string; insolvency_exists?: boolean; insolvency_ongoing?: boolean; legal_form?: string; name?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }; documents?: { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }[]; members?: { id?: string; address?: string; birthday?: string; birthplace?: string; country?: string; documents?: object[]; email?: string; first_name?: string; is_beneficial_owner?: boolean; is_delegator?: boolean; last_name?: string; liveness_verification?: boolean; name?: string; ownership_percentage?: number; phone_number?: string; postal_code?: string; registration_id?: string; relation?: string; roles?: string; source?: 'gouve' | 'user' | 'company'; state?: string; status?: string; type?: 'person' | 'company'; workspace_id?: string; }[]; portal_url?: string; properties?: { name?: string; type?: string; value?: string; }[]; risk?: { code?: string; reason?: string; score?: number; }; source_id?: string; technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }; webview_url?: string; }`\n\n  - `aml_suspicions?: { caption?: string; country?: string; gender?: string; relation?: string; schema?: string; score?: number; source?: string; status?: 'true_positive' | 'false_positive' | 'pending'; type?: 'crime' | 'sanction' | 'pep' | 'adverse_news' | 'other'; }[]`\n  - `certificat?: { id?: string; created_at?: string; filename?: string; }`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `company?: { address?: string; closure_date?: string; commercial_name?: string; contact?: { department?: string; email?: string; first_name?: string; last_name?: string; phone_number?: string; }; country?: string; email?: string; employees?: number; employer_identification_number?: string; insolvency_exists?: boolean; insolvency_ongoing?: boolean; legal_form?: string; name?: string; phone_number?: string; registration_date?: string; registration_id?: string; share_capital?: string; status?: string; tax_identification_number?: string; type?: string; website_url?: string; }`\n  - `documents?: { id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]`\n  - `members?: { id?: string; address?: string; birthday?: string; birthplace?: string; country?: string; documents?: { id?: string; checks?: object[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }[]; email?: string; first_name?: string; is_beneficial_owner?: boolean; is_delegator?: boolean; last_name?: string; liveness_verification?: boolean; name?: string; ownership_percentage?: number; phone_number?: string; postal_code?: string; registration_id?: string; relation?: string; roles?: string; source?: 'gouve' | 'user' | 'company'; state?: string; status?: string; type?: 'person' | 'company'; workspace_id?: string; }[]`\n  - `portal_url?: string`\n  - `properties?: { name?: string; type?: string; value?: string; }[]`\n  - `risk?: { code?: string; reason?: string; score?: number; }`\n  - `source_id?: string`\n  - `technical_data?: { active_aml_suspicions?: boolean; api_version?: number; approved_at?: string; approved_by?: string; callback_url?: string; callback_url_notification?: string; disable_notification?: boolean; disable_notification_date?: string; export_type?: string; filtering_score_aml_suspicions?: number; finished_at?: string; ip?: string; language?: string; location_ip?: string; need_review_at?: string; need_review_by?: string; notification_confirmation?: boolean; portal_steps?: 'identity_verification' | 'document_signing' | 'proof_of_address' | 'selfie' | 'face_match'[]; qr_code?: string; raw_data?: boolean; rejected_at?: string; rejected_by?: string; session_duration?: number; started_at?: string; transfer_at?: string; transfer_mode?: string; }`\n  - `webview_url?: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst companyRegistration = await client.companies.update('company_id', {\n  company: { name: 'ACME Corp' },\n  workspace_id: 'wk_123',\n});\n\nconsole.log(companyRegistration);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Companies.Update',
+      typescript: {
+        method: 'client.companies.update',
         example:
-          'CompanyUpdateParams parameters = new()\n{\n    CompanyID = "company_id",\n    Company = new()\n    {\n        Name = "ACME Corp",\n        Address = "123 rue Exemple, Paris",\n        CommercialName = "ACME",\n        Country = "FR",\n        Email = "info@acme.fr",\n        EmployerIdentificationNumber = "EIN123456",\n        LegalForm = "SARL",\n        PhoneNumber = "+33 1 23 45 67 89",\n        RegistrationDate = "2010-05-15",\n        RegistrationID = "RCS123456",\n        ShareCapital = "100000",\n        Status = "active",\n        TaxIdentificationNumber = "FR123456789",\n        Type = "main",\n        WebsiteUrl = "https://acme.fr",\n    },\n    WorkspaceID = "wk_123",\n};\n\nvar companyRegistration = await client.Companies.Update(parameters);\n\nConsole.WriteLine(companyRegistration);',
-      },
-      go: {
-        method: 'client.Companies.Update',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistration, err := client.Companies.Update(\n\t\tcontext.TODO(),\n\t\t"company_id",\n\t\tdataleon.CompanyUpdateParams{\n\t\t\tCompany: dataleon.CompanyUpdateParamsCompany{\n\t\t\t\tName: "ACME Corp",\n\t\t\t},\n\t\t\tWorkspaceID: "wk_123",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistration.SourceID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "company": {\n            "name": "ACME Corp"\n          },\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
-      },
-      java: {
-        method: 'companies().update',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyRegistration;\nimport com.dataleon.api.models.companies.CompanyUpdateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        CompanyUpdateParams params = CompanyUpdateParams.builder()\n            .companyId("company_id")\n            .company(CompanyUpdateParams.Company.builder()\n                .name("ACME Corp")\n                .build())\n            .workspaceId("wk_123")\n            .build();\n        CompanyRegistration companyRegistration = client.companies().update(params);\n    }\n}',
-      },
-      php: {
-        method: 'companies->update',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistration = $client->companies->update(\n  'company_id',\n  company: [\n    'name' => 'ACME Corp',\n    'address' => '123 rue Exemple, Paris',\n    'commercialName' => 'ACME',\n    'country' => 'FR',\n    'email' => 'info@acme.fr',\n    'employerIdentificationNumber' => 'EIN123456',\n    'legalForm' => 'SARL',\n    'phoneNumber' => '+33 1 23 45 67 89',\n    'registrationDate' => '2010-05-15',\n    'registrationID' => 'RCS123456',\n    'shareCapital' => '100000',\n    'status' => 'active',\n    'taxIdentificationNumber' => 'FR123456789',\n    'type' => 'main',\n    'websiteURL' => 'https://acme.fr',\n  ],\n  workspaceID: 'wk_123',\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'document_signing'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($companyRegistration);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistration = await client.companies.update('company_id', {\n  company: { name: 'ACME Corp' },\n  workspace_id: 'wk_123',\n});\n\nconsole.log(companyRegistration.source_id);",
       },
       python: {
         method: 'companies.update',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ncompany_registration = client.companies.update(\n    company_id="company_id",\n    company={\n        "name": "ACME Corp"\n    },\n    workspace_id="wk_123",\n)\nprint(company_registration.source_id)',
       },
+      java: {
+        method: 'companies().update',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyRegistration;\nimport com.dataleon.api.models.companies.CompanyUpdateParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        CompanyUpdateParams params = CompanyUpdateParams.builder()\n            .companyId("company_id")\n            .company(CompanyUpdateParams.Company.builder()\n                .name("ACME Corp")\n                .build())\n            .workspaceId("wk_123")\n            .build();\n        CompanyRegistration companyRegistration = client.companies().update(params);\n    }\n}',
+      },
+      go: {
+        method: 'client.Companies.Update',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tcompanyRegistration, err := client.Companies.Update(\n\t\tcontext.TODO(),\n\t\t"company_id",\n\t\tdataleon.CompanyUpdateParams{\n\t\t\tCompany: dataleon.CompanyUpdateParamsCompany{\n\t\t\t\tName: "ACME Corp",\n\t\t\t},\n\t\t\tWorkspaceID: "wk_123",\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", companyRegistration.SourceID)\n}\n',
+      },
       ruby: {
         method: 'companies.update',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ncompany_registration = dataleon.companies.update("company_id", company: {name: "ACME Corp"}, workspace_id: "wk_123")\n\nputs(company_registration)',
       },
-      typescript: {
-        method: 'client.companies.update',
+      php: {
+        method: 'companies->update',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst companyRegistration = await client.companies.update('company_id', {\n  company: { name: 'ACME Corp' },\n  workspace_id: 'wk_123',\n});\n\nconsole.log(companyRegistration.source_id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$companyRegistration = $client->companies->update(\n  'company_id',\n  company: [\n    'name' => 'ACME Corp',\n    'address' => '123 rue Exemple, Paris',\n    'commercialName' => 'ACME',\n    'country' => 'FR',\n    'email' => 'info@acme.fr',\n    'employerIdentificationNumber' => 'EIN123456',\n    'legalForm' => 'SARL',\n    'phoneNumber' => '+33 1 23 45 67 89',\n    'registrationDate' => '2010-05-15',\n    'registrationID' => 'RCS123456',\n    'shareCapital' => '100000',\n    'status' => 'active',\n    'taxIdentificationNumber' => 'FR123456789',\n    'type' => 'main',\n    'websiteURL' => 'https://acme.fr',\n  ],\n  workspaceID: 'wk_123',\n  sourceID: 'ID54410069066',\n  technicalData: [\n    'activeAmlSuspicions' => false,\n    'callbackURL' => 'https://example.com/callback',\n    'callbackURLNotification' => 'https://example.com/notify',\n    'filteringScoreAmlSuspicions' => 0.75,\n    'language' => 'fra',\n    'portalSteps' => ['identity_verification', 'document_signing'],\n    'rawData' => true,\n  ],\n);\n\nvar_dump($companyRegistration);",
+      },
+      csharp: {
+        method: 'Companies.Update',
+        example:
+          'CompanyUpdateParams parameters = new()\n{\n    CompanyID = "company_id",\n    Company = new()\n    {\n        Name = "ACME Corp",\n        Address = "123 rue Exemple, Paris",\n        CommercialName = "ACME",\n        Country = "FR",\n        Email = "info@acme.fr",\n        EmployerIdentificationNumber = "EIN123456",\n        LegalForm = "SARL",\n        PhoneNumber = "+33 1 23 45 67 89",\n        RegistrationDate = "2010-05-15",\n        RegistrationID = "RCS123456",\n        ShareCapital = "100000",\n        Status = "active",\n        TaxIdentificationNumber = "FR123456789",\n        Type = "main",\n        WebsiteUrl = "https://acme.fr",\n    },\n    WorkspaceID = "wk_123",\n};\n\nvar companyRegistration = await client.Companies.Update(parameters);\n\nConsole.WriteLine(companyRegistration);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID \\\n    -X PUT \\\n    -H \'Content-Type: application/json\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -d \'{\n          "company": {\n            "name": "ACME Corp"\n          },\n          "workspace_id": "wk_123",\n          "source_id": "ID54410069066"\n        }\'',
       },
     },
   },
@@ -705,44 +705,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## delete\n\n`client.companies.delete(company_id: string): void`\n\n**delete** `/companies/{company_id}`\n\nDelete a company by ID\n\n### Parameters\n\n- `company_id: string`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nawait client.companies.delete('company_id')\n```",
     perLanguage: {
-      csharp: {
-        method: 'Companies.Delete',
+      typescript: {
+        method: 'client.companies.delete',
         example:
-          'CompanyDeleteParams parameters = new() { CompanyID = "company_id" };\n\nawait client.Companies.Delete(parameters);',
-      },
-      go: {
-        method: 'client.Companies.Delete',
-        example:
-          'package main\n\nimport (\n\t"context"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Companies.Delete(context.TODO(), "company_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID \\\n    -X DELETE \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'companies().delete',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyDeleteParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        client.companies().delete("company_id");\n    }\n}',
-      },
-      php: {
-        method: 'companies->delete',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$result = $client->companies->delete('company_id');\n\nvar_dump($result);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.companies.delete('company_id');",
       },
       python: {
         method: 'companies.delete',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\nclient.companies.delete(\n    "company_id",\n)',
       },
+      java: {
+        method: 'companies().delete',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.CompanyDeleteParams;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        client.companies().delete("company_id");\n    }\n}',
+      },
+      go: {
+        method: 'client.Companies.Delete',
+        example:
+          'package main\n\nimport (\n\t"context"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\terr := client.Companies.Delete(context.TODO(), "company_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n}\n',
+      },
       ruby: {
         method: 'companies.delete',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\nresult = dataleon.companies.delete("company_id")\n\nputs(result)',
       },
-      typescript: {
-        method: 'client.companies.delete',
+      php: {
+        method: 'companies->delete',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.companies.delete('company_id');",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$result = $client->companies->delete('company_id');\n\nvar_dump($result);",
+      },
+      csharp: {
+        method: 'Companies.Delete',
+        example:
+          'CompanyDeleteParams parameters = new() { CompanyID = "company_id" };\n\nawait client.Companies.Delete(parameters);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID \\\n    -X DELETE \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -760,44 +760,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## list\n\n`client.companies.documents.list(company_id: string): { documents?: object[]; total_document?: number; }`\n\n**get** `/companies/{company_id}/documents`\n\nGet documents to an company\n\n### Parameters\n\n- `company_id: string`\n\n### Returns\n\n- `{ documents?: { id?: string; document_type?: string; filename?: string; name?: string; signed_url?: string; state?: string; status?: string; workspace_id?: string; }[]; total_document?: number; }`\n\n  - `documents?: { id?: string; document_type?: string; filename?: string; name?: string; signed_url?: string; state?: string; status?: string; workspace_id?: string; }[]`\n  - `total_document?: number`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst documentResponse = await client.companies.documents.list('company_id');\n\nconsole.log(documentResponse);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Companies.Documents.List',
+      typescript: {
+        method: 'client.companies.documents.list',
         example:
-          'DocumentListParams parameters = new() { CompanyID = "company_id" };\n\nvar documentResponse = await client.Companies.Documents.List(parameters);\n\nConsole.WriteLine(documentResponse);',
-      },
-      go: {
-        method: 'client.Companies.Documents.List',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tdocumentResponse, err := client.Companies.Documents.List(context.TODO(), "company_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", documentResponse.Documents)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID/documents \\\n    -H "Api-Key: $DATALEON_API_KEY"',
-      },
-      java: {
-        method: 'companies().documents().list',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.documents.DocumentListParams;\nimport com.dataleon.api.models.individuals.documents.DocumentResponse;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentResponse documentResponse = client.companies().documents().list("company_id");\n    }\n}',
-      },
-      php: {
-        method: 'companies->documents->list',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$documentResponse = $client->companies->documents->list('company_id');\n\nvar_dump($documentResponse);",
+          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst documentResponse = await client.companies.documents.list('company_id');\n\nconsole.log(documentResponse.documents);",
       },
       python: {
         method: 'companies.documents.list',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ndocument_response = client.companies.documents.list(\n    "company_id",\n)\nprint(document_response.documents)',
       },
+      java: {
+        method: 'companies().documents().list',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.documents.DocumentListParams;\nimport com.dataleon.api.models.individuals.documents.DocumentResponse;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentResponse documentResponse = client.companies().documents().list("company_id");\n    }\n}',
+      },
+      go: {
+        method: 'client.Companies.Documents.List',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tdocumentResponse, err := client.Companies.Documents.List(context.TODO(), "company_id")\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", documentResponse.Documents)\n}\n',
+      },
       ruby: {
         method: 'companies.documents.list',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ndocument_response = dataleon.companies.documents.list("company_id")\n\nputs(document_response)',
       },
-      typescript: {
-        method: 'client.companies.documents.list',
+      php: {
+        method: 'companies->documents->list',
         example:
-          "import Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst documentResponse = await client.companies.documents.list('company_id');\n\nconsole.log(documentResponse.documents);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$documentResponse = $client->companies->documents->list('company_id');\n\nvar_dump($documentResponse);",
+      },
+      csharp: {
+        method: 'Companies.Documents.List',
+        example:
+          'DocumentListParams parameters = new() { CompanyID = "company_id" };\n\nvar documentResponse = await client.Companies.Documents.List(parameters);\n\nConsole.WriteLine(documentResponse);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID/documents \\\n    -H "Api-Key: $DATALEON_API_KEY"',
       },
     },
   },
@@ -815,44 +815,44 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     markdown:
       "## upload\n\n`client.companies.documents.upload(company_id: string, document_type: string, file?: string, url?: string): { id?: string; checks?: check[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: object[]; values?: object[]; }`\n\n**post** `/companies/{company_id}/documents`\n\nUpload documents to an company\n\n### Parameters\n\n- `company_id: string`\n\n- `document_type: string`\n  Filter by document type for upload (must be one of the allowed values)\n\n- `file?: string`\n  File to upload (required)\n\n- `url?: string`\n  URL of the file to upload (either `file` or `url` is required)\n\n### Returns\n\n- `{ id?: string; checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]; created_at?: string; document_type?: string; name?: string; signed_url?: string; state?: string; status?: string; tables?: { operation?: object[]; }[]; values?: { confidence?: number; name?: string; value?: number[]; }[]; }`\n  Represents a general document with metadata, verification checks, and extracted data.\n\n  - `id?: string`\n  - `checks?: { masked?: boolean; message?: string; name?: string; validate?: boolean; weight?: number; }[]`\n  - `created_at?: string`\n  - `document_type?: string`\n  - `name?: string`\n  - `signed_url?: string`\n  - `state?: string`\n  - `status?: string`\n  - `tables?: { operation?: object[]; }[]`\n  - `values?: { confidence?: number; name?: string; value?: number[]; }[]`\n\n### Example\n\n```typescript\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon();\n\nconst genericDocument = await client.companies.documents.upload('company_id', { document_type: 'liasse_fiscale' });\n\nconsole.log(genericDocument);\n```",
     perLanguage: {
-      csharp: {
-        method: 'Companies.Documents.Upload',
+      typescript: {
+        method: 'client.companies.documents.upload',
         example:
-          'DocumentUploadParams parameters = new()\n{\n    CompanyID = "company_id",\n    DocumentType = DocumentType.LiasseFiscale,\n};\n\nvar genericDocument = await client.Companies.Documents.Upload(parameters);\n\nConsole.WriteLine(genericDocument);',
-      },
-      go: {
-        method: 'client.Companies.Documents.Upload',
-        example:
-          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tgenericDocument, err := client.Companies.Documents.Upload(\n\t\tcontext.TODO(),\n\t\t"company_id",\n\t\tdataleon.CompanyDocumentUploadParams{\n\t\t\tDocumentType: dataleon.CompanyDocumentUploadParamsDocumentTypeLiasseFiscale,\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", genericDocument.ID)\n}\n',
-      },
-      http: {
-        example:
-          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID/documents \\\n    -H \'Content-Type: multipart/form-data\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -F document_type=liasse_fiscale \\\n    -F url=https://example.com/sample.pdf',
-      },
-      java: {
-        method: 'companies().documents().upload',
-        example:
-          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.documents.DocumentUploadParams;\nimport com.dataleon.api.models.individuals.documents.GenericDocument;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentUploadParams params = DocumentUploadParams.builder()\n            .companyId("company_id")\n            .documentType(DocumentUploadParams.DocumentType.LIASSE_FISCALE)\n            .build();\n        GenericDocument genericDocument = client.companies().documents().upload(params);\n    }\n}',
-      },
-      php: {
-        method: 'companies->documents->upload',
-        example:
-          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->companies->documents->upload(\n  'company_id',\n  documentType: 'liasse_fiscale',\n  file: FileParam::fromString('Example data', filename: uniqid('file-upload-', true)),\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
+          "import fs from 'fs';\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.companies.documents.upload('company_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
       },
       python: {
         method: 'companies.documents.upload',
         example:
           'import os\nfrom dataleon import Dataleon\n\nclient = Dataleon(\n    api_key=os.environ.get("DATALEON_API_KEY"),  # This is the default and can be omitted\n)\ngeneric_document = client.companies.documents.upload(\n    company_id="company_id",\n    document_type="liasse_fiscale",\n)\nprint(generic_document.id)',
       },
+      java: {
+        method: 'companies().documents().upload',
+        example:
+          'package com.dataleon.api.example;\n\nimport com.dataleon.api.client.DataleonClient;\nimport com.dataleon.api.client.okhttp.DataleonOkHttpClient;\nimport com.dataleon.api.models.companies.documents.DocumentUploadParams;\nimport com.dataleon.api.models.individuals.documents.GenericDocument;\n\npublic final class Main {\n    private Main() {}\n\n    public static void main(String[] args) {\n        DataleonClient client = DataleonOkHttpClient.fromEnv();\n\n        DocumentUploadParams params = DocumentUploadParams.builder()\n            .companyId("company_id")\n            .documentType(DocumentUploadParams.DocumentType.LIASSE_FISCALE)\n            .build();\n        GenericDocument genericDocument = client.companies().documents().upload(params);\n    }\n}',
+      },
+      go: {
+        method: 'client.Companies.Documents.Upload',
+        example:
+          'package main\n\nimport (\n\t"context"\n\t"fmt"\n\n\t"github.com/dataleonlabs/dataleon-go"\n\t"github.com/dataleonlabs/dataleon-go/option"\n)\n\nfunc main() {\n\tclient := dataleon.NewClient(\n\t\toption.WithAPIKey("My API Key"),\n\t)\n\tgenericDocument, err := client.Companies.Documents.Upload(\n\t\tcontext.TODO(),\n\t\t"company_id",\n\t\tdataleon.CompanyDocumentUploadParams{\n\t\t\tDocumentType: dataleon.CompanyDocumentUploadParamsDocumentTypeLiasseFiscale,\n\t\t},\n\t)\n\tif err != nil {\n\t\tpanic(err.Error())\n\t}\n\tfmt.Printf("%+v\\n", genericDocument.ID)\n}\n',
+      },
       ruby: {
         method: 'companies.documents.upload',
         example:
           'require "dataleon"\n\ndataleon = Dataleon::Client.new(api_key: "My API Key")\n\ngeneric_document = dataleon.companies.documents.upload("company_id", document_type: :liasse_fiscale)\n\nputs(generic_document)',
       },
-      typescript: {
-        method: 'client.companies.documents.upload',
+      php: {
+        method: 'companies->documents->upload',
         example:
-          "import fs from 'fs';\nimport Dataleon from '@dataleon/dataleon';\n\nconst client = new Dataleon({\n  apiKey: process.env['DATALEON_API_KEY'], // This is the default and can be omitted\n});\n\nconst genericDocument = await client.companies.documents.upload('company_id', {\n  document_type: 'liasse_fiscale',\n});\n\nconsole.log(genericDocument.id);",
+          "<?php\n\nrequire_once dirname(__DIR__) . '/vendor/autoload.php';\n\n$client = new Client(apiKey: 'My API Key');\n\n$genericDocument = $client->companies->documents->upload(\n  'company_id',\n  documentType: 'liasse_fiscale',\n  file: FileParam::fromString('Example data', filename: uniqid('file-upload-', true)),\n  url: 'https://example.com/sample.pdf',\n);\n\nvar_dump($genericDocument);",
+      },
+      csharp: {
+        method: 'Companies.Documents.Upload',
+        example:
+          'DocumentUploadParams parameters = new()\n{\n    CompanyID = "company_id",\n    DocumentType = DocumentType.LiasseFiscale,\n};\n\nvar genericDocument = await client.Companies.Documents.Upload(parameters);\n\nConsole.WriteLine(genericDocument);',
+      },
+      http: {
+        example:
+          'curl https://inference.eu-west-1.dataleon.ai/companies/$COMPANY_ID/documents \\\n    -H \'Content-Type: multipart/form-data\' \\\n    -H "Api-Key: $DATALEON_API_KEY" \\\n    -F document_type=liasse_fiscale \\\n    -F url=https://example.com/sample.pdf',
       },
     },
   },
