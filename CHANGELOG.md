@@ -1,5 +1,28 @@
 # Changelog
 
+## 0.1.0-alpha.44 (2026-05-19)
+
+Full Changelog: [v0.1.0-alpha.43...v0.1.0-alpha.44](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.43...v0.1.0-alpha.44)
+
+### Bug Fixes
+
+* **typescript:** upgrade tsc-multi so that it works with Node 26 ([83656b4](https://github.com/dataleonlabs/dataleon-typescript/commit/83656b416c56e0aedc02fc795b98b504a7615332))
+
+
+### Chores
+
+* avoid formatting file that gets changed during releases ([dbbd591](https://github.com/dataleonlabs/dataleon-typescript/commit/dbbd591581a27c673a62780a8a851c48ae008c06))
+* **format:** run eslint and prettier separately ([cbae497](https://github.com/dataleonlabs/dataleon-typescript/commit/cbae497e16a520a57728f53f9f6e1600e90b93c6))
+* redact api-key headers in debug logs ([cf4a11f](https://github.com/dataleonlabs/dataleon-typescript/commit/cf4a11f463bbc663506ed094489e4fdad59e941f))
+* **tests:** remove redundant File import ([6c10dd6](https://github.com/dataleonlabs/dataleon-typescript/commit/6c10dd64adebb5ef099f616ed18d9dbbccb45de6))
+
+
+### Documentation
+
+* clarify forwards compat behavior ([a27e543](https://github.com/dataleonlabs/dataleon-typescript/commit/a27e543077d960f65abcabf510727f64738c5fb1))
+* update logging docs ([e540cb7](https://github.com/dataleonlabs/dataleon-typescript/commit/e540cb7fb45075e61c855be3f9a9087b67d5ad54))
+* update with proxy auth info ([ab79fcf](https://github.com/dataleonlabs/dataleon-typescript/commit/ab79fcf58b62493c924bbaf6d7e31bd76a8c1bcf))
+
 ## 0.1.0-alpha.43 (2026-04-28)
 
 Full Changelog: [v0.1.0-alpha.42...v0.1.0-alpha.43](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.42...v0.1.0-alpha.43)
