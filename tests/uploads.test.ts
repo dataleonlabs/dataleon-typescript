@@ -1,7 +1,6 @@
 import fs from 'fs';
 import type { ResponseLike } from '@dataleon/dataleon/internal/to-file';
 import { toFile } from '@dataleon/dataleon/core/uploads';
-import { File } from 'node:buffer';
 
 class MyClass {
   name: string = 'foo';
