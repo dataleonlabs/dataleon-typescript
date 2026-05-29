@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.45 (2026-05-29)
+
+Full Changelog: [v0.1.0-alpha.44...v0.1.0-alpha.45](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.44...v0.1.0-alpha.45)
+
+### Bug Fixes
+
+* **mcp:** use `pure-lockfile` when building mcp server ([baffa7d](https://github.com/dataleonlabs/dataleon-typescript/commit/baffa7d0cbd790a7e3f6a7661eff7134ec1a1738))
+
+
+### Chores
+
+* **internal:** codegen related update ([f3627fb](https://github.com/dataleonlabs/dataleon-typescript/commit/f3627fb65f4a193ae19d9bc0b056812aa6347096))
+
 ## 0.1.0-alpha.44 (2026-05-19)
 
 Full Changelog: [v0.1.0-alpha.43...v0.1.0-alpha.44](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.43...v0.1.0-alpha.44)
