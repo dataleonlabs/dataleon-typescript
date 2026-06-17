@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.46 (2026-06-17)
+
+Full Changelog: [v0.1.0-alpha.45...v0.1.0-alpha.46](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.45...v0.1.0-alpha.46)
+
+### Bug Fixes
+
+* **client:** send content-type header for requests with an omitted optional body ([ada909b](https://github.com/dataleonlabs/dataleon-typescript/commit/ada909bcc26fb6796207bc0847de5d7c12675908))
+
 ## 0.1.0-alpha.45 (2026-05-29)
 
 Full Changelog: [v0.1.0-alpha.44...v0.1.0-alpha.45](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.44...v0.1.0-alpha.45)
