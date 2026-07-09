@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.47 (2026-07-09)
+
+Full Changelog: [v0.1.0-alpha.46...v0.1.0-alpha.47](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.46...v0.1.0-alpha.47)
+
+### Bug Fixes
+
+* **client:** emit method aliases after the methods they reference ([f173fa2](https://github.com/dataleonlabs/dataleon-typescript/commit/f173fa216668facdec21a7f3075df7b03f6dc382))
+
 ## 0.1.0-alpha.46 (2026-06-17)
 
 Full Changelog: [v0.1.0-alpha.45...v0.1.0-alpha.46](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.45...v0.1.0-alpha.46)
