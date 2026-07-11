@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.48 (2026-07-11)
+
+Full Changelog: [v0.1.0-alpha.47...v0.1.0-alpha.48](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.47...v0.1.0-alpha.48)
+
+### Bug Fixes
+
+* **ci:** bump @arethetypeswrong/cli to ^0.18.0 and run CI workflows on Node 24 ([96b8ce4](https://github.com/dataleonlabs/dataleon-typescript/commit/96b8ce4f4c123e3ddc35ee7b5b5fae25e31b683b))
+
 ## 0.1.0-alpha.47 (2026-07-09)
 
 Full Changelog: [v0.1.0-alpha.46...v0.1.0-alpha.47](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.46...v0.1.0-alpha.47)
