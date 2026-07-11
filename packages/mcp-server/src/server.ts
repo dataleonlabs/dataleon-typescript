@@ -28,7 +28,7 @@ export const newMcpServer = async ({
   new McpServer(
     {
       name: 'dataleon_dataleon_api',
-      version: '0.1.0-alpha.47',
+      version: '0.1.0-alpha.48',
     },
     {
       instructions: await getInstructions({ stainlessApiKey, customInstructionsPath }),
