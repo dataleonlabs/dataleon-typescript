@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.1.0-alpha.49 (2026-07-18)
+
+Full Changelog: [v0.1.0-alpha.48...v0.1.0-alpha.49](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.48...v0.1.0-alpha.49)
+
+### Features
+
+* **stlc:** configurable CI runner and private-production-repo support in workflow templates ([9a15413](https://github.com/dataleonlabs/dataleon-typescript/commit/9a15413bc86eeeb2e6fa8b251072e723b03249c8))
+
 ## 0.1.0-alpha.48 (2026-07-11)
 
 Full Changelog: [v0.1.0-alpha.47...v0.1.0-alpha.48](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.47...v0.1.0-alpha.48)
