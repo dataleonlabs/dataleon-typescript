@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.50 (2026-07-31)
+
+Full Changelog: [v0.1.0-alpha.49...v0.1.0-alpha.50](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.49...v0.1.0-alpha.50)
+
+### Bug Fixes
+
+* **stlc:** stop hand-edited CI workflows from blocking seals and builds ([4856272](https://github.com/dataleonlabs/dataleon-typescript/commit/4856272a43021f0cf3482515b4619d7835dd513b))
+
+
+### Chores
+
+* **internal:** codegen related update ([541f988](https://github.com/dataleonlabs/dataleon-typescript/commit/541f988d1211247f1966d30a6515fe959a4ab78f))
+
 ## 0.1.0-alpha.49 (2026-07-18)
 
 Full Changelog: [v0.1.0-alpha.48...v0.1.0-alpha.49](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.48...v0.1.0-alpha.49)
