@@ -1,5 +1,18 @@
 # Changelog
 
+## 0.1.0-alpha.51 (2026-09-01)
+
+Full Changelog: [v0.1.0-alpha.50...v0.1.0-alpha.51](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.50...v0.1.0-alpha.51)
+
+### Chores
+
+* **internal:** codegen related update ([552382a](https://github.com/dataleonlabs/dataleon-typescript/commit/552382ace6012ff4b7a5ab264bed2edc85c06ba5))
+
+
+### Documentation
+
+* **mcp:** document code execution modes and the local code runner ([c0066b4](https://github.com/dataleonlabs/dataleon-typescript/commit/c0066b41ebc84b39d64921344499978f4c044662))
+
 ## 0.1.0-alpha.50 (2026-07-31)
 
 Full Changelog: [v0.1.0-alpha.49...v0.1.0-alpha.50](https://github.com/dataleonlabs/dataleon-typescript/compare/v0.1.0-alpha.49...v0.1.0-alpha.50)
